@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://neuroatlas-lab.org/schemas/evidence.schema.json",
+  "title": "Evidence Record",
+  "type": "object",
+  "required": [
+    "id",
+    "source_id",
+    "source_type",
+    "evidence_type"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "source_id": {
+      "type": "string"
+    },
+    "source_type": {
+      "enum": [
+        "primary_research",
+        "systematic_review",
+        "meta_analysis",
+        "textbook",
+        "curated_database",
+        "atlas",
+        "experimental_dataset",
+        "computational_model",
+        "educational_resource"
+      ]
+    },
+    "evidence_type": {
+      "enum": [
+        "anatomical",
+        "electrophysiological",
+        "molecular",
+        "imaging",
+        "behavioral",
+        "clinical",
+        "computational",
+        "mixed"
+      ]
+    },
+    "species": {
+      "type": "string"
+    },
+    "methods": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "relevant_entities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "relevant_claims": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "publication_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "accessed_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "license": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

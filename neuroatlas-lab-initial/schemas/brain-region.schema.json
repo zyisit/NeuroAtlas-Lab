@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://neuroatlas-lab.org/schemas/brain-region.schema.json",
+  "title": "Brain Region",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "name",
+    "hemisphere",
+    "anatomical_class",
+    "version",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "const": "BrainRegion"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "parent_regions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "hemisphere": {
+      "enum": [
+        "left",
+        "right",
+        "bilateral",
+        "midline",
+        "not_applicable"
+      ]
+    },
+    "anatomical_class": {
+      "type": "string"
+    },
+    "atlas_memberships": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "spatial_representations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "external_identifiers": {
+      "type": "array",
+      "items": {
+        "$ref": "external-identifier.schema.json"
+      }
+    },
+    "version": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "active",
+        "deprecated",
+        "proposed",
+        "draft"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

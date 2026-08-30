@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://neuroatlas-lab.org/schemas/relationship.schema.json",
+  "title": "Relationship",
+  "type": "object",
+  "required": [
+    "id",
+    "subject_id",
+    "predicate",
+    "object_id",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "subject_id": {
+      "type": "string"
+    },
+    "predicate": {
+      "type": "string"
+    },
+    "object_id": {
+      "type": "string"
+    },
+    "context": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "species": {
+      "type": "string"
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "confidence": {
+      "enum": [
+        "high",
+        "moderate",
+        "limited",
+        "unknown"
+      ]
+    },
+    "status": {
+      "enum": [
+        "active",
+        "deprecated",
+        "proposed",
+        "draft"
+      ]
+    },
+    "model_status": {
+      "enum": [
+        "biological",
+        "observational",
+        "inferred",
+        "model_derived",
+        "hypothetical"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

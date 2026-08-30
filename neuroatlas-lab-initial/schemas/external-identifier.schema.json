@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://neuroatlas-lab.org/schemas/external-identifier.schema.json",
+  "title": "External Identifier",
+  "type": "object",
+  "required": [
+    "namespace",
+    "identifier"
+  ],
+  "properties": {
+    "namespace": {
+      "type": "string",
+      "minLength": 1
+    },
+    "identifier": {
+      "type": "string",
+      "minLength": 1
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "source_version": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}
