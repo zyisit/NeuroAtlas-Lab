@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "dataset-version.json", "title": "DatasetVersion",
+  "type": "object", "required": ["id", "datasetId", "version", "releaseDate"], "additionalProperties": false,
+  "properties": {
+    "id": { "$ref": "common.json#/$defs/id" }, "datasetId": { "$ref": "common.json#/$defs/id" }, "version": { "$ref": "common.json#/$defs/nonEmptyString" },
+    "releaseDate": { "type": "string", "format": "date" }, "accessUrl": { "$ref": "common.json#/$defs/uri" },
+    "contentHash": { "type": "string" }, "notes": { "type": "string" }, "provenance": { "$ref": "common.json#/$defs/provenance" }
+  }
+}

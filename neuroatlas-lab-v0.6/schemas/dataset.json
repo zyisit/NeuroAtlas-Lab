@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "dataset.json", "title": "Dataset",
+  "type": "object", "required": ["id", "name"], "additionalProperties": false,
+  "properties": {
+    "id": { "$ref": "common.json#/$defs/id" }, "name": { "$ref": "common.json#/$defs/nonEmptyString" },
+    "description": { "type": "string" }, "sourceUrl": { "$ref": "common.json#/$defs/uri" },
+    "license": { "type": "string" }, "publisher": { "type": "string" }, "provenance": { "$ref": "common.json#/$defs/provenance" }
+  }
+}

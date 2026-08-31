@@ -1,0 +1,4 @@
+{
+  "package": "NeuroAtlas Lab schema package", "version": "0.6", "schemaDraft": "2020-12",
+  "schemas": ["dataset.json", "dataset-version.json", "reference-space.json", "spatial-transformation.json", "brain-region.json", "atlas-mapping.json", "spatial-representation.json", "observation.json", "claim.json", "relationship.json", "evidence-record.json"]
+}
