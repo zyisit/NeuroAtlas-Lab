@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.8.0 — 2026-09-14
+- Sprint 2: viewer MVP in `viewer/` (React 19, three.js, Vite) — region tree with search, 3D region surfaces, evidence/detail panel, attribution footer
+- `scripts/build/build_meshes.py`: whole-brain hull and 386 per-region GLB meshes from the Julich labelled MPM, with spatial-representation records (`data/anatomy/julich-brain-3.1/meshes.json`)
+- `scripts/build/build_viewer_bundle.py`: validates `data/` and emits the viewer bundle
+- `.github/workflows/viewer.yml`: builds the site on every push; deploys to GitHub Pages from `main`
+- `.gitattributes` normalises line endings; `src/` placeholder removed in favour of `viewer/`
+
 ## 0.7.1 — 2026-09-14
 - Sprint 1: Julich-Brain 3.1 imported via `scripts/import/import_julich_brain.py` — 771 brain-region records, 771 atlas-mapping records, dataset / dataset-version / source / reference-space / atlas provenance
 - `atlas-mapping.displayColor` added (atlas-supplied region colour for the viewer)

@@ -13,7 +13,7 @@ hypotheses are never silently mixed.
 
 ## Status
 
-**Schema v0.7.1 · Sprint 1 (first real data) · pre-application**
+**v0.8.0 · Sprint 2 (viewer MVP)**
 
 What exists today:
 
@@ -28,7 +28,11 @@ What exists today:
   (`data/anatomy/julich-brain-3.1/`), produced by a reproducible import script
   (`scripts/import/import_julich_brain.py`)
 
-What does not exist yet: the viewer. That is Sprint 2. See `docs/roadmap.md`.
+- **The viewer:** a React + three.js atlas browser (`viewer/`) — searchable region
+  hierarchy, 3D surfaces for 386 Julich regions in MNI152 space, and a detail panel
+  that shows only what the records contain, with sources and license attached
+
+Run it: see `viewer/README.md`. Roadmap: `docs/roadmap.md`.
 
 ## Quick start
 
@@ -67,13 +71,14 @@ Full text: `docs/scientific-governance/principles.md`.
 | Path | Contents |
 |---|---|
 | `schemas/` | Generated JSON Schema files + `index.json` registry |
-| `scripts/` | `gen_schemas.py` (schema source of truth), `validate.py` |
+| `scripts/` | `gen_schemas.py` (schema source of truth), `validate.py`, `import/` (data ingestion), `build/` (meshes, viewer bundle) |
 | `docs/` | Data model, ontology, governance, architecture, data-source policy, roadmap |
 | `examples/` | Synthetic placeholder records. **Not scientific content.** |
 | `data/` | Curated project records, by domain. `anatomy/julich-brain-3.1/` is the first real dataset. |
 | `tests/` | Validator tests |
 | `archive/` | Schema v0.4 and v0.6 packages, retained for history |
-| `src/`, `models/` | Reserved for the viewer (Phase 1) and computational models (Phase 5+) |
+| `viewer/` | The web viewer (React, three.js). Reads `viewer/public/data/bundle.json` built from `data/` |
+| `models/` | Reserved for computational models (Phase 7+) |
 
 ## Scope boundaries
 

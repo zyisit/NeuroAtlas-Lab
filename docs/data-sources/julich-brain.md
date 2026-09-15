@@ -20,8 +20,19 @@
   maximum-probability labelled mask. Regions not mapped in that space are skipped and
   listed on stderr.
 
+## Regions skipped by `--spatial`
+74 leaf regions are skipped with a ValueError. They are all dotted sub-areas (e.g. `CM.Ce`,
+`Subc.Sub`, `Area p24c.pd24cd`) that Julich defines in the hierarchy but maps only at the
+parent level in the labelled maximum-probability map. Their parents get centroids and meshes.
+
+## Meshes
+`scripts/build/build_meshes.py` produces display surfaces from the same labelled map:
+a whole-brain hull and one mesh per mapped leaf region, recorded as `spatial-representation`
+records of type `surface` in `meshes.json`. They are smoothed and decimated for the viewer
+and are not measurement-grade.
+
 ## What is deliberately not imported
-- Probability maps and mask volumes themselves (large; will be external assets in Sprint 1b).
+- Probability maps and mask volumes themselves (large). Only derived display meshes are kept.
 - Julich's linked data features (receptor densities, cell densities, connectivity). Those
   are Phases 2–4 and will come in through their own scripts with their own provenance.
 

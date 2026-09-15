@@ -170,7 +170,8 @@
       "brain-region:julich-vp-ventral-pallidum"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-vp-ventral-pallidum-right-centroid"
+      "spatial-representation:julich31-vp-ventral-pallidum-right-centroid",
+      "spatial-representation:julich31-vp-ventral-pallidum-right-mesh"
     ]
   },
   {
@@ -202,7 +203,8 @@
       "brain-region:julich-vp-ventral-pallidum"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-vp-ventral-pallidum-left-centroid"
+      "spatial-representation:julich31-vp-ventral-pallidum-left-centroid",
+      "spatial-representation:julich31-vp-ventral-pallidum-left-mesh"
     ]
   },
   {
@@ -292,7 +294,8 @@
       "brain-region:julich-fucd-ventral-striatum-fundus-of-caudate-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-fucd-ventral-striatum-fundus-of-caudate-nucleus-right-centroid"
+      "spatial-representation:julich31-fucd-ventral-striatum-fundus-of-caudate-nucleus-right-centroid",
+      "spatial-representation:julich31-fucd-ventral-striatum-fundus-of-caudate-nucleus-right-mesh"
     ]
   },
   {
@@ -324,7 +327,8 @@
       "brain-region:julich-fucd-ventral-striatum-fundus-of-caudate-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-fucd-ventral-striatum-fundus-of-caudate-nucleus-left-centroid"
+      "spatial-representation:julich31-fucd-ventral-striatum-fundus-of-caudate-nucleus-left-centroid",
+      "spatial-representation:julich31-fucd-ventral-striatum-fundus-of-caudate-nucleus-left-mesh"
     ]
   },
   {
@@ -385,7 +389,8 @@
       "brain-region:julich-acbm-ventral-striatum-medial-accumbens"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-acbm-ventral-striatum-medial-accumbens-right-centroid"
+      "spatial-representation:julich31-acbm-ventral-striatum-medial-accumbens-right-centroid",
+      "spatial-representation:julich31-acbm-ventral-striatum-medial-accumbens-right-mesh"
     ]
   },
   {
@@ -417,7 +422,8 @@
       "brain-region:julich-acbm-ventral-striatum-medial-accumbens"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-acbm-ventral-striatum-medial-accumbens-left-centroid"
+      "spatial-representation:julich31-acbm-ventral-striatum-medial-accumbens-left-centroid",
+      "spatial-representation:julich31-acbm-ventral-striatum-medial-accumbens-left-mesh"
     ]
   },
   {
@@ -478,7 +484,8 @@
       "brain-region:julich-acbl-ventral-striatum-lateral-accumbens"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-acbl-ventral-striatum-lateral-accumbens-right-centroid"
+      "spatial-representation:julich31-acbl-ventral-striatum-lateral-accumbens-right-centroid",
+      "spatial-representation:julich31-acbl-ventral-striatum-lateral-accumbens-right-mesh"
     ]
   },
   {
@@ -510,7 +517,8 @@
       "brain-region:julich-acbl-ventral-striatum-lateral-accumbens"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-acbl-ventral-striatum-lateral-accumbens-left-centroid"
+      "spatial-representation:julich31-acbl-ventral-striatum-lateral-accumbens-left-centroid",
+      "spatial-representation:julich31-acbl-ventral-striatum-lateral-accumbens-left-mesh"
     ]
   },
   {
@@ -571,7 +579,8 @@
       "brain-region:julich-fup-ventral-striatum-fundus-of-putamen"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-fup-ventral-striatum-fundus-of-putamen-right-centroid"
+      "spatial-representation:julich31-fup-ventral-striatum-fundus-of-putamen-right-centroid",
+      "spatial-representation:julich31-fup-ventral-striatum-fundus-of-putamen-right-mesh"
     ]
   },
   {
@@ -603,7 +612,8 @@
       "brain-region:julich-fup-ventral-striatum-fundus-of-putamen"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-fup-ventral-striatum-fundus-of-putamen-left-centroid"
+      "spatial-representation:julich31-fup-ventral-striatum-fundus-of-putamen-left-centroid",
+      "spatial-representation:julich31-fup-ventral-striatum-fundus-of-putamen-left-mesh"
     ]
   },
   {
@@ -722,7 +732,8 @@
       "brain-region:julich-ch-4-basal-forebrain"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-ch-4-basal-forebrain-right-centroid"
+      "spatial-representation:julich31-ch-4-basal-forebrain-right-centroid",
+      "spatial-representation:julich31-ch-4-basal-forebrain-right-mesh"
     ]
   },
   {
@@ -754,7 +765,8 @@
       "brain-region:julich-ch-4-basal-forebrain"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-ch-4-basal-forebrain-left-centroid"
+      "spatial-representation:julich31-ch-4-basal-forebrain-left-centroid",
+      "spatial-representation:julich31-ch-4-basal-forebrain-left-mesh"
     ]
   },
   {
@@ -844,7 +856,8 @@
       "brain-region:julich-bst-basal-forebrain-bed-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-bst-basal-forebrain-bed-nucleus-right-centroid"
+      "spatial-representation:julich31-bst-basal-forebrain-bed-nucleus-right-centroid",
+      "spatial-representation:julich31-bst-basal-forebrain-bed-nucleus-right-mesh"
     ]
   },
   {
@@ -876,7 +889,8 @@
       "brain-region:julich-bst-basal-forebrain-bed-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-bst-basal-forebrain-bed-nucleus-left-centroid"
+      "spatial-representation:julich31-bst-basal-forebrain-bed-nucleus-left-centroid",
+      "spatial-representation:julich31-bst-basal-forebrain-bed-nucleus-left-mesh"
     ]
   },
   {
@@ -966,7 +980,8 @@
       "brain-region:julich-ch-123-basal-forebrain"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-ch-123-basal-forebrain-right-centroid"
+      "spatial-representation:julich31-ch-123-basal-forebrain-right-centroid",
+      "spatial-representation:julich31-ch-123-basal-forebrain-right-mesh"
     ]
   },
   {
@@ -998,7 +1013,8 @@
       "brain-region:julich-ch-123-basal-forebrain"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-ch-123-basal-forebrain-left-centroid"
+      "spatial-representation:julich31-ch-123-basal-forebrain-left-centroid",
+      "spatial-representation:julich31-ch-123-basal-forebrain-left-mesh"
     ]
   },
   {
@@ -1987,7 +2003,8 @@
       "brain-region:julich-astr-amygdala"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-astr-amygdala-right-centroid"
+      "spatial-representation:julich31-astr-amygdala-right-centroid",
+      "spatial-representation:julich31-astr-amygdala-right-mesh"
     ]
   },
   {
@@ -2019,7 +2036,8 @@
       "brain-region:julich-astr-amygdala"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-astr-amygdala-left-centroid"
+      "spatial-representation:julich31-astr-amygdala-left-centroid",
+      "spatial-representation:julich31-astr-amygdala-left-mesh"
     ]
   },
   {
@@ -2109,7 +2127,8 @@
       "brain-region:julich-vtm-amygdala"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-vtm-amygdala-right-centroid"
+      "spatial-representation:julich31-vtm-amygdala-right-centroid",
+      "spatial-representation:julich31-vtm-amygdala-right-mesh"
     ]
   },
   {
@@ -2141,7 +2160,8 @@
       "brain-region:julich-vtm-amygdala"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-vtm-amygdala-left-centroid"
+      "spatial-representation:julich31-vtm-amygdala-left-centroid",
+      "spatial-representation:julich31-vtm-amygdala-left-mesh"
     ]
   },
   {
@@ -2753,7 +2773,8 @@
       "brain-region:julich-area-5l-spl"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-5l-spl-right-centroid"
+      "spatial-representation:julich31-area-5l-spl-right-centroid",
+      "spatial-representation:julich31-area-5l-spl-right-mesh"
     ]
   },
   {
@@ -2785,7 +2806,8 @@
       "brain-region:julich-area-5l-spl"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-5l-spl-left-centroid"
+      "spatial-representation:julich31-area-5l-spl-left-centroid",
+      "spatial-representation:julich31-area-5l-spl-left-mesh"
     ]
   },
   {
@@ -2846,7 +2868,8 @@
       "brain-region:julich-area-7m-spl"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-7m-spl-right-centroid"
+      "spatial-representation:julich31-area-7m-spl-right-centroid",
+      "spatial-representation:julich31-area-7m-spl-right-mesh"
     ]
   },
   {
@@ -2878,7 +2901,8 @@
       "brain-region:julich-area-7m-spl"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-7m-spl-left-centroid"
+      "spatial-representation:julich31-area-7m-spl-left-centroid",
+      "spatial-representation:julich31-area-7m-spl-left-mesh"
     ]
   },
   {
@@ -2939,7 +2963,8 @@
       "brain-region:julich-area-7pc-spl"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-7pc-spl-right-centroid"
+      "spatial-representation:julich31-area-7pc-spl-right-centroid",
+      "spatial-representation:julich31-area-7pc-spl-right-mesh"
     ]
   },
   {
@@ -2971,7 +2996,8 @@
       "brain-region:julich-area-7pc-spl"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-7pc-spl-left-centroid"
+      "spatial-representation:julich31-area-7pc-spl-left-centroid",
+      "spatial-representation:julich31-area-7pc-spl-left-mesh"
     ]
   },
   {
@@ -3032,7 +3058,8 @@
       "brain-region:julich-area-5m-spl"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-5m-spl-right-centroid"
+      "spatial-representation:julich31-area-5m-spl-right-centroid",
+      "spatial-representation:julich31-area-5m-spl-right-mesh"
     ]
   },
   {
@@ -3064,7 +3091,8 @@
       "brain-region:julich-area-5m-spl"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-5m-spl-left-centroid"
+      "spatial-representation:julich31-area-5m-spl-left-centroid",
+      "spatial-representation:julich31-area-5m-spl-left-mesh"
     ]
   },
   {
@@ -3125,7 +3153,8 @@
       "brain-region:julich-area-7p-spl"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-7p-spl-right-centroid"
+      "spatial-representation:julich31-area-7p-spl-right-centroid",
+      "spatial-representation:julich31-area-7p-spl-right-mesh"
     ]
   },
   {
@@ -3157,7 +3186,8 @@
       "brain-region:julich-area-7p-spl"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-7p-spl-left-centroid"
+      "spatial-representation:julich31-area-7p-spl-left-centroid",
+      "spatial-representation:julich31-area-7p-spl-left-mesh"
     ]
   },
   {
@@ -3218,7 +3248,8 @@
       "brain-region:julich-area-5ci-spl"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-5ci-spl-right-centroid"
+      "spatial-representation:julich31-area-5ci-spl-right-centroid",
+      "spatial-representation:julich31-area-5ci-spl-right-mesh"
     ]
   },
   {
@@ -3250,7 +3281,8 @@
       "brain-region:julich-area-5ci-spl"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-5ci-spl-left-centroid"
+      "spatial-representation:julich31-area-5ci-spl-left-centroid",
+      "spatial-representation:julich31-area-5ci-spl-left-mesh"
     ]
   },
   {
@@ -3311,7 +3343,8 @@
       "brain-region:julich-area-7a-spl"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-7a-spl-right-centroid"
+      "spatial-representation:julich31-area-7a-spl-right-centroid",
+      "spatial-representation:julich31-area-7a-spl-right-mesh"
     ]
   },
   {
@@ -3343,7 +3376,8 @@
       "brain-region:julich-area-7a-spl"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-7a-spl-left-centroid"
+      "spatial-representation:julich31-area-7a-spl-left-centroid",
+      "spatial-representation:julich31-area-7a-spl-left-mesh"
     ]
   },
   {
@@ -3433,7 +3467,8 @@
       "brain-region:julich-area-3b-postcg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-3b-postcg-right-centroid"
+      "spatial-representation:julich31-area-3b-postcg-right-centroid",
+      "spatial-representation:julich31-area-3b-postcg-right-mesh"
     ]
   },
   {
@@ -3465,7 +3500,8 @@
       "brain-region:julich-area-3b-postcg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-3b-postcg-left-centroid"
+      "spatial-representation:julich31-area-3b-postcg-left-centroid",
+      "spatial-representation:julich31-area-3b-postcg-left-mesh"
     ]
   },
   {
@@ -3526,7 +3562,8 @@
       "brain-region:julich-area-1-postcg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-1-postcg-right-centroid"
+      "spatial-representation:julich31-area-1-postcg-right-centroid",
+      "spatial-representation:julich31-area-1-postcg-right-mesh"
     ]
   },
   {
@@ -3558,7 +3595,8 @@
       "brain-region:julich-area-1-postcg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-1-postcg-left-centroid"
+      "spatial-representation:julich31-area-1-postcg-left-centroid",
+      "spatial-representation:julich31-area-1-postcg-left-mesh"
     ]
   },
   {
@@ -3619,7 +3657,8 @@
       "brain-region:julich-area-2-postcs"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-2-postcs-right-centroid"
+      "spatial-representation:julich31-area-2-postcs-right-centroid",
+      "spatial-representation:julich31-area-2-postcs-right-mesh"
     ]
   },
   {
@@ -3651,7 +3690,8 @@
       "brain-region:julich-area-2-postcs"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-2-postcs-left-centroid"
+      "spatial-representation:julich31-area-2-postcs-left-centroid",
+      "spatial-representation:julich31-area-2-postcs-left-mesh"
     ]
   },
   {
@@ -3712,7 +3752,8 @@
       "brain-region:julich-area-3a-postcg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-3a-postcg-right-centroid"
+      "spatial-representation:julich31-area-3a-postcg-right-centroid",
+      "spatial-representation:julich31-area-3a-postcg-right-mesh"
     ]
   },
   {
@@ -3744,7 +3785,8 @@
       "brain-region:julich-area-3a-postcg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-3a-postcg-left-centroid"
+      "spatial-representation:julich31-area-3a-postcg-left-centroid",
+      "spatial-representation:julich31-area-3a-postcg-left-mesh"
     ]
   },
   {
@@ -3834,7 +3876,8 @@
       "brain-region:julich-area-op1-poperc"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-op1-poperc-right-centroid"
+      "spatial-representation:julich31-area-op1-poperc-right-centroid",
+      "spatial-representation:julich31-area-op1-poperc-right-mesh"
     ]
   },
   {
@@ -3866,7 +3909,8 @@
       "brain-region:julich-area-op1-poperc"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-op1-poperc-left-centroid"
+      "spatial-representation:julich31-area-op1-poperc-left-centroid",
+      "spatial-representation:julich31-area-op1-poperc-left-mesh"
     ]
   },
   {
@@ -3927,7 +3971,8 @@
       "brain-region:julich-area-op2-poperc"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-op2-poperc-right-centroid"
+      "spatial-representation:julich31-area-op2-poperc-right-centroid",
+      "spatial-representation:julich31-area-op2-poperc-right-mesh"
     ]
   },
   {
@@ -3959,7 +4004,8 @@
       "brain-region:julich-area-op2-poperc"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-op2-poperc-left-centroid"
+      "spatial-representation:julich31-area-op2-poperc-left-centroid",
+      "spatial-representation:julich31-area-op2-poperc-left-mesh"
     ]
   },
   {
@@ -4020,7 +4066,8 @@
       "brain-region:julich-area-op3-poperc"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-op3-poperc-right-centroid"
+      "spatial-representation:julich31-area-op3-poperc-right-centroid",
+      "spatial-representation:julich31-area-op3-poperc-right-mesh"
     ]
   },
   {
@@ -4052,7 +4099,8 @@
       "brain-region:julich-area-op3-poperc"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-op3-poperc-left-centroid"
+      "spatial-representation:julich31-area-op3-poperc-left-centroid",
+      "spatial-representation:julich31-area-op3-poperc-left-mesh"
     ]
   },
   {
@@ -4113,7 +4161,8 @@
       "brain-region:julich-area-op4-poperc"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-op4-poperc-right-centroid"
+      "spatial-representation:julich31-area-op4-poperc-right-centroid",
+      "spatial-representation:julich31-area-op4-poperc-right-mesh"
     ]
   },
   {
@@ -4145,7 +4194,8 @@
       "brain-region:julich-area-op4-poperc"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-op4-poperc-left-centroid"
+      "spatial-representation:julich31-area-op4-poperc-left-centroid",
+      "spatial-representation:julich31-area-op4-poperc-left-mesh"
     ]
   },
   {
@@ -4235,7 +4285,8 @@
       "brain-region:julich-area-pf-ipl"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-pf-ipl-right-centroid"
+      "spatial-representation:julich31-area-pf-ipl-right-centroid",
+      "spatial-representation:julich31-area-pf-ipl-right-mesh"
     ]
   },
   {
@@ -4267,7 +4318,8 @@
       "brain-region:julich-area-pf-ipl"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-pf-ipl-left-centroid"
+      "spatial-representation:julich31-area-pf-ipl-left-centroid",
+      "spatial-representation:julich31-area-pf-ipl-left-mesh"
     ]
   },
   {
@@ -4328,7 +4380,8 @@
       "brain-region:julich-area-pfcm-ipl"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-pfcm-ipl-right-centroid"
+      "spatial-representation:julich31-area-pfcm-ipl-right-centroid",
+      "spatial-representation:julich31-area-pfcm-ipl-right-mesh"
     ]
   },
   {
@@ -4360,7 +4413,8 @@
       "brain-region:julich-area-pfcm-ipl"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-pfcm-ipl-left-centroid"
+      "spatial-representation:julich31-area-pfcm-ipl-left-centroid",
+      "spatial-representation:julich31-area-pfcm-ipl-left-mesh"
     ]
   },
   {
@@ -4421,7 +4475,8 @@
       "brain-region:julich-area-pga-ipl"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-pga-ipl-right-centroid"
+      "spatial-representation:julich31-area-pga-ipl-right-centroid",
+      "spatial-representation:julich31-area-pga-ipl-right-mesh"
     ]
   },
   {
@@ -4453,7 +4508,8 @@
       "brain-region:julich-area-pga-ipl"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-pga-ipl-left-centroid"
+      "spatial-representation:julich31-area-pga-ipl-left-centroid",
+      "spatial-representation:julich31-area-pga-ipl-left-mesh"
     ]
   },
   {
@@ -4514,7 +4570,8 @@
       "brain-region:julich-area-pft-ipl"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-pft-ipl-right-centroid"
+      "spatial-representation:julich31-area-pft-ipl-right-centroid",
+      "spatial-representation:julich31-area-pft-ipl-right-mesh"
     ]
   },
   {
@@ -4546,7 +4603,8 @@
       "brain-region:julich-area-pft-ipl"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-pft-ipl-left-centroid"
+      "spatial-representation:julich31-area-pft-ipl-left-centroid",
+      "spatial-representation:julich31-area-pft-ipl-left-mesh"
     ]
   },
   {
@@ -4607,7 +4665,8 @@
       "brain-region:julich-area-pfm-ipl"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-pfm-ipl-right-centroid"
+      "spatial-representation:julich31-area-pfm-ipl-right-centroid",
+      "spatial-representation:julich31-area-pfm-ipl-right-mesh"
     ]
   },
   {
@@ -4639,7 +4698,8 @@
       "brain-region:julich-area-pfm-ipl"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-pfm-ipl-left-centroid"
+      "spatial-representation:julich31-area-pfm-ipl-left-centroid",
+      "spatial-representation:julich31-area-pfm-ipl-left-mesh"
     ]
   },
   {
@@ -4700,7 +4760,8 @@
       "brain-region:julich-area-pgp-ipl"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-pgp-ipl-right-centroid"
+      "spatial-representation:julich31-area-pgp-ipl-right-centroid",
+      "spatial-representation:julich31-area-pgp-ipl-right-mesh"
     ]
   },
   {
@@ -4732,7 +4793,8 @@
       "brain-region:julich-area-pgp-ipl"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-pgp-ipl-left-centroid"
+      "spatial-representation:julich31-area-pgp-ipl-left-centroid",
+      "spatial-representation:julich31-area-pgp-ipl-left-mesh"
     ]
   },
   {
@@ -4793,7 +4855,8 @@
       "brain-region:julich-area-pfop-ipl"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-pfop-ipl-right-centroid"
+      "spatial-representation:julich31-area-pfop-ipl-right-centroid",
+      "spatial-representation:julich31-area-pfop-ipl-right-mesh"
     ]
   },
   {
@@ -4825,7 +4888,8 @@
       "brain-region:julich-area-pfop-ipl"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-pfop-ipl-left-centroid"
+      "spatial-representation:julich31-area-pfop-ipl-left-centroid",
+      "spatial-representation:julich31-area-pfop-ipl-left-mesh"
     ]
   },
   {
@@ -4915,7 +4979,8 @@
       "brain-region:julich-area-hpo1-pos"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hpo1-pos-right-centroid"
+      "spatial-representation:julich31-area-hpo1-pos-right-centroid",
+      "spatial-representation:julich31-area-hpo1-pos-right-mesh"
     ]
   },
   {
@@ -4947,7 +5012,8 @@
       "brain-region:julich-area-hpo1-pos"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hpo1-pos-left-centroid"
+      "spatial-representation:julich31-area-hpo1-pos-left-centroid",
+      "spatial-representation:julich31-area-hpo1-pos-left-mesh"
     ]
   },
   {
@@ -5037,7 +5103,8 @@
       "brain-region:julich-area-hip1-ips"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hip1-ips-right-centroid"
+      "spatial-representation:julich31-area-hip1-ips-right-centroid",
+      "spatial-representation:julich31-area-hip1-ips-right-mesh"
     ]
   },
   {
@@ -5069,7 +5136,8 @@
       "brain-region:julich-area-hip1-ips"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hip1-ips-left-centroid"
+      "spatial-representation:julich31-area-hip1-ips-left-centroid",
+      "spatial-representation:julich31-area-hip1-ips-left-mesh"
     ]
   },
   {
@@ -5130,7 +5198,8 @@
       "brain-region:julich-area-hip7-ips"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hip7-ips-right-centroid"
+      "spatial-representation:julich31-area-hip7-ips-right-centroid",
+      "spatial-representation:julich31-area-hip7-ips-right-mesh"
     ]
   },
   {
@@ -5162,7 +5231,8 @@
       "brain-region:julich-area-hip7-ips"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hip7-ips-left-centroid"
+      "spatial-representation:julich31-area-hip7-ips-left-centroid",
+      "spatial-representation:julich31-area-hip7-ips-left-mesh"
     ]
   },
   {
@@ -5223,7 +5293,8 @@
       "brain-region:julich-area-hip3-ips"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hip3-ips-right-centroid"
+      "spatial-representation:julich31-area-hip3-ips-right-centroid",
+      "spatial-representation:julich31-area-hip3-ips-right-mesh"
     ]
   },
   {
@@ -5255,7 +5326,8 @@
       "brain-region:julich-area-hip3-ips"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hip3-ips-left-centroid"
+      "spatial-representation:julich31-area-hip3-ips-left-centroid",
+      "spatial-representation:julich31-area-hip3-ips-left-mesh"
     ]
   },
   {
@@ -5316,7 +5388,8 @@
       "brain-region:julich-area-hip2-ips"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hip2-ips-right-centroid"
+      "spatial-representation:julich31-area-hip2-ips-right-centroid",
+      "spatial-representation:julich31-area-hip2-ips-right-mesh"
     ]
   },
   {
@@ -5348,7 +5421,8 @@
       "brain-region:julich-area-hip2-ips"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hip2-ips-left-centroid"
+      "spatial-representation:julich31-area-hip2-ips-left-centroid",
+      "spatial-representation:julich31-area-hip2-ips-left-mesh"
     ]
   },
   {
@@ -5409,7 +5483,8 @@
       "brain-region:julich-area-hip4-ips"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hip4-ips-right-centroid"
+      "spatial-representation:julich31-area-hip4-ips-right-centroid",
+      "spatial-representation:julich31-area-hip4-ips-right-mesh"
     ]
   },
   {
@@ -5441,7 +5516,8 @@
       "brain-region:julich-area-hip4-ips"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hip4-ips-left-centroid"
+      "spatial-representation:julich31-area-hip4-ips-left-centroid",
+      "spatial-representation:julich31-area-hip4-ips-left-mesh"
     ]
   },
   {
@@ -5502,7 +5578,8 @@
       "brain-region:julich-area-hip5-ips"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hip5-ips-right-centroid"
+      "spatial-representation:julich31-area-hip5-ips-right-centroid",
+      "spatial-representation:julich31-area-hip5-ips-right-mesh"
     ]
   },
   {
@@ -5534,7 +5611,8 @@
       "brain-region:julich-area-hip5-ips"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hip5-ips-left-centroid"
+      "spatial-representation:julich31-area-hip5-ips-left-centroid",
+      "spatial-representation:julich31-area-hip5-ips-left-mesh"
     ]
   },
   {
@@ -5595,7 +5673,8 @@
       "brain-region:julich-area-hip6-ips"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hip6-ips-right-centroid"
+      "spatial-representation:julich31-area-hip6-ips-right-centroid",
+      "spatial-representation:julich31-area-hip6-ips-right-mesh"
     ]
   },
   {
@@ -5627,7 +5706,8 @@
       "brain-region:julich-area-hip6-ips"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hip6-ips-left-centroid"
+      "spatial-representation:julich31-area-hip6-ips-left-centroid",
+      "spatial-representation:julich31-area-hip6-ips-left-mesh"
     ]
   },
   {
@@ -5688,7 +5768,8 @@
       "brain-region:julich-area-hip8-ips"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hip8-ips-right-centroid"
+      "spatial-representation:julich31-area-hip8-ips-right-centroid",
+      "spatial-representation:julich31-area-hip8-ips-right-mesh"
     ]
   },
   {
@@ -5720,7 +5801,8 @@
       "brain-region:julich-area-hip8-ips"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hip8-ips-left-centroid"
+      "spatial-representation:julich31-area-hip8-ips-left-centroid",
+      "spatial-representation:julich31-area-hip8-ips-left-mesh"
     ]
   },
   {
@@ -5781,7 +5863,8 @@
       "brain-region:julich-frontal-to-occipital-gapmap"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-frontal-to-occipital-gapmap-right-centroid"
+      "spatial-representation:julich31-frontal-to-occipital-gapmap-right-centroid",
+      "spatial-representation:julich31-frontal-to-occipital-gapmap-right-mesh"
     ]
   },
   {
@@ -5813,7 +5896,8 @@
       "brain-region:julich-frontal-to-occipital-gapmap"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-frontal-to-occipital-gapmap-left-centroid"
+      "spatial-representation:julich31-frontal-to-occipital-gapmap-left-centroid",
+      "spatial-representation:julich31-frontal-to-occipital-gapmap-left-mesh"
     ]
   },
   {
@@ -5874,7 +5958,8 @@
       "brain-region:julich-temporal-to-parietal-gapmap"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-temporal-to-parietal-gapmap-right-centroid"
+      "spatial-representation:julich31-temporal-to-parietal-gapmap-right-centroid",
+      "spatial-representation:julich31-temporal-to-parietal-gapmap-right-mesh"
     ]
   },
   {
@@ -5906,7 +5991,8 @@
       "brain-region:julich-temporal-to-parietal-gapmap"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-temporal-to-parietal-gapmap-left-centroid"
+      "spatial-representation:julich31-temporal-to-parietal-gapmap-left-centroid",
+      "spatial-representation:julich31-temporal-to-parietal-gapmap-left-mesh"
     ]
   },
   {
@@ -5967,7 +6053,8 @@
       "brain-region:julich-frontal-i-2-gapmap"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-frontal-i-2-gapmap-right-centroid"
+      "spatial-representation:julich31-frontal-i-2-gapmap-right-centroid",
+      "spatial-representation:julich31-frontal-i-2-gapmap-right-mesh"
     ]
   },
   {
@@ -5999,7 +6086,8 @@
       "brain-region:julich-frontal-i-2-gapmap"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-frontal-i-2-gapmap-left-centroid"
+      "spatial-representation:julich31-frontal-i-2-gapmap-left-centroid",
+      "spatial-representation:julich31-frontal-i-2-gapmap-left-mesh"
     ]
   },
   {
@@ -6060,7 +6148,8 @@
       "brain-region:julich-frontal-to-temporal-ii-gapmap"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-frontal-to-temporal-ii-gapmap-right-centroid"
+      "spatial-representation:julich31-frontal-to-temporal-ii-gapmap-right-centroid",
+      "spatial-representation:julich31-frontal-to-temporal-ii-gapmap-right-mesh"
     ]
   },
   {
@@ -6092,7 +6181,8 @@
       "brain-region:julich-frontal-to-temporal-ii-gapmap"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-frontal-to-temporal-ii-gapmap-left-centroid"
+      "spatial-representation:julich31-frontal-to-temporal-ii-gapmap-left-centroid",
+      "spatial-representation:julich31-frontal-to-temporal-ii-gapmap-left-mesh"
     ]
   },
   {
@@ -6153,7 +6243,8 @@
       "brain-region:julich-frontal-i-1-gapmap"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-frontal-i-1-gapmap-right-centroid"
+      "spatial-representation:julich31-frontal-i-1-gapmap-right-centroid",
+      "spatial-representation:julich31-frontal-i-1-gapmap-right-mesh"
     ]
   },
   {
@@ -6185,7 +6276,8 @@
       "brain-region:julich-frontal-i-1-gapmap"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-frontal-i-1-gapmap-left-centroid"
+      "spatial-representation:julich31-frontal-i-1-gapmap-left-centroid",
+      "spatial-representation:julich31-frontal-i-1-gapmap-left-mesh"
     ]
   },
   {
@@ -6246,7 +6338,8 @@
       "brain-region:julich-frontal-to-temporal-i-gapmap"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-frontal-to-temporal-i-gapmap-right-centroid"
+      "spatial-representation:julich31-frontal-to-temporal-i-gapmap-right-centroid",
+      "spatial-representation:julich31-frontal-to-temporal-i-gapmap-right-mesh"
     ]
   },
   {
@@ -6278,7 +6371,8 @@
       "brain-region:julich-frontal-to-temporal-i-gapmap"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-frontal-to-temporal-i-gapmap-left-centroid"
+      "spatial-representation:julich31-frontal-to-temporal-i-gapmap-left-centroid",
+      "spatial-representation:julich31-frontal-to-temporal-i-gapmap-left-mesh"
     ]
   },
   {
@@ -6339,7 +6433,8 @@
       "brain-region:julich-frontal-ii-gapmap"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-frontal-ii-gapmap-right-centroid"
+      "spatial-representation:julich31-frontal-ii-gapmap-right-centroid",
+      "spatial-representation:julich31-frontal-ii-gapmap-right-mesh"
     ]
   },
   {
@@ -6371,7 +6466,8 @@
       "brain-region:julich-frontal-ii-gapmap"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-frontal-ii-gapmap-left-centroid"
+      "spatial-representation:julich31-frontal-ii-gapmap-left-centroid",
+      "spatial-representation:julich31-frontal-ii-gapmap-left-mesh"
     ]
   },
   {
@@ -6490,7 +6586,8 @@
       "brain-region:julich-area-6v3-precg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-6v3-precg-right-centroid"
+      "spatial-representation:julich31-area-6v3-precg-right-centroid",
+      "spatial-representation:julich31-area-6v3-precg-right-mesh"
     ]
   },
   {
@@ -6522,7 +6619,8 @@
       "brain-region:julich-area-6v3-precg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-6v3-precg-left-centroid"
+      "spatial-representation:julich31-area-6v3-precg-left-centroid",
+      "spatial-representation:julich31-area-6v3-precg-left-mesh"
     ]
   },
   {
@@ -6583,7 +6681,8 @@
       "brain-region:julich-area-6v2-precg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-6v2-precg-right-centroid"
+      "spatial-representation:julich31-area-6v2-precg-right-centroid",
+      "spatial-representation:julich31-area-6v2-precg-right-mesh"
     ]
   },
   {
@@ -6615,7 +6714,8 @@
       "brain-region:julich-area-6v2-precg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-6v2-precg-left-centroid"
+      "spatial-representation:julich31-area-6v2-precg-left-centroid",
+      "spatial-representation:julich31-area-6v2-precg-left-mesh"
     ]
   },
   {
@@ -6676,7 +6776,8 @@
       "brain-region:julich-area-6r1-precg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-6r1-precg-right-centroid"
+      "spatial-representation:julich31-area-6r1-precg-right-centroid",
+      "spatial-representation:julich31-area-6r1-precg-right-mesh"
     ]
   },
   {
@@ -6708,7 +6809,8 @@
       "brain-region:julich-area-6r1-precg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-6r1-precg-left-centroid"
+      "spatial-representation:julich31-area-6r1-precg-left-centroid",
+      "spatial-representation:julich31-area-6r1-precg-left-mesh"
     ]
   },
   {
@@ -6769,7 +6871,8 @@
       "brain-region:julich-area-6v1-precg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-6v1-precg-right-centroid"
+      "spatial-representation:julich31-area-6v1-precg-right-centroid",
+      "spatial-representation:julich31-area-6v1-precg-right-mesh"
     ]
   },
   {
@@ -6801,7 +6904,8 @@
       "brain-region:julich-area-6v1-precg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-6v1-precg-left-centroid"
+      "spatial-representation:julich31-area-6v1-precg-left-centroid",
+      "spatial-representation:julich31-area-6v1-precg-left-mesh"
     ]
   },
   {
@@ -6891,7 +6995,8 @@
       "brain-region:julich-area-6d2-precg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-6d2-precg-right-centroid"
+      "spatial-representation:julich31-area-6d2-precg-right-centroid",
+      "spatial-representation:julich31-area-6d2-precg-right-mesh"
     ]
   },
   {
@@ -6923,7 +7028,8 @@
       "brain-region:julich-area-6d2-precg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-6d2-precg-left-centroid"
+      "spatial-representation:julich31-area-6d2-precg-left-centroid",
+      "spatial-representation:julich31-area-6d2-precg-left-mesh"
     ]
   },
   {
@@ -6984,7 +7090,8 @@
       "brain-region:julich-area-6d1-precg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-6d1-precg-right-centroid"
+      "spatial-representation:julich31-area-6d1-precg-right-centroid",
+      "spatial-representation:julich31-area-6d1-precg-right-mesh"
     ]
   },
   {
@@ -7016,7 +7123,8 @@
       "brain-region:julich-area-6d1-precg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-6d1-precg-left-centroid"
+      "spatial-representation:julich31-area-6d1-precg-left-centroid",
+      "spatial-representation:julich31-area-6d1-precg-left-mesh"
     ]
   },
   {
@@ -7106,7 +7214,8 @@
       "brain-region:julich-area-6ma-presma-mesial-sfg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-6ma-presma-mesial-sfg-right-centroid"
+      "spatial-representation:julich31-area-6ma-presma-mesial-sfg-right-centroid",
+      "spatial-representation:julich31-area-6ma-presma-mesial-sfg-right-mesh"
     ]
   },
   {
@@ -7138,7 +7247,8 @@
       "brain-region:julich-area-6ma-presma-mesial-sfg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-6ma-presma-mesial-sfg-left-centroid"
+      "spatial-representation:julich31-area-6ma-presma-mesial-sfg-left-centroid",
+      "spatial-representation:julich31-area-6ma-presma-mesial-sfg-left-mesh"
     ]
   },
   {
@@ -7228,7 +7338,8 @@
       "brain-region:julich-area-fp1-fpole"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-fp1-fpole-right-centroid"
+      "spatial-representation:julich31-area-fp1-fpole-right-centroid",
+      "spatial-representation:julich31-area-fp1-fpole-right-mesh"
     ]
   },
   {
@@ -7260,7 +7371,8 @@
       "brain-region:julich-area-fp1-fpole"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-fp1-fpole-left-centroid"
+      "spatial-representation:julich31-area-fp1-fpole-left-centroid",
+      "spatial-representation:julich31-area-fp1-fpole-left-mesh"
     ]
   },
   {
@@ -7321,7 +7433,8 @@
       "brain-region:julich-area-fp2-fpole"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-fp2-fpole-right-centroid"
+      "spatial-representation:julich31-area-fp2-fpole-right-centroid",
+      "spatial-representation:julich31-area-fp2-fpole-right-mesh"
     ]
   },
   {
@@ -7353,7 +7466,8 @@
       "brain-region:julich-area-fp2-fpole"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-fp2-fpole-left-centroid"
+      "spatial-representation:julich31-area-fp2-fpole-left-centroid",
+      "spatial-representation:julich31-area-fp2-fpole-left-mesh"
     ]
   },
   {
@@ -7443,7 +7557,8 @@
       "brain-region:julich-area-6mp-sma-mesial-sfg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-6mp-sma-mesial-sfg-right-centroid"
+      "spatial-representation:julich31-area-6mp-sma-mesial-sfg-right-centroid",
+      "spatial-representation:julich31-area-6mp-sma-mesial-sfg-right-mesh"
     ]
   },
   {
@@ -7475,7 +7590,8 @@
       "brain-region:julich-area-6mp-sma-mesial-sfg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-6mp-sma-mesial-sfg-left-centroid"
+      "spatial-representation:julich31-area-6mp-sma-mesial-sfg-left-centroid",
+      "spatial-representation:julich31-area-6mp-sma-mesial-sfg-left-mesh"
     ]
   },
   {
@@ -7565,7 +7681,8 @@
       "brain-region:julich-area-fo1-ofc"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-fo1-ofc-right-centroid"
+      "spatial-representation:julich31-area-fo1-ofc-right-centroid",
+      "spatial-representation:julich31-area-fo1-ofc-right-mesh"
     ]
   },
   {
@@ -7597,7 +7714,8 @@
       "brain-region:julich-area-fo1-ofc"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-fo1-ofc-left-centroid"
+      "spatial-representation:julich31-area-fo1-ofc-left-centroid",
+      "spatial-representation:julich31-area-fo1-ofc-left-mesh"
     ]
   },
   {
@@ -7658,7 +7776,8 @@
       "brain-region:julich-area-fo3-ofc"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-fo3-ofc-right-centroid"
+      "spatial-representation:julich31-area-fo3-ofc-right-centroid",
+      "spatial-representation:julich31-area-fo3-ofc-right-mesh"
     ]
   },
   {
@@ -7690,7 +7809,8 @@
       "brain-region:julich-area-fo3-ofc"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-fo3-ofc-left-centroid"
+      "spatial-representation:julich31-area-fo3-ofc-left-centroid",
+      "spatial-representation:julich31-area-fo3-ofc-left-mesh"
     ]
   },
   {
@@ -7751,7 +7871,8 @@
       "brain-region:julich-area-fo2-ofc"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-fo2-ofc-right-centroid"
+      "spatial-representation:julich31-area-fo2-ofc-right-centroid",
+      "spatial-representation:julich31-area-fo2-ofc-right-mesh"
     ]
   },
   {
@@ -7783,7 +7904,8 @@
       "brain-region:julich-area-fo2-ofc"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-fo2-ofc-left-centroid"
+      "spatial-representation:julich31-area-fo2-ofc-left-centroid",
+      "spatial-representation:julich31-area-fo2-ofc-left-mesh"
     ]
   },
   {
@@ -7873,7 +7995,8 @@
       "brain-region:julich-area-4p-precg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-4p-precg-right-centroid"
+      "spatial-representation:julich31-area-4p-precg-right-centroid",
+      "spatial-representation:julich31-area-4p-precg-right-mesh"
     ]
   },
   {
@@ -7905,7 +8028,8 @@
       "brain-region:julich-area-4p-precg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-4p-precg-left-centroid"
+      "spatial-representation:julich31-area-4p-precg-left-centroid",
+      "spatial-representation:julich31-area-4p-precg-left-mesh"
     ]
   },
   {
@@ -7966,7 +8090,8 @@
       "brain-region:julich-area-4a-precg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-4a-precg-right-centroid"
+      "spatial-representation:julich31-area-4a-precg-right-centroid",
+      "spatial-representation:julich31-area-4a-precg-right-mesh"
     ]
   },
   {
@@ -7998,7 +8123,8 @@
       "brain-region:julich-area-4a-precg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-4a-precg-left-centroid"
+      "spatial-representation:julich31-area-4a-precg-left-centroid",
+      "spatial-representation:julich31-area-4a-precg-left-mesh"
     ]
   },
   {
@@ -8088,7 +8214,8 @@
       "brain-region:julich-area-op10-frontal-operculum"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-op10-frontal-operculum-right-centroid"
+      "spatial-representation:julich31-area-op10-frontal-operculum-right-centroid",
+      "spatial-representation:julich31-area-op10-frontal-operculum-right-mesh"
     ]
   },
   {
@@ -8120,7 +8247,8 @@
       "brain-region:julich-area-op10-frontal-operculum"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-op10-frontal-operculum-left-centroid"
+      "spatial-representation:julich31-area-op10-frontal-operculum-left-centroid",
+      "spatial-representation:julich31-area-op10-frontal-operculum-left-mesh"
     ]
   },
   {
@@ -8181,7 +8309,8 @@
       "brain-region:julich-area-op6-frontal-operculum"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-op6-frontal-operculum-right-centroid"
+      "spatial-representation:julich31-area-op6-frontal-operculum-right-centroid",
+      "spatial-representation:julich31-area-op6-frontal-operculum-right-mesh"
     ]
   },
   {
@@ -8213,7 +8342,8 @@
       "brain-region:julich-area-op6-frontal-operculum"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-op6-frontal-operculum-left-centroid"
+      "spatial-representation:julich31-area-op6-frontal-operculum-left-centroid",
+      "spatial-representation:julich31-area-op6-frontal-operculum-left-mesh"
     ]
   },
   {
@@ -8274,7 +8404,8 @@
       "brain-region:julich-area-op5-frontal-operculum"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-op5-frontal-operculum-right-centroid"
+      "spatial-representation:julich31-area-op5-frontal-operculum-right-centroid",
+      "spatial-representation:julich31-area-op5-frontal-operculum-right-mesh"
     ]
   },
   {
@@ -8306,7 +8437,8 @@
       "brain-region:julich-area-op5-frontal-operculum"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-op5-frontal-operculum-left-centroid"
+      "spatial-representation:julich31-area-op5-frontal-operculum-left-centroid",
+      "spatial-representation:julich31-area-op5-frontal-operculum-left-mesh"
     ]
   },
   {
@@ -8367,7 +8499,8 @@
       "brain-region:julich-area-op7-frontal-operculum"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-op7-frontal-operculum-right-centroid"
+      "spatial-representation:julich31-area-op7-frontal-operculum-right-centroid",
+      "spatial-representation:julich31-area-op7-frontal-operculum-right-mesh"
     ]
   },
   {
@@ -8399,7 +8532,8 @@
       "brain-region:julich-area-op7-frontal-operculum"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-op7-frontal-operculum-left-centroid"
+      "spatial-representation:julich31-area-op7-frontal-operculum-left-centroid",
+      "spatial-representation:julich31-area-op7-frontal-operculum-left-mesh"
     ]
   },
   {
@@ -8460,7 +8594,8 @@
       "brain-region:julich-area-op9-frontal-operculum"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-op9-frontal-operculum-right-centroid"
+      "spatial-representation:julich31-area-op9-frontal-operculum-right-centroid",
+      "spatial-representation:julich31-area-op9-frontal-operculum-right-mesh"
     ]
   },
   {
@@ -8492,7 +8627,8 @@
       "brain-region:julich-area-op9-frontal-operculum"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-op9-frontal-operculum-left-centroid"
+      "spatial-representation:julich31-area-op9-frontal-operculum-left-centroid",
+      "spatial-representation:julich31-area-op9-frontal-operculum-left-mesh"
     ]
   },
   {
@@ -8553,7 +8689,8 @@
       "brain-region:julich-area-op8-frontal-operculum"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-op8-frontal-operculum-right-centroid"
+      "spatial-representation:julich31-area-op8-frontal-operculum-right-centroid",
+      "spatial-representation:julich31-area-op8-frontal-operculum-right-mesh"
     ]
   },
   {
@@ -8585,7 +8722,8 @@
       "brain-region:julich-area-op8-frontal-operculum"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-op8-frontal-operculum-left-centroid"
+      "spatial-representation:julich31-area-op8-frontal-operculum-left-centroid",
+      "spatial-representation:julich31-area-op8-frontal-operculum-left-mesh"
     ]
   },
   {
@@ -8675,7 +8813,8 @@
       "brain-region:julich-area-ifs4-ifs"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ifs4-ifs-right-centroid"
+      "spatial-representation:julich31-area-ifs4-ifs-right-centroid",
+      "spatial-representation:julich31-area-ifs4-ifs-right-mesh"
     ]
   },
   {
@@ -8707,7 +8846,8 @@
       "brain-region:julich-area-ifs4-ifs"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ifs4-ifs-left-centroid"
+      "spatial-representation:julich31-area-ifs4-ifs-left-centroid",
+      "spatial-representation:julich31-area-ifs4-ifs-left-mesh"
     ]
   },
   {
@@ -8768,7 +8908,8 @@
       "brain-region:julich-area-ifs2-ifs"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ifs2-ifs-right-centroid"
+      "spatial-representation:julich31-area-ifs2-ifs-right-centroid",
+      "spatial-representation:julich31-area-ifs2-ifs-right-mesh"
     ]
   },
   {
@@ -8800,7 +8941,8 @@
       "brain-region:julich-area-ifs2-ifs"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ifs2-ifs-left-centroid"
+      "spatial-representation:julich31-area-ifs2-ifs-left-centroid",
+      "spatial-representation:julich31-area-ifs2-ifs-left-mesh"
     ]
   },
   {
@@ -8861,7 +9003,8 @@
       "brain-region:julich-area-ifs1-ifs"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ifs1-ifs-right-centroid"
+      "spatial-representation:julich31-area-ifs1-ifs-right-centroid",
+      "spatial-representation:julich31-area-ifs1-ifs-right-mesh"
     ]
   },
   {
@@ -8893,7 +9036,8 @@
       "brain-region:julich-area-ifs1-ifs"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ifs1-ifs-left-centroid"
+      "spatial-representation:julich31-area-ifs1-ifs-left-centroid",
+      "spatial-representation:julich31-area-ifs1-ifs-left-mesh"
     ]
   },
   {
@@ -8954,7 +9098,8 @@
       "brain-region:julich-area-ifj2-ifs-precs"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ifj2-ifs-precs-right-centroid"
+      "spatial-representation:julich31-area-ifj2-ifs-precs-right-centroid",
+      "spatial-representation:julich31-area-ifj2-ifs-precs-right-mesh"
     ]
   },
   {
@@ -8986,7 +9131,8 @@
       "brain-region:julich-area-ifj2-ifs-precs"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ifj2-ifs-precs-left-centroid"
+      "spatial-representation:julich31-area-ifj2-ifs-precs-left-centroid",
+      "spatial-representation:julich31-area-ifj2-ifs-precs-left-mesh"
     ]
   },
   {
@@ -9047,7 +9193,8 @@
       "brain-region:julich-area-ifs3-ifs"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ifs3-ifs-right-centroid"
+      "spatial-representation:julich31-area-ifs3-ifs-right-centroid",
+      "spatial-representation:julich31-area-ifs3-ifs-right-mesh"
     ]
   },
   {
@@ -9079,7 +9226,8 @@
       "brain-region:julich-area-ifs3-ifs"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ifs3-ifs-left-centroid"
+      "spatial-representation:julich31-area-ifs3-ifs-left-centroid",
+      "spatial-representation:julich31-area-ifs3-ifs-left-mesh"
     ]
   },
   {
@@ -9140,7 +9288,8 @@
       "brain-region:julich-area-ifj1-ifs-precs"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ifj1-ifs-precs-right-centroid"
+      "spatial-representation:julich31-area-ifj1-ifs-precs-right-centroid",
+      "spatial-representation:julich31-area-ifj1-ifs-precs-right-mesh"
     ]
   },
   {
@@ -9172,7 +9321,8 @@
       "brain-region:julich-area-ifj1-ifs-precs"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ifj1-ifs-precs-left-centroid"
+      "spatial-representation:julich31-area-ifj1-ifs-precs-left-centroid",
+      "spatial-representation:julich31-area-ifj1-ifs-precs-left-mesh"
     ]
   },
   {
@@ -9262,7 +9412,8 @@
       "brain-region:julich-area-mfg2-mfg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-mfg2-mfg-right-centroid"
+      "spatial-representation:julich31-area-mfg2-mfg-right-centroid",
+      "spatial-representation:julich31-area-mfg2-mfg-right-mesh"
     ]
   },
   {
@@ -9294,7 +9445,8 @@
       "brain-region:julich-area-mfg2-mfg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-mfg2-mfg-left-centroid"
+      "spatial-representation:julich31-area-mfg2-mfg-left-centroid",
+      "spatial-representation:julich31-area-mfg2-mfg-left-mesh"
     ]
   },
   {
@@ -9384,7 +9536,8 @@
       "brain-region:julich-area-44-ifg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-44-ifg-right-centroid"
+      "spatial-representation:julich31-area-44-ifg-right-centroid",
+      "spatial-representation:julich31-area-44-ifg-right-mesh"
     ]
   },
   {
@@ -9416,7 +9569,8 @@
       "brain-region:julich-area-44-ifg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-44-ifg-left-centroid"
+      "spatial-representation:julich31-area-44-ifg-left-centroid",
+      "spatial-representation:julich31-area-44-ifg-left-mesh"
     ]
   },
   {
@@ -9477,7 +9631,8 @@
       "brain-region:julich-area-45-ifg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-45-ifg-right-centroid"
+      "spatial-representation:julich31-area-45-ifg-right-centroid",
+      "spatial-representation:julich31-area-45-ifg-right-mesh"
     ]
   },
   {
@@ -9509,7 +9664,8 @@
       "brain-region:julich-area-45-ifg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-45-ifg-left-centroid"
+      "spatial-representation:julich31-area-45-ifg-left-centroid",
+      "spatial-representation:julich31-area-45-ifg-left-mesh"
     ]
   },
   {
@@ -9599,7 +9755,8 @@
       "brain-region:julich-area-8v2-mfg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-8v2-mfg-right-centroid"
+      "spatial-representation:julich31-area-8v2-mfg-right-centroid",
+      "spatial-representation:julich31-area-8v2-mfg-right-mesh"
     ]
   },
   {
@@ -9631,7 +9788,8 @@
       "brain-region:julich-area-8v2-mfg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-8v2-mfg-left-centroid"
+      "spatial-representation:julich31-area-8v2-mfg-left-centroid",
+      "spatial-representation:julich31-area-8v2-mfg-left-mesh"
     ]
   },
   {
@@ -9692,7 +9850,8 @@
       "brain-region:julich-area-8v1-mfg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-8v1-mfg-right-centroid"
+      "spatial-representation:julich31-area-8v1-mfg-right-centroid",
+      "spatial-representation:julich31-area-8v1-mfg-right-mesh"
     ]
   },
   {
@@ -9724,7 +9883,8 @@
       "brain-region:julich-area-8v1-mfg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-8v1-mfg-left-centroid"
+      "spatial-representation:julich31-area-8v1-mfg-left-centroid",
+      "spatial-representation:julich31-area-8v1-mfg-left-mesh"
     ]
   },
   {
@@ -9785,7 +9945,8 @@
       "brain-region:julich-area-mfg4-mfg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-mfg4-mfg-right-centroid"
+      "spatial-representation:julich31-area-mfg4-mfg-right-centroid",
+      "spatial-representation:julich31-area-mfg4-mfg-right-mesh"
     ]
   },
   {
@@ -9817,7 +9978,8 @@
       "brain-region:julich-area-mfg4-mfg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-mfg4-mfg-left-centroid"
+      "spatial-representation:julich31-area-mfg4-mfg-left-centroid",
+      "spatial-representation:julich31-area-mfg4-mfg-left-mesh"
     ]
   },
   {
@@ -9878,7 +10040,8 @@
       "brain-region:julich-area-mfg1-mfg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-mfg1-mfg-right-centroid"
+      "spatial-representation:julich31-area-mfg1-mfg-right-centroid",
+      "spatial-representation:julich31-area-mfg1-mfg-right-mesh"
     ]
   },
   {
@@ -9910,7 +10073,8 @@
       "brain-region:julich-area-mfg1-mfg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-mfg1-mfg-left-centroid"
+      "spatial-representation:julich31-area-mfg1-mfg-left-centroid",
+      "spatial-representation:julich31-area-mfg1-mfg-left-mesh"
     ]
   },
   {
@@ -10000,7 +10164,8 @@
       "brain-region:julich-area-sfs2-sfs"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-sfs2-sfs-right-centroid"
+      "spatial-representation:julich31-area-sfs2-sfs-right-centroid",
+      "spatial-representation:julich31-area-sfs2-sfs-right-mesh"
     ]
   },
   {
@@ -10032,7 +10197,8 @@
       "brain-region:julich-area-sfs2-sfs"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-sfs2-sfs-left-centroid"
+      "spatial-representation:julich31-area-sfs2-sfs-left-centroid",
+      "spatial-representation:julich31-area-sfs2-sfs-left-mesh"
     ]
   },
   {
@@ -10093,7 +10259,8 @@
       "brain-region:julich-area-6d3-sfs"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-6d3-sfs-right-centroid"
+      "spatial-representation:julich31-area-6d3-sfs-right-centroid",
+      "spatial-representation:julich31-area-6d3-sfs-right-mesh"
     ]
   },
   {
@@ -10125,7 +10292,8 @@
       "brain-region:julich-area-6d3-sfs"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-6d3-sfs-left-centroid"
+      "spatial-representation:julich31-area-6d3-sfs-left-centroid",
+      "spatial-representation:julich31-area-6d3-sfs-left-mesh"
     ]
   },
   {
@@ -10186,7 +10354,8 @@
       "brain-region:julich-area-sfs1-sfs"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-sfs1-sfs-right-centroid"
+      "spatial-representation:julich31-area-sfs1-sfs-right-centroid",
+      "spatial-representation:julich31-area-sfs1-sfs-right-mesh"
     ]
   },
   {
@@ -10218,7 +10387,8 @@
       "brain-region:julich-area-sfs1-sfs"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-sfs1-sfs-left-centroid"
+      "spatial-representation:julich31-area-sfs1-sfs-left-centroid",
+      "spatial-representation:julich31-area-sfs1-sfs-left-mesh"
     ]
   },
   {
@@ -10279,7 +10449,8 @@
       "brain-region:julich-area-sfg3-sfg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-sfg3-sfg-right-centroid"
+      "spatial-representation:julich31-area-sfg3-sfg-right-centroid",
+      "spatial-representation:julich31-area-sfg3-sfg-right-mesh"
     ]
   },
   {
@@ -10311,7 +10482,8 @@
       "brain-region:julich-area-sfg3-sfg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-sfg3-sfg-left-centroid"
+      "spatial-representation:julich31-area-sfg3-sfg-left-centroid",
+      "spatial-representation:julich31-area-sfg3-sfg-left-mesh"
     ]
   },
   {
@@ -10401,7 +10573,8 @@
       "brain-region:julich-area-mfg5-mfg-ifg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-mfg5-mfg-ifg-right-centroid"
+      "spatial-representation:julich31-area-mfg5-mfg-ifg-right-centroid",
+      "spatial-representation:julich31-area-mfg5-mfg-ifg-right-mesh"
     ]
   },
   {
@@ -10433,7 +10606,8 @@
       "brain-region:julich-area-mfg5-mfg-ifg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-mfg5-mfg-ifg-left-centroid"
+      "spatial-representation:julich31-area-mfg5-mfg-ifg-left-centroid",
+      "spatial-representation:julich31-area-mfg5-mfg-ifg-left-mesh"
     ]
   },
   {
@@ -10523,7 +10697,8 @@
       "brain-region:julich-area-sfg2-sfg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-sfg2-sfg-right-centroid"
+      "spatial-representation:julich31-area-sfg2-sfg-right-centroid",
+      "spatial-representation:julich31-area-sfg2-sfg-right-mesh"
     ]
   },
   {
@@ -10555,7 +10730,8 @@
       "brain-region:julich-area-sfg2-sfg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-sfg2-sfg-left-centroid"
+      "spatial-representation:julich31-area-sfg2-sfg-left-centroid",
+      "spatial-representation:julich31-area-sfg2-sfg-left-mesh"
     ]
   },
   {
@@ -10616,7 +10792,8 @@
       "brain-region:julich-area-8d2-sfg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-8d2-sfg-right-centroid"
+      "spatial-representation:julich31-area-8d2-sfg-right-centroid",
+      "spatial-representation:julich31-area-8d2-sfg-right-mesh"
     ]
   },
   {
@@ -10648,7 +10825,8 @@
       "brain-region:julich-area-8d2-sfg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-8d2-sfg-left-centroid"
+      "spatial-representation:julich31-area-8d2-sfg-left-centroid",
+      "spatial-representation:julich31-area-8d2-sfg-left-mesh"
     ]
   },
   {
@@ -10709,7 +10887,8 @@
       "brain-region:julich-area-8d1-sfg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-8d1-sfg-right-centroid"
+      "spatial-representation:julich31-area-8d1-sfg-right-centroid",
+      "spatial-representation:julich31-area-8d1-sfg-right-mesh"
     ]
   },
   {
@@ -10741,7 +10920,8 @@
       "brain-region:julich-area-8d1-sfg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-8d1-sfg-left-centroid"
+      "spatial-representation:julich31-area-8d1-sfg-left-centroid",
+      "spatial-representation:julich31-area-8d1-sfg-left-mesh"
     ]
   },
   {
@@ -10802,7 +10982,8 @@
       "brain-region:julich-area-sfg4-sfg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-sfg4-sfg-right-centroid"
+      "spatial-representation:julich31-area-sfg4-sfg-right-centroid",
+      "spatial-representation:julich31-area-sfg4-sfg-right-mesh"
     ]
   },
   {
@@ -10834,7 +11015,8 @@
       "brain-region:julich-area-sfg4-sfg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-sfg4-sfg-left-centroid"
+      "spatial-representation:julich31-area-sfg4-sfg-left-centroid",
+      "spatial-representation:julich31-area-sfg4-sfg-left-mesh"
     ]
   },
   {
@@ -10924,7 +11106,8 @@
       "brain-region:julich-area-fo6-ofc"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-fo6-ofc-right-centroid"
+      "spatial-representation:julich31-area-fo6-ofc-right-centroid",
+      "spatial-representation:julich31-area-fo6-ofc-right-mesh"
     ]
   },
   {
@@ -10956,7 +11139,8 @@
       "brain-region:julich-area-fo6-ofc"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-fo6-ofc-left-centroid"
+      "spatial-representation:julich31-area-fo6-ofc-left-centroid",
+      "spatial-representation:julich31-area-fo6-ofc-left-mesh"
     ]
   },
   {
@@ -11017,7 +11201,8 @@
       "brain-region:julich-area-fo5-ofc"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-fo5-ofc-right-centroid"
+      "spatial-representation:julich31-area-fo5-ofc-right-centroid",
+      "spatial-representation:julich31-area-fo5-ofc-right-mesh"
     ]
   },
   {
@@ -11049,7 +11234,8 @@
       "brain-region:julich-area-fo5-ofc"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-fo5-ofc-left-centroid"
+      "spatial-representation:julich31-area-fo5-ofc-left-centroid",
+      "spatial-representation:julich31-area-fo5-ofc-left-mesh"
     ]
   },
   {
@@ -11110,7 +11296,8 @@
       "brain-region:julich-area-fo7-ofc"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-fo7-ofc-right-centroid"
+      "spatial-representation:julich31-area-fo7-ofc-right-centroid",
+      "spatial-representation:julich31-area-fo7-ofc-right-mesh"
     ]
   },
   {
@@ -11142,7 +11329,8 @@
       "brain-region:julich-area-fo7-ofc"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-fo7-ofc-left-centroid"
+      "spatial-representation:julich31-area-fo7-ofc-left-centroid",
+      "spatial-representation:julich31-area-fo7-ofc-left-mesh"
     ]
   },
   {
@@ -11203,7 +11391,8 @@
       "brain-region:julich-area-fo4-ofc"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-fo4-ofc-right-centroid"
+      "spatial-representation:julich31-area-fo4-ofc-right-centroid",
+      "spatial-representation:julich31-area-fo4-ofc-right-mesh"
     ]
   },
   {
@@ -11235,7 +11424,8 @@
       "brain-region:julich-area-fo4-ofc"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-fo4-ofc-left-centroid"
+      "spatial-representation:julich31-area-fo4-ofc-left-centroid",
+      "spatial-representation:julich31-area-fo4-ofc-left-mesh"
     ]
   },
   {
@@ -11354,7 +11544,8 @@
       "brain-region:julich-area-ig3-insula"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ig3-insula-right-centroid"
+      "spatial-representation:julich31-area-ig3-insula-right-centroid",
+      "spatial-representation:julich31-area-ig3-insula-right-mesh"
     ]
   },
   {
@@ -11386,7 +11577,8 @@
       "brain-region:julich-area-ig3-insula"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ig3-insula-left-centroid"
+      "spatial-representation:julich31-area-ig3-insula-left-centroid",
+      "spatial-representation:julich31-area-ig3-insula-left-mesh"
     ]
   },
   {
@@ -11447,7 +11639,8 @@
       "brain-region:julich-area-ig1-insula"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ig1-insula-right-centroid"
+      "spatial-representation:julich31-area-ig1-insula-right-centroid",
+      "spatial-representation:julich31-area-ig1-insula-right-mesh"
     ]
   },
   {
@@ -11479,7 +11672,8 @@
       "brain-region:julich-area-ig1-insula"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ig1-insula-left-centroid"
+      "spatial-representation:julich31-area-ig1-insula-left-centroid",
+      "spatial-representation:julich31-area-ig1-insula-left-mesh"
     ]
   },
   {
@@ -11540,7 +11734,8 @@
       "brain-region:julich-area-ig2-insula"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ig2-insula-right-centroid"
+      "spatial-representation:julich31-area-ig2-insula-right-centroid",
+      "spatial-representation:julich31-area-ig2-insula-right-mesh"
     ]
   },
   {
@@ -11572,7 +11767,8 @@
       "brain-region:julich-area-ig2-insula"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ig2-insula-left-centroid"
+      "spatial-representation:julich31-area-ig2-insula-left-centroid",
+      "spatial-representation:julich31-area-ig2-insula-left-mesh"
     ]
   },
   {
@@ -11662,7 +11858,8 @@
       "brain-region:julich-area-ia2-insula"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ia2-insula-right-centroid"
+      "spatial-representation:julich31-area-ia2-insula-right-centroid",
+      "spatial-representation:julich31-area-ia2-insula-right-mesh"
     ]
   },
   {
@@ -11694,7 +11891,8 @@
       "brain-region:julich-area-ia2-insula"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ia2-insula-left-centroid"
+      "spatial-representation:julich31-area-ia2-insula-left-centroid",
+      "spatial-representation:julich31-area-ia2-insula-left-mesh"
     ]
   },
   {
@@ -11755,7 +11953,8 @@
       "brain-region:julich-area-ia1-insula"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ia1-insula-right-centroid"
+      "spatial-representation:julich31-area-ia1-insula-right-centroid",
+      "spatial-representation:julich31-area-ia1-insula-right-mesh"
     ]
   },
   {
@@ -11787,7 +11986,8 @@
       "brain-region:julich-area-ia1-insula"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ia1-insula-left-centroid"
+      "spatial-representation:julich31-area-ia1-insula-left-centroid",
+      "spatial-representation:julich31-area-ia1-insula-left-mesh"
     ]
   },
   {
@@ -11848,7 +12048,8 @@
       "brain-region:julich-area-ia3-insula"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ia3-insula-right-centroid"
+      "spatial-representation:julich31-area-ia3-insula-right-centroid",
+      "spatial-representation:julich31-area-ia3-insula-right-mesh"
     ]
   },
   {
@@ -11880,7 +12081,8 @@
       "brain-region:julich-area-ia3-insula"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ia3-insula-left-centroid"
+      "spatial-representation:julich31-area-ia3-insula-left-centroid",
+      "spatial-representation:julich31-area-ia3-insula-left-mesh"
     ]
   },
   {
@@ -11970,7 +12172,8 @@
       "brain-region:julich-area-id2-insula"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-id2-insula-right-centroid"
+      "spatial-representation:julich31-area-id2-insula-right-centroid",
+      "spatial-representation:julich31-area-id2-insula-right-mesh"
     ]
   },
   {
@@ -12002,7 +12205,8 @@
       "brain-region:julich-area-id2-insula"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-id2-insula-left-centroid"
+      "spatial-representation:julich31-area-id2-insula-left-centroid",
+      "spatial-representation:julich31-area-id2-insula-left-mesh"
     ]
   },
   {
@@ -12063,7 +12267,8 @@
       "brain-region:julich-area-id8-insula"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-id8-insula-right-centroid"
+      "spatial-representation:julich31-area-id8-insula-right-centroid",
+      "spatial-representation:julich31-area-id8-insula-right-mesh"
     ]
   },
   {
@@ -12095,7 +12300,8 @@
       "brain-region:julich-area-id8-insula"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-id8-insula-left-centroid"
+      "spatial-representation:julich31-area-id8-insula-left-centroid",
+      "spatial-representation:julich31-area-id8-insula-left-mesh"
     ]
   },
   {
@@ -12156,7 +12362,8 @@
       "brain-region:julich-area-id1-insula"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-id1-insula-right-centroid"
+      "spatial-representation:julich31-area-id1-insula-right-centroid",
+      "spatial-representation:julich31-area-id1-insula-right-mesh"
     ]
   },
   {
@@ -12188,7 +12395,8 @@
       "brain-region:julich-area-id1-insula"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-id1-insula-left-centroid"
+      "spatial-representation:julich31-area-id1-insula-left-centroid",
+      "spatial-representation:julich31-area-id1-insula-left-mesh"
     ]
   },
   {
@@ -12249,7 +12457,8 @@
       "brain-region:julich-area-id9-insula"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-id9-insula-right-centroid"
+      "spatial-representation:julich31-area-id9-insula-right-centroid",
+      "spatial-representation:julich31-area-id9-insula-right-mesh"
     ]
   },
   {
@@ -12281,7 +12490,8 @@
       "brain-region:julich-area-id9-insula"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-id9-insula-left-centroid"
+      "spatial-representation:julich31-area-id9-insula-left-centroid",
+      "spatial-representation:julich31-area-id9-insula-left-mesh"
     ]
   },
   {
@@ -12342,7 +12552,8 @@
       "brain-region:julich-area-id7-insula"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-id7-insula-right-centroid"
+      "spatial-representation:julich31-area-id7-insula-right-centroid",
+      "spatial-representation:julich31-area-id7-insula-right-mesh"
     ]
   },
   {
@@ -12374,7 +12585,8 @@
       "brain-region:julich-area-id7-insula"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-id7-insula-left-centroid"
+      "spatial-representation:julich31-area-id7-insula-left-centroid",
+      "spatial-representation:julich31-area-id7-insula-left-mesh"
     ]
   },
   {
@@ -12435,7 +12647,8 @@
       "brain-region:julich-area-id5-insula"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-id5-insula-right-centroid"
+      "spatial-representation:julich31-area-id5-insula-right-centroid",
+      "spatial-representation:julich31-area-id5-insula-right-mesh"
     ]
   },
   {
@@ -12467,7 +12680,8 @@
       "brain-region:julich-area-id5-insula"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-id5-insula-left-centroid"
+      "spatial-representation:julich31-area-id5-insula-left-centroid",
+      "spatial-representation:julich31-area-id5-insula-left-mesh"
     ]
   },
   {
@@ -12528,7 +12742,8 @@
       "brain-region:julich-area-id6-insula"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-id6-insula-right-centroid"
+      "spatial-representation:julich31-area-id6-insula-right-centroid",
+      "spatial-representation:julich31-area-id6-insula-right-mesh"
     ]
   },
   {
@@ -12560,7 +12775,8 @@
       "brain-region:julich-area-id6-insula"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-id6-insula-left-centroid"
+      "spatial-representation:julich31-area-id6-insula-left-centroid",
+      "spatial-representation:julich31-area-id6-insula-left-mesh"
     ]
   },
   {
@@ -12621,7 +12837,8 @@
       "brain-region:julich-area-id10-insula"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-id10-insula-right-centroid"
+      "spatial-representation:julich31-area-id10-insula-right-centroid",
+      "spatial-representation:julich31-area-id10-insula-right-mesh"
     ]
   },
   {
@@ -12653,7 +12870,8 @@
       "brain-region:julich-area-id10-insula"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-id10-insula-left-centroid"
+      "spatial-representation:julich31-area-id10-insula-left-centroid",
+      "spatial-representation:julich31-area-id10-insula-left-mesh"
     ]
   },
   {
@@ -12714,7 +12932,8 @@
       "brain-region:julich-area-id4-insula"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-id4-insula-right-centroid"
+      "spatial-representation:julich31-area-id4-insula-right-centroid",
+      "spatial-representation:julich31-area-id4-insula-right-mesh"
     ]
   },
   {
@@ -12746,7 +12965,8 @@
       "brain-region:julich-area-id4-insula"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-id4-insula-left-centroid"
+      "spatial-representation:julich31-area-id4-insula-left-centroid",
+      "spatial-representation:julich31-area-id4-insula-left-mesh"
     ]
   },
   {
@@ -12807,7 +13027,8 @@
       "brain-region:julich-area-id3-insula"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-id3-insula-right-centroid"
+      "spatial-representation:julich31-area-id3-insula-right-centroid",
+      "spatial-representation:julich31-area-id3-insula-right-mesh"
     ]
   },
   {
@@ -12839,7 +13060,8 @@
       "brain-region:julich-area-id3-insula"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-id3-insula-left-centroid"
+      "spatial-representation:julich31-area-id3-insula-left-centroid",
+      "spatial-representation:julich31-area-id3-insula-left-mesh"
     ]
   },
   {
@@ -12958,7 +13180,8 @@
       "brain-region:julich-area-sts2-sts"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-sts2-sts-right-centroid"
+      "spatial-representation:julich31-area-sts2-sts-right-centroid",
+      "spatial-representation:julich31-area-sts2-sts-right-mesh"
     ]
   },
   {
@@ -12990,7 +13213,8 @@
       "brain-region:julich-area-sts2-sts"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-sts2-sts-left-centroid"
+      "spatial-representation:julich31-area-sts2-sts-left-centroid",
+      "spatial-representation:julich31-area-sts2-sts-left-mesh"
     ]
   },
   {
@@ -13051,7 +13275,8 @@
       "brain-region:julich-area-sts1-sts"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-sts1-sts-right-centroid"
+      "spatial-representation:julich31-area-sts1-sts-right-centroid",
+      "spatial-representation:julich31-area-sts1-sts-right-mesh"
     ]
   },
   {
@@ -13083,7 +13308,8 @@
       "brain-region:julich-area-sts1-sts"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-sts1-sts-left-centroid"
+      "spatial-representation:julich31-area-sts1-sts-left-centroid",
+      "spatial-representation:julich31-area-sts1-sts-left-mesh"
     ]
   },
   {
@@ -13173,7 +13399,8 @@
       "brain-region:julich-area-ots1-ots"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ots1-ots-right-centroid"
+      "spatial-representation:julich31-area-ots1-ots-right-centroid",
+      "spatial-representation:julich31-area-ots1-ots-right-mesh"
     ]
   },
   {
@@ -13205,7 +13432,8 @@
       "brain-region:julich-area-ots1-ots"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ots1-ots-left-centroid"
+      "spatial-representation:julich31-area-ots1-ots-left-centroid",
+      "spatial-representation:julich31-area-ots1-ots-left-mesh"
     ]
   },
   {
@@ -13295,7 +13523,8 @@
       "brain-region:julich-area-te-3-stg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-te-3-stg-right-centroid"
+      "spatial-representation:julich31-area-te-3-stg-right-centroid",
+      "spatial-representation:julich31-area-te-3-stg-right-mesh"
     ]
   },
   {
@@ -13327,7 +13556,8 @@
       "brain-region:julich-area-te-3-stg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-te-3-stg-left-centroid"
+      "spatial-representation:julich31-area-te-3-stg-left-centroid",
+      "spatial-representation:julich31-area-te-3-stg-left-mesh"
     ]
   },
   {
@@ -13388,7 +13618,8 @@
       "brain-region:julich-area-te-2-2-stg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-te-2-2-stg-right-centroid"
+      "spatial-representation:julich31-area-te-2-2-stg-right-centroid",
+      "spatial-representation:julich31-area-te-2-2-stg-right-mesh"
     ]
   },
   {
@@ -13420,7 +13651,8 @@
       "brain-region:julich-area-te-2-2-stg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-te-2-2-stg-left-centroid"
+      "spatial-representation:julich31-area-te-2-2-stg-left-centroid",
+      "spatial-representation:julich31-area-te-2-2-stg-left-mesh"
     ]
   },
   {
@@ -13481,7 +13713,8 @@
       "brain-region:julich-area-te-2-1-stg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-te-2-1-stg-right-centroid"
+      "spatial-representation:julich31-area-te-2-1-stg-right-centroid",
+      "spatial-representation:julich31-area-te-2-1-stg-right-mesh"
     ]
   },
   {
@@ -13513,7 +13746,8 @@
       "brain-region:julich-area-te-2-1-stg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-te-2-1-stg-left-centroid"
+      "spatial-representation:julich31-area-te-2-1-stg-left-centroid",
+      "spatial-representation:julich31-area-te-2-1-stg-left-mesh"
     ]
   },
   {
@@ -13603,7 +13837,8 @@
       "brain-region:julich-area-te-1-1-heschl"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-te-1-1-heschl-right-centroid"
+      "spatial-representation:julich31-area-te-1-1-heschl-right-centroid",
+      "spatial-representation:julich31-area-te-1-1-heschl-right-mesh"
     ]
   },
   {
@@ -13635,7 +13870,8 @@
       "brain-region:julich-area-te-1-1-heschl"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-te-1-1-heschl-left-centroid"
+      "spatial-representation:julich31-area-te-1-1-heschl-left-centroid",
+      "spatial-representation:julich31-area-te-1-1-heschl-left-mesh"
     ]
   },
   {
@@ -13696,7 +13932,8 @@
       "brain-region:julich-area-te-1-2-heschl"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-te-1-2-heschl-right-centroid"
+      "spatial-representation:julich31-area-te-1-2-heschl-right-centroid",
+      "spatial-representation:julich31-area-te-1-2-heschl-right-mesh"
     ]
   },
   {
@@ -13728,7 +13965,8 @@
       "brain-region:julich-area-te-1-2-heschl"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-te-1-2-heschl-left-centroid"
+      "spatial-representation:julich31-area-te-1-2-heschl-left-centroid",
+      "spatial-representation:julich31-area-te-1-2-heschl-left-mesh"
     ]
   },
   {
@@ -13789,7 +14027,8 @@
       "brain-region:julich-area-te-1-0-heschl"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-te-1-0-heschl-right-centroid"
+      "spatial-representation:julich31-area-te-1-0-heschl-right-centroid",
+      "spatial-representation:julich31-area-te-1-0-heschl-right-mesh"
     ]
   },
   {
@@ -13821,7 +14060,8 @@
       "brain-region:julich-area-te-1-0-heschl"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-te-1-0-heschl-left-centroid"
+      "spatial-representation:julich31-area-te-1-0-heschl-left-centroid",
+      "spatial-representation:julich31-area-te-1-0-heschl-left-mesh"
     ]
   },
   {
@@ -13911,7 +14151,8 @@
       "brain-region:julich-area-ph1-phg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ph1-phg-right-centroid"
+      "spatial-representation:julich31-area-ph1-phg-right-centroid",
+      "spatial-representation:julich31-area-ph1-phg-right-mesh"
     ]
   },
   {
@@ -13943,7 +14184,8 @@
       "brain-region:julich-area-ph1-phg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ph1-phg-left-centroid"
+      "spatial-representation:julich31-area-ph1-phg-left-centroid",
+      "spatial-representation:julich31-area-ph1-phg-left-mesh"
     ]
   },
   {
@@ -14004,7 +14246,8 @@
       "brain-region:julich-area-ph2-phg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ph2-phg-right-centroid"
+      "spatial-representation:julich31-area-ph2-phg-right-centroid",
+      "spatial-representation:julich31-area-ph2-phg-right-mesh"
     ]
   },
   {
@@ -14036,7 +14279,8 @@
       "brain-region:julich-area-ph2-phg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ph2-phg-left-centroid"
+      "spatial-representation:julich31-area-ph2-phg-left-centroid",
+      "spatial-representation:julich31-area-ph2-phg-left-mesh"
     ]
   },
   {
@@ -14097,7 +14341,8 @@
       "brain-region:julich-area-ph3-phg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ph3-phg-right-centroid"
+      "spatial-representation:julich31-area-ph3-phg-right-centroid",
+      "spatial-representation:julich31-area-ph3-phg-right-mesh"
     ]
   },
   {
@@ -14129,7 +14374,8 @@
       "brain-region:julich-area-ph3-phg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ph3-phg-left-centroid"
+      "spatial-representation:julich31-area-ph3-phg-left-centroid",
+      "spatial-representation:julich31-area-ph3-phg-left-mesh"
     ]
   },
   {
@@ -14219,7 +14465,8 @@
       "brain-region:julich-area-cos1-cos"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-cos1-cos-right-centroid"
+      "spatial-representation:julich31-area-cos1-cos-right-centroid",
+      "spatial-representation:julich31-area-cos1-cos-right-mesh"
     ]
   },
   {
@@ -14251,7 +14498,8 @@
       "brain-region:julich-area-cos1-cos"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-cos1-cos-left-centroid"
+      "spatial-representation:julich31-area-cos1-cos-left-centroid",
+      "spatial-representation:julich31-area-cos1-cos-left-mesh"
     ]
   },
   {
@@ -14341,7 +14589,8 @@
       "brain-region:julich-area-ti-stg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ti-stg-right-centroid"
+      "spatial-representation:julich31-area-ti-stg-right-centroid",
+      "spatial-representation:julich31-area-ti-stg-right-mesh"
     ]
   },
   {
@@ -14373,7 +14622,8 @@
       "brain-region:julich-area-ti-stg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ti-stg-left-centroid"
+      "spatial-representation:julich31-area-ti-stg-left-centroid",
+      "spatial-representation:julich31-area-ti-stg-left-mesh"
     ]
   },
   {
@@ -14434,7 +14684,8 @@
       "brain-region:julich-area-tei-stg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-tei-stg-right-centroid"
+      "spatial-representation:julich31-area-tei-stg-right-centroid",
+      "spatial-representation:julich31-area-tei-stg-right-mesh"
     ]
   },
   {
@@ -14466,7 +14717,8 @@
       "brain-region:julich-area-tei-stg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-tei-stg-left-centroid"
+      "spatial-representation:julich31-area-tei-stg-left-centroid",
+      "spatial-representation:julich31-area-tei-stg-left-mesh"
     ]
   },
   {
@@ -14556,7 +14808,8 @@
       "brain-region:julich-area-fg5-fusg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-fg5-fusg-right-centroid"
+      "spatial-representation:julich31-area-fg5-fusg-right-centroid",
+      "spatial-representation:julich31-area-fg5-fusg-right-mesh"
     ]
   },
   {
@@ -14588,7 +14841,8 @@
       "brain-region:julich-area-fg5-fusg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-fg5-fusg-left-centroid"
+      "spatial-representation:julich31-area-fg5-fusg-left-centroid",
+      "spatial-representation:julich31-area-fg5-fusg-left-mesh"
     ]
   },
   {
@@ -14649,7 +14903,8 @@
       "brain-region:julich-area-fg2-fusg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-fg2-fusg-right-centroid"
+      "spatial-representation:julich31-area-fg2-fusg-right-centroid",
+      "spatial-representation:julich31-area-fg2-fusg-right-mesh"
     ]
   },
   {
@@ -14681,7 +14936,8 @@
       "brain-region:julich-area-fg2-fusg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-fg2-fusg-left-centroid"
+      "spatial-representation:julich31-area-fg2-fusg-left-centroid",
+      "spatial-representation:julich31-area-fg2-fusg-left-mesh"
     ]
   },
   {
@@ -14742,7 +14998,8 @@
       "brain-region:julich-area-fg3-fusg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-fg3-fusg-right-centroid"
+      "spatial-representation:julich31-area-fg3-fusg-right-centroid",
+      "spatial-representation:julich31-area-fg3-fusg-right-mesh"
     ]
   },
   {
@@ -14774,7 +15031,8 @@
       "brain-region:julich-area-fg3-fusg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-fg3-fusg-left-centroid"
+      "spatial-representation:julich31-area-fg3-fusg-left-centroid",
+      "spatial-representation:julich31-area-fg3-fusg-left-mesh"
     ]
   },
   {
@@ -14835,7 +15093,8 @@
       "brain-region:julich-area-fg1-fusg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-fg1-fusg-right-centroid"
+      "spatial-representation:julich31-area-fg1-fusg-right-centroid",
+      "spatial-representation:julich31-area-fg1-fusg-right-mesh"
     ]
   },
   {
@@ -14867,7 +15126,8 @@
       "brain-region:julich-area-fg1-fusg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-fg1-fusg-left-centroid"
+      "spatial-representation:julich31-area-fg1-fusg-left-centroid",
+      "spatial-representation:julich31-area-fg1-fusg-left-mesh"
     ]
   },
   {
@@ -14928,7 +15188,8 @@
       "brain-region:julich-area-fg4-fusg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-fg4-fusg-right-centroid"
+      "spatial-representation:julich31-area-fg4-fusg-right-centroid",
+      "spatial-representation:julich31-area-fg4-fusg-right-mesh"
     ]
   },
   {
@@ -14960,7 +15221,8 @@
       "brain-region:julich-area-fg4-fusg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-fg4-fusg-left-centroid"
+      "spatial-representation:julich31-area-fg4-fusg-left-centroid",
+      "spatial-representation:julich31-area-fg4-fusg-left-mesh"
     ]
   },
   {
@@ -15050,7 +15312,8 @@
       "brain-region:julich-area-tpj-stg-smg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-tpj-stg-smg-right-centroid"
+      "spatial-representation:julich31-area-tpj-stg-smg-right-centroid",
+      "spatial-representation:julich31-area-tpj-stg-smg-right-mesh"
     ]
   },
   {
@@ -15082,7 +15345,8 @@
       "brain-region:julich-area-tpj-stg-smg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-tpj-stg-smg-left-centroid"
+      "spatial-representation:julich31-area-tpj-stg-smg-left-centroid",
+      "spatial-representation:julich31-area-tpj-stg-smg-left-mesh"
     ]
   },
   {
@@ -15201,7 +15465,8 @@
       "brain-region:julich-area-hoc2-v2-18"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hoc2-v2-18-right-centroid"
+      "spatial-representation:julich31-area-hoc2-v2-18-right-centroid",
+      "spatial-representation:julich31-area-hoc2-v2-18-right-mesh"
     ]
   },
   {
@@ -15233,7 +15498,8 @@
       "brain-region:julich-area-hoc2-v2-18"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hoc2-v2-18-left-centroid"
+      "spatial-representation:julich31-area-hoc2-v2-18-left-centroid",
+      "spatial-representation:julich31-area-hoc2-v2-18-left-mesh"
     ]
   },
   {
@@ -15294,7 +15560,8 @@
       "brain-region:julich-area-hoc1-v1-17-calcs"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hoc1-v1-17-calcs-right-centroid"
+      "spatial-representation:julich31-area-hoc1-v1-17-calcs-right-centroid",
+      "spatial-representation:julich31-area-hoc1-v1-17-calcs-right-mesh"
     ]
   },
   {
@@ -15326,7 +15593,8 @@
       "brain-region:julich-area-hoc1-v1-17-calcs"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hoc1-v1-17-calcs-left-centroid"
+      "spatial-representation:julich31-area-hoc1-v1-17-calcs-left-centroid",
+      "spatial-representation:julich31-area-hoc1-v1-17-calcs-left-mesh"
     ]
   },
   {
@@ -15416,7 +15684,8 @@
       "brain-region:julich-area-hoc6-pos"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hoc6-pos-right-centroid"
+      "spatial-representation:julich31-area-hoc6-pos-right-centroid",
+      "spatial-representation:julich31-area-hoc6-pos-right-mesh"
     ]
   },
   {
@@ -15448,7 +15717,8 @@
       "brain-region:julich-area-hoc6-pos"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hoc6-pos-left-centroid"
+      "spatial-representation:julich31-area-hoc6-pos-left-centroid",
+      "spatial-representation:julich31-area-hoc6-pos-left-mesh"
     ]
   },
   {
@@ -15509,7 +15779,8 @@
       "brain-region:julich-area-hoc4d-cuneus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hoc4d-cuneus-right-centroid"
+      "spatial-representation:julich31-area-hoc4d-cuneus-right-centroid",
+      "spatial-representation:julich31-area-hoc4d-cuneus-right-mesh"
     ]
   },
   {
@@ -15541,7 +15812,8 @@
       "brain-region:julich-area-hoc4d-cuneus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hoc4d-cuneus-left-centroid"
+      "spatial-representation:julich31-area-hoc4d-cuneus-left-centroid",
+      "spatial-representation:julich31-area-hoc4d-cuneus-left-mesh"
     ]
   },
   {
@@ -15602,7 +15874,8 @@
       "brain-region:julich-area-hoc3d-cuneus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hoc3d-cuneus-right-centroid"
+      "spatial-representation:julich31-area-hoc3d-cuneus-right-centroid",
+      "spatial-representation:julich31-area-hoc3d-cuneus-right-mesh"
     ]
   },
   {
@@ -15634,7 +15907,8 @@
       "brain-region:julich-area-hoc3d-cuneus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hoc3d-cuneus-left-centroid"
+      "spatial-representation:julich31-area-hoc3d-cuneus-left-centroid",
+      "spatial-representation:julich31-area-hoc3d-cuneus-left-mesh"
     ]
   },
   {
@@ -15724,7 +15998,8 @@
       "brain-region:julich-area-hoc3v-lingg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hoc3v-lingg-right-centroid"
+      "spatial-representation:julich31-area-hoc3v-lingg-right-centroid",
+      "spatial-representation:julich31-area-hoc3v-lingg-right-mesh"
     ]
   },
   {
@@ -15756,7 +16031,8 @@
       "brain-region:julich-area-hoc3v-lingg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hoc3v-lingg-left-centroid"
+      "spatial-representation:julich31-area-hoc3v-lingg-left-centroid",
+      "spatial-representation:julich31-area-hoc3v-lingg-left-mesh"
     ]
   },
   {
@@ -15817,7 +16093,8 @@
       "brain-region:julich-area-hoc4v-lingg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hoc4v-lingg-right-centroid"
+      "spatial-representation:julich31-area-hoc4v-lingg-right-centroid",
+      "spatial-representation:julich31-area-hoc4v-lingg-right-mesh"
     ]
   },
   {
@@ -15849,7 +16126,8 @@
       "brain-region:julich-area-hoc4v-lingg"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hoc4v-lingg-left-centroid"
+      "spatial-representation:julich31-area-hoc4v-lingg-left-centroid",
+      "spatial-representation:julich31-area-hoc4v-lingg-left-mesh"
     ]
   },
   {
@@ -15939,7 +16217,8 @@
       "brain-region:julich-area-hoc4lp-loc"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hoc4lp-loc-right-centroid"
+      "spatial-representation:julich31-area-hoc4lp-loc-right-centroid",
+      "spatial-representation:julich31-area-hoc4lp-loc-right-mesh"
     ]
   },
   {
@@ -15971,7 +16250,8 @@
       "brain-region:julich-area-hoc4lp-loc"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hoc4lp-loc-left-centroid"
+      "spatial-representation:julich31-area-hoc4lp-loc-left-centroid",
+      "spatial-representation:julich31-area-hoc4lp-loc-left-mesh"
     ]
   },
   {
@@ -16032,7 +16312,8 @@
       "brain-region:julich-area-hoc5-loc"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hoc5-loc-right-centroid"
+      "spatial-representation:julich31-area-hoc5-loc-right-centroid",
+      "spatial-representation:julich31-area-hoc5-loc-right-mesh"
     ]
   },
   {
@@ -16064,7 +16345,8 @@
       "brain-region:julich-area-hoc5-loc"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hoc5-loc-left-centroid"
+      "spatial-representation:julich31-area-hoc5-loc-left-centroid",
+      "spatial-representation:julich31-area-hoc5-loc-left-mesh"
     ]
   },
   {
@@ -16125,7 +16407,8 @@
       "brain-region:julich-area-hoc4la-loc"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hoc4la-loc-right-centroid"
+      "spatial-representation:julich31-area-hoc4la-loc-right-centroid",
+      "spatial-representation:julich31-area-hoc4la-loc-right-mesh"
     ]
   },
   {
@@ -16157,7 +16440,8 @@
       "brain-region:julich-area-hoc4la-loc"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-hoc4la-loc-left-centroid"
+      "spatial-representation:julich31-area-hoc4la-loc-left-centroid",
+      "spatial-representation:julich31-area-hoc4la-loc-left-mesh"
     ]
   },
   {
@@ -16943,7 +17227,8 @@
       "brain-region:julich-area-s32-sacc"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-s32-sacc-right-centroid"
+      "spatial-representation:julich31-area-s32-sacc-right-centroid",
+      "spatial-representation:julich31-area-s32-sacc-right-mesh"
     ]
   },
   {
@@ -16975,7 +17260,8 @@
       "brain-region:julich-area-s32-sacc"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-s32-sacc-left-centroid"
+      "spatial-representation:julich31-area-s32-sacc-left-centroid",
+      "spatial-representation:julich31-area-s32-sacc-left-mesh"
     ]
   },
   {
@@ -17036,7 +17322,8 @@
       "brain-region:julich-area-33-acc"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-33-acc-right-centroid"
+      "spatial-representation:julich31-area-33-acc-right-centroid",
+      "spatial-representation:julich31-area-33-acc-right-mesh"
     ]
   },
   {
@@ -17068,7 +17355,8 @@
       "brain-region:julich-area-33-acc"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-33-acc-left-centroid"
+      "spatial-representation:julich31-area-33-acc-left-centroid",
+      "spatial-representation:julich31-area-33-acc-left-mesh"
     ]
   },
   {
@@ -17129,7 +17417,8 @@
       "brain-region:julich-area-p32-pacc"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-p32-pacc-right-centroid"
+      "spatial-representation:julich31-area-p32-pacc-right-centroid",
+      "spatial-representation:julich31-area-p32-pacc-right-mesh"
     ]
   },
   {
@@ -17161,7 +17450,8 @@
       "brain-region:julich-area-p32-pacc"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-p32-pacc-left-centroid"
+      "spatial-representation:julich31-area-p32-pacc-left-centroid",
+      "spatial-representation:julich31-area-p32-pacc-left-mesh"
     ]
   },
   {
@@ -17889,7 +18179,8 @@
       "brain-region:julich-hata-hippocampus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-hata-hippocampus-right-centroid"
+      "spatial-representation:julich31-hata-hippocampus-right-centroid",
+      "spatial-representation:julich31-hata-hippocampus-right-mesh"
     ]
   },
   {
@@ -17921,7 +18212,8 @@
       "brain-region:julich-hata-hippocampus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-hata-hippocampus-left-centroid"
+      "spatial-representation:julich31-hata-hippocampus-left-centroid",
+      "spatial-representation:julich31-hata-hippocampus-left-mesh"
     ]
   },
   {
@@ -17982,7 +18274,8 @@
       "brain-region:julich-ca3-hippocampus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-ca3-hippocampus-right-centroid"
+      "spatial-representation:julich31-ca3-hippocampus-right-centroid",
+      "spatial-representation:julich31-ca3-hippocampus-right-mesh"
     ]
   },
   {
@@ -18014,7 +18307,8 @@
       "brain-region:julich-ca3-hippocampus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-ca3-hippocampus-left-centroid"
+      "spatial-representation:julich31-ca3-hippocampus-left-centroid",
+      "spatial-representation:julich31-ca3-hippocampus-left-mesh"
     ]
   },
   {
@@ -18075,7 +18369,8 @@
       "brain-region:julich-trs-hippocampus-transsubiculum"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-trs-hippocampus-transsubiculum-right-centroid"
+      "spatial-representation:julich31-trs-hippocampus-transsubiculum-right-centroid",
+      "spatial-representation:julich31-trs-hippocampus-transsubiculum-right-mesh"
     ]
   },
   {
@@ -18107,7 +18402,8 @@
       "brain-region:julich-trs-hippocampus-transsubiculum"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-trs-hippocampus-transsubiculum-left-centroid"
+      "spatial-representation:julich31-trs-hippocampus-transsubiculum-left-centroid",
+      "spatial-representation:julich31-trs-hippocampus-transsubiculum-left-mesh"
     ]
   },
   {
@@ -18487,7 +18783,8 @@
       "brain-region:julich-dg-hippocampus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-dg-hippocampus-right-centroid"
+      "spatial-representation:julich31-dg-hippocampus-right-centroid",
+      "spatial-representation:julich31-dg-hippocampus-right-mesh"
     ]
   },
   {
@@ -18519,7 +18816,8 @@
       "brain-region:julich-dg-hippocampus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-dg-hippocampus-left-centroid"
+      "spatial-representation:julich31-dg-hippocampus-left-centroid",
+      "spatial-representation:julich31-dg-hippocampus-left-mesh"
     ]
   },
   {
@@ -18580,7 +18878,8 @@
       "brain-region:julich-ca2-hippocampus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-ca2-hippocampus-right-centroid"
+      "spatial-representation:julich31-ca2-hippocampus-right-centroid",
+      "spatial-representation:julich31-ca2-hippocampus-right-mesh"
     ]
   },
   {
@@ -18612,7 +18911,8 @@
       "brain-region:julich-ca2-hippocampus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-ca2-hippocampus-left-centroid"
+      "spatial-representation:julich31-ca2-hippocampus-left-centroid",
+      "spatial-representation:julich31-ca2-hippocampus-left-mesh"
     ]
   },
   {
@@ -18673,7 +18973,8 @@
       "brain-region:julich-area-ec-hippocampal-region-entorhinal-cortex"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ec-hippocampal-region-entorhinal-cortex-right-centroid"
+      "spatial-representation:julich31-area-ec-hippocampal-region-entorhinal-cortex-right-centroid",
+      "spatial-representation:julich31-area-ec-hippocampal-region-entorhinal-cortex-right-mesh"
     ]
   },
   {
@@ -18705,7 +19006,8 @@
       "brain-region:julich-area-ec-hippocampal-region-entorhinal-cortex"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-area-ec-hippocampal-region-entorhinal-cortex-left-centroid"
+      "spatial-representation:julich31-area-ec-hippocampal-region-entorhinal-cortex-left-centroid",
+      "spatial-representation:julich31-area-ec-hippocampal-region-entorhinal-cortex-left-mesh"
     ]
   },
   {
@@ -18766,7 +19068,8 @@
       "brain-region:julich-ca1-hippocampus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-ca1-hippocampus-right-centroid"
+      "spatial-representation:julich31-ca1-hippocampus-right-centroid",
+      "spatial-representation:julich31-ca1-hippocampus-right-mesh"
     ]
   },
   {
@@ -18798,7 +19101,8 @@
       "brain-region:julich-ca1-hippocampus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-ca1-hippocampus-left-centroid"
+      "spatial-representation:julich31-ca1-hippocampus-left-centroid",
+      "spatial-representation:julich31-ca1-hippocampus-left-mesh"
     ]
   },
   {
@@ -18888,7 +19192,8 @@
       "brain-region:julich-tuti-basal-forebrain-terminal-islands"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-tuti-basal-forebrain-terminal-islands-right-centroid"
+      "spatial-representation:julich31-tuti-basal-forebrain-terminal-islands-right-centroid",
+      "spatial-representation:julich31-tuti-basal-forebrain-terminal-islands-right-mesh"
     ]
   },
   {
@@ -18920,7 +19225,8 @@
       "brain-region:julich-tuti-basal-forebrain-terminal-islands"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-tuti-basal-forebrain-terminal-islands-left-centroid"
+      "spatial-representation:julich31-tuti-basal-forebrain-terminal-islands-left-centroid",
+      "spatial-representation:julich31-tuti-basal-forebrain-terminal-islands-left-mesh"
     ]
   },
   {
@@ -18981,7 +19287,8 @@
       "brain-region:julich-tu-basal-forebrain-tuberculum"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-tu-basal-forebrain-tuberculum-right-centroid"
+      "spatial-representation:julich31-tu-basal-forebrain-tuberculum-right-centroid",
+      "spatial-representation:julich31-tu-basal-forebrain-tuberculum-right-mesh"
     ]
   },
   {
@@ -19013,7 +19320,8 @@
       "brain-region:julich-tu-basal-forebrain-tuberculum"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-tu-basal-forebrain-tuberculum-left-centroid"
+      "spatial-representation:julich31-tu-basal-forebrain-tuberculum-left-centroid",
+      "spatial-representation:julich31-tu-basal-forebrain-tuberculum-left-mesh"
     ]
   },
   {
@@ -19187,7 +19495,8 @@
       "brain-region:julich-snc-midbrain-substantia-nigra-pars-compacta"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-snc-midbrain-substantia-nigra-pars-compacta-right-centroid"
+      "spatial-representation:julich31-snc-midbrain-substantia-nigra-pars-compacta-right-centroid",
+      "spatial-representation:julich31-snc-midbrain-substantia-nigra-pars-compacta-right-mesh"
     ]
   },
   {
@@ -19219,7 +19528,8 @@
       "brain-region:julich-snc-midbrain-substantia-nigra-pars-compacta"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-snc-midbrain-substantia-nigra-pars-compacta-left-centroid"
+      "spatial-representation:julich31-snc-midbrain-substantia-nigra-pars-compacta-left-centroid",
+      "spatial-representation:julich31-snc-midbrain-substantia-nigra-pars-compacta-left-mesh"
     ]
   },
   {
@@ -19280,7 +19590,8 @@
       "brain-region:julich-snr-midbrain-substantia-nigra-pars-reticulata"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-snr-midbrain-substantia-nigra-pars-reticulata-right-centroid"
+      "spatial-representation:julich31-snr-midbrain-substantia-nigra-pars-reticulata-right-centroid",
+      "spatial-representation:julich31-snr-midbrain-substantia-nigra-pars-reticulata-right-mesh"
     ]
   },
   {
@@ -19312,7 +19623,8 @@
       "brain-region:julich-snr-midbrain-substantia-nigra-pars-reticulata"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-snr-midbrain-substantia-nigra-pars-reticulata-left-centroid"
+      "spatial-representation:julich31-snr-midbrain-substantia-nigra-pars-reticulata-left-centroid",
+      "spatial-representation:julich31-snr-midbrain-substantia-nigra-pars-reticulata-left-mesh"
     ]
   },
   {
@@ -19402,7 +19714,8 @@
       "brain-region:julich-nrp-midbrain-nucleus-ruber-parvocellular-part"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-nrp-midbrain-nucleus-ruber-parvocellular-part-right-centroid"
+      "spatial-representation:julich31-nrp-midbrain-nucleus-ruber-parvocellular-part-right-centroid",
+      "spatial-representation:julich31-nrp-midbrain-nucleus-ruber-parvocellular-part-right-mesh"
     ]
   },
   {
@@ -19434,7 +19747,8 @@
       "brain-region:julich-nrp-midbrain-nucleus-ruber-parvocellular-part"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-nrp-midbrain-nucleus-ruber-parvocellular-part-left-centroid"
+      "spatial-representation:julich31-nrp-midbrain-nucleus-ruber-parvocellular-part-left-centroid",
+      "spatial-representation:julich31-nrp-midbrain-nucleus-ruber-parvocellular-part-left-mesh"
     ]
   },
   {
@@ -19524,7 +19838,8 @@
       "brain-region:julich-nrm-midbrain-nucleus-ruber-magnocellular-part"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-nrm-midbrain-nucleus-ruber-magnocellular-part-right-centroid"
+      "spatial-representation:julich31-nrm-midbrain-nucleus-ruber-magnocellular-part-right-centroid",
+      "spatial-representation:julich31-nrm-midbrain-nucleus-ruber-magnocellular-part-right-mesh"
     ]
   },
   {
@@ -19556,7 +19871,8 @@
       "brain-region:julich-nrm-midbrain-nucleus-ruber-magnocellular-part"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-nrm-midbrain-nucleus-ruber-magnocellular-part-left-centroid"
+      "spatial-representation:julich31-nrm-midbrain-nucleus-ruber-magnocellular-part-left-centroid",
+      "spatial-representation:julich31-nrm-midbrain-nucleus-ruber-magnocellular-part-left-mesh"
     ]
   },
   {
@@ -19701,7 +20017,8 @@
       "brain-region:julich-ninterp-cerebellum-interposed-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-ninterp-cerebellum-interposed-nucleus-right-centroid"
+      "spatial-representation:julich31-ninterp-cerebellum-interposed-nucleus-right-centroid",
+      "spatial-representation:julich31-ninterp-cerebellum-interposed-nucleus-right-mesh"
     ]
   },
   {
@@ -19733,7 +20050,8 @@
       "brain-region:julich-ninterp-cerebellum-interposed-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-ninterp-cerebellum-interposed-nucleus-left-centroid"
+      "spatial-representation:julich31-ninterp-cerebellum-interposed-nucleus-left-centroid",
+      "spatial-representation:julich31-ninterp-cerebellum-interposed-nucleus-left-mesh"
     ]
   },
   {
@@ -19823,7 +20141,8 @@
       "brain-region:julich-ndentv-cerebellum-ventral-dentate-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-ndentv-cerebellum-ventral-dentate-nucleus-right-centroid"
+      "spatial-representation:julich31-ndentv-cerebellum-ventral-dentate-nucleus-right-centroid",
+      "spatial-representation:julich31-ndentv-cerebellum-ventral-dentate-nucleus-right-mesh"
     ]
   },
   {
@@ -19855,7 +20174,8 @@
       "brain-region:julich-ndentv-cerebellum-ventral-dentate-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-ndentv-cerebellum-ventral-dentate-nucleus-left-centroid"
+      "spatial-representation:julich31-ndentv-cerebellum-ventral-dentate-nucleus-left-centroid",
+      "spatial-representation:julich31-ndentv-cerebellum-ventral-dentate-nucleus-left-mesh"
     ]
   },
   {
@@ -19916,7 +20236,8 @@
       "brain-region:julich-ndentd-cerebellum-dorsal-dentate-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-ndentd-cerebellum-dorsal-dentate-nucleus-right-centroid"
+      "spatial-representation:julich31-ndentd-cerebellum-dorsal-dentate-nucleus-right-centroid",
+      "spatial-representation:julich31-ndentd-cerebellum-dorsal-dentate-nucleus-right-mesh"
     ]
   },
   {
@@ -19948,7 +20269,8 @@
       "brain-region:julich-ndentd-cerebellum-dorsal-dentate-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-ndentd-cerebellum-dorsal-dentate-nucleus-left-centroid"
+      "spatial-representation:julich31-ndentd-cerebellum-dorsal-dentate-nucleus-left-centroid",
+      "spatial-representation:julich31-ndentd-cerebellum-dorsal-dentate-nucleus-left-mesh"
     ]
   },
   {
@@ -20038,7 +20360,8 @@
       "brain-region:julich-nfast-cerebellum-fastigial-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-nfast-cerebellum-fastigial-nucleus-right-centroid"
+      "spatial-representation:julich31-nfast-cerebellum-fastigial-nucleus-right-centroid",
+      "spatial-representation:julich31-nfast-cerebellum-fastigial-nucleus-right-mesh"
     ]
   },
   {
@@ -20070,7 +20393,8 @@
       "brain-region:julich-nfast-cerebellum-fastigial-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-nfast-cerebellum-fastigial-nucleus-left-centroid"
+      "spatial-representation:julich31-nfast-cerebellum-fastigial-nucleus-left-centroid",
+      "spatial-representation:julich31-nfast-cerebellum-fastigial-nucleus-left-mesh"
     ]
   },
   {
@@ -20186,7 +20510,8 @@
       "brain-region:julich-stn-subthalamus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-stn-subthalamus-right-centroid"
+      "spatial-representation:julich31-stn-subthalamus-right-centroid",
+      "spatial-representation:julich31-stn-subthalamus-right-mesh"
     ]
   },
   {
@@ -20218,7 +20543,8 @@
       "brain-region:julich-stn-subthalamus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-stn-subthalamus-left-centroid"
+      "spatial-representation:julich31-stn-subthalamus-left-centroid",
+      "spatial-representation:julich31-stn-subthalamus-left-mesh"
     ]
   },
   {
@@ -20337,7 +20663,8 @@
       "brain-region:julich-rt-thalamus-reticular-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-rt-thalamus-reticular-nucleus-right-centroid"
+      "spatial-representation:julich31-rt-thalamus-reticular-nucleus-right-centroid",
+      "spatial-representation:julich31-rt-thalamus-reticular-nucleus-right-mesh"
     ]
   },
   {
@@ -20369,7 +20696,8 @@
       "brain-region:julich-rt-thalamus-reticular-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-rt-thalamus-reticular-nucleus-left-centroid"
+      "spatial-representation:julich31-rt-thalamus-reticular-nucleus-left-centroid",
+      "spatial-representation:julich31-rt-thalamus-reticular-nucleus-left-mesh"
     ]
   },
   {
@@ -20430,7 +20758,8 @@
       "brain-region:julich-zi-thalamus-zona-incerta"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-zi-thalamus-zona-incerta-right-centroid"
+      "spatial-representation:julich31-zi-thalamus-zona-incerta-right-centroid",
+      "spatial-representation:julich31-zi-thalamus-zona-incerta-right-mesh"
     ]
   },
   {
@@ -20462,7 +20791,8 @@
       "brain-region:julich-zi-thalamus-zona-incerta"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-zi-thalamus-zona-incerta-left-centroid"
+      "spatial-representation:julich31-zi-thalamus-zona-incerta-left-centroid",
+      "spatial-representation:julich31-zi-thalamus-zona-incerta-left-mesh"
     ]
   },
   {
@@ -20581,7 +20911,8 @@
       "brain-region:julich-cgm-metathalamus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-cgm-metathalamus-right-centroid"
+      "spatial-representation:julich31-cgm-metathalamus-right-centroid",
+      "spatial-representation:julich31-cgm-metathalamus-right-mesh"
     ]
   },
   {
@@ -20613,7 +20944,8 @@
       "brain-region:julich-cgm-metathalamus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-cgm-metathalamus-left-centroid"
+      "spatial-representation:julich31-cgm-metathalamus-left-centroid",
+      "spatial-representation:julich31-cgm-metathalamus-left-mesh"
     ]
   },
   {
@@ -20703,7 +21035,8 @@
       "brain-region:julich-cgl-metathalamus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-cgl-metathalamus-right-centroid"
+      "spatial-representation:julich31-cgl-metathalamus-right-centroid",
+      "spatial-representation:julich31-cgl-metathalamus-right-mesh"
     ]
   },
   {
@@ -20735,7 +21068,8 @@
       "brain-region:julich-cgl-metathalamus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-cgl-metathalamus-left-centroid"
+      "spatial-representation:julich31-cgl-metathalamus-left-centroid",
+      "spatial-representation:julich31-cgl-metathalamus-left-mesh"
     ]
   },
   {
@@ -20854,7 +21188,8 @@
       "brain-region:julich-mv-thalamus-medioventral-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-mv-thalamus-medioventral-nucleus-right-centroid"
+      "spatial-representation:julich31-mv-thalamus-medioventral-nucleus-right-centroid",
+      "spatial-representation:julich31-mv-thalamus-medioventral-nucleus-right-mesh"
     ]
   },
   {
@@ -20886,7 +21221,8 @@
       "brain-region:julich-mv-thalamus-medioventral-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-mv-thalamus-medioventral-nucleus-left-centroid"
+      "spatial-representation:julich31-mv-thalamus-medioventral-nucleus-left-centroid",
+      "spatial-representation:julich31-mv-thalamus-medioventral-nucleus-left-mesh"
     ]
   },
   {
@@ -20947,7 +21283,8 @@
       "brain-region:julich-md-thalamus-mediodorsal-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-md-thalamus-mediodorsal-nucleus-right-centroid"
+      "spatial-representation:julich31-md-thalamus-mediodorsal-nucleus-right-centroid",
+      "spatial-representation:julich31-md-thalamus-mediodorsal-nucleus-right-mesh"
     ]
   },
   {
@@ -20979,7 +21316,8 @@
       "brain-region:julich-md-thalamus-mediodorsal-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-md-thalamus-mediodorsal-nucleus-left-centroid"
+      "spatial-representation:julich31-md-thalamus-mediodorsal-nucleus-left-centroid",
+      "spatial-representation:julich31-md-thalamus-mediodorsal-nucleus-left-mesh"
     ]
   },
   {
@@ -21040,7 +21378,8 @@
       "brain-region:julich-pv-thalamus-paraventricular-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-pv-thalamus-paraventricular-nucleus-right-centroid"
+      "spatial-representation:julich31-pv-thalamus-paraventricular-nucleus-right-centroid",
+      "spatial-representation:julich31-pv-thalamus-paraventricular-nucleus-right-mesh"
     ]
   },
   {
@@ -21162,7 +21501,8 @@
       "brain-region:julich-po-thalamus-posterior-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-po-thalamus-posterior-nucleus-right-centroid"
+      "spatial-representation:julich31-po-thalamus-posterior-nucleus-right-centroid",
+      "spatial-representation:julich31-po-thalamus-posterior-nucleus-right-mesh"
     ]
   },
   {
@@ -21194,7 +21534,8 @@
       "brain-region:julich-po-thalamus-posterior-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-po-thalamus-posterior-nucleus-left-centroid"
+      "spatial-representation:julich31-po-thalamus-posterior-nucleus-left-centroid",
+      "spatial-representation:julich31-po-thalamus-posterior-nucleus-left-mesh"
     ]
   },
   {
@@ -21255,7 +21596,8 @@
       "brain-region:julich-pum-thalamus-medial-pulvinar"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-pum-thalamus-medial-pulvinar-right-centroid"
+      "spatial-representation:julich31-pum-thalamus-medial-pulvinar-right-centroid",
+      "spatial-representation:julich31-pum-thalamus-medial-pulvinar-right-mesh"
     ]
   },
   {
@@ -21287,7 +21629,8 @@
       "brain-region:julich-pum-thalamus-medial-pulvinar"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-pum-thalamus-medial-pulvinar-left-centroid"
+      "spatial-representation:julich31-pum-thalamus-medial-pulvinar-left-centroid",
+      "spatial-representation:julich31-pum-thalamus-medial-pulvinar-left-mesh"
     ]
   },
   {
@@ -21348,7 +21691,8 @@
       "brain-region:julich-pul-thalamus-lateral-pulvinar"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-pul-thalamus-lateral-pulvinar-right-centroid"
+      "spatial-representation:julich31-pul-thalamus-lateral-pulvinar-right-centroid",
+      "spatial-representation:julich31-pul-thalamus-lateral-pulvinar-right-mesh"
     ]
   },
   {
@@ -21380,7 +21724,8 @@
       "brain-region:julich-pul-thalamus-lateral-pulvinar"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-pul-thalamus-lateral-pulvinar-left-centroid"
+      "spatial-representation:julich31-pul-thalamus-lateral-pulvinar-left-centroid",
+      "spatial-representation:julich31-pul-thalamus-lateral-pulvinar-left-mesh"
     ]
   },
   {
@@ -21441,7 +21786,8 @@
       "brain-region:julich-li-thalamus-limitans-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-li-thalamus-limitans-nucleus-right-centroid"
+      "spatial-representation:julich31-li-thalamus-limitans-nucleus-right-centroid",
+      "spatial-representation:julich31-li-thalamus-limitans-nucleus-right-mesh"
     ]
   },
   {
@@ -21473,7 +21819,8 @@
       "brain-region:julich-li-thalamus-limitans-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-li-thalamus-limitans-nucleus-left-centroid"
+      "spatial-representation:julich31-li-thalamus-limitans-nucleus-left-centroid",
+      "spatial-representation:julich31-li-thalamus-limitans-nucleus-left-mesh"
     ]
   },
   {
@@ -21534,7 +21881,8 @@
       "brain-region:julich-sg-thalamus-suprageniculate-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-sg-thalamus-suprageniculate-nucleus-right-centroid"
+      "spatial-representation:julich31-sg-thalamus-suprageniculate-nucleus-right-centroid",
+      "spatial-representation:julich31-sg-thalamus-suprageniculate-nucleus-right-mesh"
     ]
   },
   {
@@ -21566,7 +21914,8 @@
       "brain-region:julich-sg-thalamus-suprageniculate-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-sg-thalamus-suprageniculate-nucleus-left-centroid"
+      "spatial-representation:julich31-sg-thalamus-suprageniculate-nucleus-left-centroid",
+      "spatial-representation:julich31-sg-thalamus-suprageniculate-nucleus-left-mesh"
     ]
   },
   {
@@ -21627,7 +21976,8 @@
       "brain-region:julich-lp-thalamus-lateral-posterior-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-lp-thalamus-lateral-posterior-nucleus-right-centroid"
+      "spatial-representation:julich31-lp-thalamus-lateral-posterior-nucleus-right-centroid",
+      "spatial-representation:julich31-lp-thalamus-lateral-posterior-nucleus-right-mesh"
     ]
   },
   {
@@ -21659,7 +22009,8 @@
       "brain-region:julich-lp-thalamus-lateral-posterior-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-lp-thalamus-lateral-posterior-nucleus-left-centroid"
+      "spatial-representation:julich31-lp-thalamus-lateral-posterior-nucleus-left-centroid",
+      "spatial-representation:julich31-lp-thalamus-lateral-posterior-nucleus-left-mesh"
     ]
   },
   {
@@ -21720,7 +22071,8 @@
       "brain-region:julich-pui-thalamus-inferior-pulvinar"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-pui-thalamus-inferior-pulvinar-right-centroid"
+      "spatial-representation:julich31-pui-thalamus-inferior-pulvinar-right-centroid",
+      "spatial-representation:julich31-pui-thalamus-inferior-pulvinar-right-mesh"
     ]
   },
   {
@@ -21752,7 +22104,8 @@
       "brain-region:julich-pui-thalamus-inferior-pulvinar"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-pui-thalamus-inferior-pulvinar-left-centroid"
+      "spatial-representation:julich31-pui-thalamus-inferior-pulvinar-left-centroid",
+      "spatial-representation:julich31-pui-thalamus-inferior-pulvinar-left-mesh"
     ]
   },
   {
@@ -21813,7 +22166,8 @@
       "brain-region:julich-pua-thalamus-anterior-pulvinar"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-pua-thalamus-anterior-pulvinar-right-centroid"
+      "spatial-representation:julich31-pua-thalamus-anterior-pulvinar-right-centroid",
+      "spatial-representation:julich31-pua-thalamus-anterior-pulvinar-right-mesh"
     ]
   },
   {
@@ -21845,7 +22199,8 @@
       "brain-region:julich-pua-thalamus-anterior-pulvinar"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-pua-thalamus-anterior-pulvinar-left-centroid"
+      "spatial-representation:julich31-pua-thalamus-anterior-pulvinar-left-centroid",
+      "spatial-representation:julich31-pua-thalamus-anterior-pulvinar-left-mesh"
     ]
   },
   {
@@ -21935,7 +22290,8 @@
       "brain-region:julich-ld-thalamus-lateral-dorsal-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-ld-thalamus-lateral-dorsal-nucleus-right-centroid"
+      "spatial-representation:julich31-ld-thalamus-lateral-dorsal-nucleus-right-centroid",
+      "spatial-representation:julich31-ld-thalamus-lateral-dorsal-nucleus-right-mesh"
     ]
   },
   {
@@ -21967,7 +22323,8 @@
       "brain-region:julich-ld-thalamus-lateral-dorsal-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-ld-thalamus-lateral-dorsal-nucleus-left-centroid"
+      "spatial-representation:julich31-ld-thalamus-lateral-dorsal-nucleus-left-centroid",
+      "spatial-representation:julich31-ld-thalamus-lateral-dorsal-nucleus-left-mesh"
     ]
   },
   {
@@ -22028,7 +22385,8 @@
       "brain-region:julich-av-thalamus-anteroventral-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-av-thalamus-anteroventral-nucleus-right-centroid"
+      "spatial-representation:julich31-av-thalamus-anteroventral-nucleus-right-centroid",
+      "spatial-representation:julich31-av-thalamus-anteroventral-nucleus-right-mesh"
     ]
   },
   {
@@ -22060,7 +22418,8 @@
       "brain-region:julich-av-thalamus-anteroventral-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-av-thalamus-anteroventral-nucleus-left-centroid"
+      "spatial-representation:julich31-av-thalamus-anteroventral-nucleus-left-centroid",
+      "spatial-representation:julich31-av-thalamus-anteroventral-nucleus-left-mesh"
     ]
   },
   {
@@ -22121,7 +22480,8 @@
       "brain-region:julich-am-thalamus-anteromedial-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-am-thalamus-anteromedial-nucleus-right-centroid"
+      "spatial-representation:julich31-am-thalamus-anteromedial-nucleus-right-centroid",
+      "spatial-representation:julich31-am-thalamus-anteromedial-nucleus-right-mesh"
     ]
   },
   {
@@ -22153,7 +22513,8 @@
       "brain-region:julich-am-thalamus-anteromedial-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-am-thalamus-anteromedial-nucleus-left-centroid"
+      "spatial-representation:julich31-am-thalamus-anteromedial-nucleus-left-centroid",
+      "spatial-representation:julich31-am-thalamus-anteromedial-nucleus-left-mesh"
     ]
   },
   {
@@ -22243,7 +22604,8 @@
       "brain-region:julich-vpmpc-thalamus-ventral-posterior-medial-nucleus-parvocellular-part"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-vpmpc-thalamus-ventral-posterior-medial-nucleus-parvocellular-part-right-centroid"
+      "spatial-representation:julich31-vpmpc-thalamus-ventral-posterior-medial-nucleus-parvocellular-part-right-centroid",
+      "spatial-representation:julich31-vpmpc-thalamus-ventral-posterior-medial-nucleus-parvocellular-part-right-mesh"
     ]
   },
   {
@@ -22275,7 +22637,8 @@
       "brain-region:julich-vpmpc-thalamus-ventral-posterior-medial-nucleus-parvocellular-part"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-vpmpc-thalamus-ventral-posterior-medial-nucleus-parvocellular-part-left-centroid"
+      "spatial-representation:julich31-vpmpc-thalamus-ventral-posterior-medial-nucleus-parvocellular-part-left-centroid",
+      "spatial-representation:julich31-vpmpc-thalamus-ventral-posterior-medial-nucleus-parvocellular-part-left-mesh"
     ]
   },
   {
@@ -22336,7 +22699,8 @@
       "brain-region:julich-vpi-thalamus-ventroposterior-inferior-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-vpi-thalamus-ventroposterior-inferior-nucleus-right-centroid"
+      "spatial-representation:julich31-vpi-thalamus-ventroposterior-inferior-nucleus-right-centroid",
+      "spatial-representation:julich31-vpi-thalamus-ventroposterior-inferior-nucleus-right-mesh"
     ]
   },
   {
@@ -22368,7 +22732,8 @@
       "brain-region:julich-vpi-thalamus-ventroposterior-inferior-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-vpi-thalamus-ventroposterior-inferior-nucleus-left-centroid"
+      "spatial-representation:julich31-vpi-thalamus-ventroposterior-inferior-nucleus-left-centroid",
+      "spatial-representation:julich31-vpi-thalamus-ventroposterior-inferior-nucleus-left-mesh"
     ]
   },
   {
@@ -22429,7 +22794,8 @@
       "brain-region:julich-vpl-thalamus-ventral-posterior-lateral-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-vpl-thalamus-ventral-posterior-lateral-nucleus-right-centroid"
+      "spatial-representation:julich31-vpl-thalamus-ventral-posterior-lateral-nucleus-right-centroid",
+      "spatial-representation:julich31-vpl-thalamus-ventral-posterior-lateral-nucleus-right-mesh"
     ]
   },
   {
@@ -22461,7 +22827,8 @@
       "brain-region:julich-vpl-thalamus-ventral-posterior-lateral-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-vpl-thalamus-ventral-posterior-lateral-nucleus-left-centroid"
+      "spatial-representation:julich31-vpl-thalamus-ventral-posterior-lateral-nucleus-left-centroid",
+      "spatial-representation:julich31-vpl-thalamus-ventral-posterior-lateral-nucleus-left-mesh"
     ]
   },
   {
@@ -22522,7 +22889,8 @@
       "brain-region:julich-vlp-thalamus-ventral-lateral-posterior-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-vlp-thalamus-ventral-lateral-posterior-nucleus-right-centroid"
+      "spatial-representation:julich31-vlp-thalamus-ventral-lateral-posterior-nucleus-right-centroid",
+      "spatial-representation:julich31-vlp-thalamus-ventral-lateral-posterior-nucleus-right-mesh"
     ]
   },
   {
@@ -22554,7 +22922,8 @@
       "brain-region:julich-vlp-thalamus-ventral-lateral-posterior-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-vlp-thalamus-ventral-lateral-posterior-nucleus-left-centroid"
+      "spatial-representation:julich31-vlp-thalamus-ventral-lateral-posterior-nucleus-left-centroid",
+      "spatial-representation:julich31-vlp-thalamus-ventral-lateral-posterior-nucleus-left-mesh"
     ]
   },
   {
@@ -22615,7 +22984,8 @@
       "brain-region:julich-vim-thalamus-ventral-intermediate-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-vim-thalamus-ventral-intermediate-nucleus-right-centroid"
+      "spatial-representation:julich31-vim-thalamus-ventral-intermediate-nucleus-right-centroid",
+      "spatial-representation:julich31-vim-thalamus-ventral-intermediate-nucleus-right-mesh"
     ]
   },
   {
@@ -22647,7 +23017,8 @@
       "brain-region:julich-vim-thalamus-ventral-intermediate-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-vim-thalamus-ventral-intermediate-nucleus-left-centroid"
+      "spatial-representation:julich31-vim-thalamus-ventral-intermediate-nucleus-left-centroid",
+      "spatial-representation:julich31-vim-thalamus-ventral-intermediate-nucleus-left-mesh"
     ]
   },
   {
@@ -22708,7 +23079,8 @@
       "brain-region:julich-vm-thalamus-ventral-medial-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-vm-thalamus-ventral-medial-nucleus-right-centroid"
+      "spatial-representation:julich31-vm-thalamus-ventral-medial-nucleus-right-centroid",
+      "spatial-representation:julich31-vm-thalamus-ventral-medial-nucleus-right-mesh"
     ]
   },
   {
@@ -22801,7 +23173,8 @@
       "brain-region:julich-va-thalamus-ventral-anterior-nucleus-ventral"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-va-thalamus-ventral-anterior-nucleus-ventral-right-centroid"
+      "spatial-representation:julich31-va-thalamus-ventral-anterior-nucleus-ventral-right-centroid",
+      "spatial-representation:julich31-va-thalamus-ventral-anterior-nucleus-ventral-right-mesh"
     ]
   },
   {
@@ -22833,7 +23206,8 @@
       "brain-region:julich-va-thalamus-ventral-anterior-nucleus-ventral"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-va-thalamus-ventral-anterior-nucleus-ventral-left-centroid"
+      "spatial-representation:julich31-va-thalamus-ventral-anterior-nucleus-ventral-left-centroid",
+      "spatial-representation:julich31-va-thalamus-ventral-anterior-nucleus-ventral-left-mesh"
     ]
   },
   {
@@ -22894,7 +23268,8 @@
       "brain-region:julich-vla-thalamus-ventral-lateral-anterior-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-vla-thalamus-ventral-lateral-anterior-nucleus-right-centroid"
+      "spatial-representation:julich31-vla-thalamus-ventral-lateral-anterior-nucleus-right-centroid",
+      "spatial-representation:julich31-vla-thalamus-ventral-lateral-anterior-nucleus-right-mesh"
     ]
   },
   {
@@ -22926,7 +23301,8 @@
       "brain-region:julich-vla-thalamus-ventral-lateral-anterior-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-vla-thalamus-ventral-lateral-anterior-nucleus-left-centroid"
+      "spatial-representation:julich31-vla-thalamus-ventral-lateral-anterior-nucleus-left-centroid",
+      "spatial-representation:julich31-vla-thalamus-ventral-lateral-anterior-nucleus-left-mesh"
     ]
   },
   {
@@ -22987,7 +23363,8 @@
       "brain-region:julich-vamc-thalamus-ventral-anterior-nucleus-magnocellular-part"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-vamc-thalamus-ventral-anterior-nucleus-magnocellular-part-right-centroid"
+      "spatial-representation:julich31-vamc-thalamus-ventral-anterior-nucleus-magnocellular-part-right-centroid",
+      "spatial-representation:julich31-vamc-thalamus-ventral-anterior-nucleus-magnocellular-part-right-mesh"
     ]
   },
   {
@@ -23019,7 +23396,8 @@
       "brain-region:julich-vamc-thalamus-ventral-anterior-nucleus-magnocellular-part"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-vamc-thalamus-ventral-anterior-nucleus-magnocellular-part-left-centroid"
+      "spatial-representation:julich31-vamc-thalamus-ventral-anterior-nucleus-magnocellular-part-left-centroid",
+      "spatial-representation:julich31-vamc-thalamus-ventral-anterior-nucleus-magnocellular-part-left-mesh"
     ]
   },
   {
@@ -23202,7 +23580,8 @@
       "brain-region:julich-spf-thalamus-subparafascicular-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-spf-thalamus-subparafascicular-nucleus-right-centroid"
+      "spatial-representation:julich31-spf-thalamus-subparafascicular-nucleus-right-centroid",
+      "spatial-representation:julich31-spf-thalamus-subparafascicular-nucleus-right-mesh"
     ]
   },
   {
@@ -23234,7 +23613,8 @@
       "brain-region:julich-spf-thalamus-subparafascicular-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-spf-thalamus-subparafascicular-nucleus-left-centroid"
+      "spatial-representation:julich31-spf-thalamus-subparafascicular-nucleus-left-centroid",
+      "spatial-representation:julich31-spf-thalamus-subparafascicular-nucleus-left-mesh"
     ]
   },
   {
@@ -23295,7 +23675,8 @@
       "brain-region:julich-pf-thalamus-parafascicular-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-pf-thalamus-parafascicular-nucleus-right-centroid"
+      "spatial-representation:julich31-pf-thalamus-parafascicular-nucleus-right-centroid",
+      "spatial-representation:julich31-pf-thalamus-parafascicular-nucleus-right-mesh"
     ]
   },
   {
@@ -23327,7 +23708,8 @@
       "brain-region:julich-pf-thalamus-parafascicular-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-pf-thalamus-parafascicular-nucleus-left-centroid"
+      "spatial-representation:julich31-pf-thalamus-parafascicular-nucleus-left-centroid",
+      "spatial-representation:julich31-pf-thalamus-parafascicular-nucleus-left-mesh"
     ]
   },
   {
@@ -23388,7 +23770,8 @@
       "brain-region:julich-cm-thalamus-centromedian-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-cm-thalamus-centromedian-nucleus-right-centroid"
+      "spatial-representation:julich31-cm-thalamus-centromedian-nucleus-right-centroid",
+      "spatial-representation:julich31-cm-thalamus-centromedian-nucleus-right-mesh"
     ]
   },
   {
@@ -23420,7 +23803,8 @@
       "brain-region:julich-cm-thalamus-centromedian-nucleus"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-cm-thalamus-centromedian-nucleus-left-centroid"
+      "spatial-representation:julich31-cm-thalamus-centromedian-nucleus-left-centroid",
+      "spatial-representation:julich31-cm-thalamus-centromedian-nucleus-left-mesh"
     ]
   },
   {
@@ -23481,7 +23865,8 @@
       "brain-region:julich-cl-thalamus-anterior-intralaminar-nuclei"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-cl-thalamus-anterior-intralaminar-nuclei-right-centroid"
+      "spatial-representation:julich31-cl-thalamus-anterior-intralaminar-nuclei-right-centroid",
+      "spatial-representation:julich31-cl-thalamus-anterior-intralaminar-nuclei-right-mesh"
     ]
   },
   {
@@ -23513,7 +23898,8 @@
       "brain-region:julich-cl-thalamus-anterior-intralaminar-nuclei"
     ],
     "spatialRepresentationIds": [
-      "spatial-representation:julich31-cl-thalamus-anterior-intralaminar-nuclei-left-centroid"
+      "spatial-representation:julich31-cl-thalamus-anterior-intralaminar-nuclei-left-centroid",
+      "spatial-representation:julich31-cl-thalamus-anterior-intralaminar-nuclei-left-mesh"
     ]
   }
 ]

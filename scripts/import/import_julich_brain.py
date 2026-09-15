@@ -301,8 +301,8 @@ def main():
         spatial_recs = build_spatial(space, regions, by_id)
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    for old in OUT_DIR.glob("*.json"):
-        old.unlink()
+    for name in ("provenance.json", "regions.json", "mappings.json", "spatial.json"):
+        (OUT_DIR / name).unlink(missing_ok=True)  # meshes.json belongs to scripts/build/build_meshes.py
     write(OUT_DIR / "provenance.json", provenance)
     write(OUT_DIR / "regions.json", region_recs)
     write(OUT_DIR / "mappings.json", mapping_recs)
@@ -313,8 +313,8 @@ def main():
     result = subprocess.run([sys.executable, str(VALIDATE), str(OUT_DIR)], capture_output=True, text=True)
     print(result.stdout, file=sys.stderr)
     if result.returncode != 0:
-        for f in OUT_DIR.glob("*.json"):
-            f.unlink()
+        for name in ("provenance.json", "regions.json", "mappings.json", "spatial.json"):
+            (OUT_DIR / name).unlink(missing_ok=True)
         print("validation failed; output removed", file=sys.stderr)
         return 1
     total = len(provenance) + len(region_recs) + len(mapping_recs) + len(spatial_recs)
