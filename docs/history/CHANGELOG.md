@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.7.1 — 2026-09-14
+- Sprint 1: Julich-Brain 3.1 imported via `scripts/import/import_julich_brain.py` — 771 brain-region records, 771 atlas-mapping records, dataset / dataset-version / source / reference-space / atlas provenance
+- `atlas-mapping.displayColor` added (atlas-supplied region colour for the viewer)
+- `requirements-import.txt` for importer-only dependencies
+- Julich-Brain license (CC BY-NC-SA 4.0) recorded with `commercialUseAllowed: false`
+
 ## 0.7 — 2026-09-14
 - Single canonical schema replacing the parallel v0.4 and v0.6 packages
 - Schemas are generated from `scripts/gen_schemas.py`; CI fails on drift

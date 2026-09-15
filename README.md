@@ -13,7 +13,7 @@ hypotheses are never silently mixed.
 
 ## Status
 
-**Schema v0.7 · Phase 0 (foundation) · pre-application**
+**Schema v0.7.1 · Sprint 1 (first real data) · pre-application**
 
 What exists today:
 
@@ -23,9 +23,12 @@ What exists today:
   and governance rules (`scripts/validate.py`), run in CI on every push
 - Scientific-governance principles the data model is designed to uphold
 - A synthetic example bundle exercising the full record chain (`examples/`)
+- **Real data:** the full Julich-Brain 3.1 cytoarchitectonic atlas — 771 regions
+  with hierarchy, atlas mappings, display colours, and provenance
+  (`data/anatomy/julich-brain-3.1/`), produced by a reproducible import script
+  (`scripts/import/import_julich_brain.py`)
 
-What does not exist yet: real data, and the viewer. Those are Sprints 1 and 2.
-See `docs/roadmap.md`.
+What does not exist yet: the viewer. That is Sprint 2. See `docs/roadmap.md`.
 
 ## Quick start
 
@@ -37,6 +40,14 @@ pytest -q
 
 To change the schemas, edit `scripts/gen_schemas.py` and re-run it; `schemas/`
 is generated output and CI fails if it drifts.
+
+To (re)build the Julich-Brain records:
+
+```bash
+pip install -r requirements-import.txt
+python scripts/import/import_julich_brain.py            # regions + mappings, ~1 min
+python scripts/import/import_julich_brain.py --spatial  # adds centroids + volumes, ~30 min first run
+```
 
 ## Scientific principles
 
@@ -59,7 +70,7 @@ Full text: `docs/scientific-governance/principles.md`.
 | `scripts/` | `gen_schemas.py` (schema source of truth), `validate.py` |
 | `docs/` | Data model, ontology, governance, architecture, data-source policy, roadmap |
 | `examples/` | Synthetic placeholder records. **Not scientific content.** |
-| `data/` | Curated project records, by domain. Empty until Sprint 1. |
+| `data/` | Curated project records, by domain. `anatomy/julich-brain-3.1/` is the first real dataset. |
 | `tests/` | Validator tests |
 | `archive/` | Schema v0.4 and v0.6 packages, retained for history |
 | `src/`, `models/` | Reserved for the viewer (Phase 1) and computational models (Phase 5+) |

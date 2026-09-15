@@ -44,6 +44,11 @@
     "datasetVersionId": {
       "$ref": "common.json#/$defs/id"
     },
+    "displayColor": {
+      "type": "string",
+      "pattern": "^#[0-9a-fA-F]{6}$",
+      "description": "The atlas's own display colour for this region, for the viewer"
+    },
     "notes": {
       "type": "string"
     },

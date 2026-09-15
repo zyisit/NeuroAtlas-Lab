@@ -7,11 +7,11 @@
 - Validator with referential integrity + governance rules, wired to CI
 - License decision (Apache-2.0), citation, contribution policy
 
-### Sprint 1 — First real data
-- Ingest one human atlas (candidates: Julich-Brain via `siibra-python`, Allen Human Brain Atlas) into `data/anatomy/`
-- Record Dataset, DatasetVersion, ReferenceSpace, Atlas, AtlasMapping, and SpatialRepresentation for every region
-- Region meshes stored as external assets (`geometry.uri`), not in git
-- Write the import script under `scripts/import/` so the ingestion is reproducible
+### Sprint 1 — First real data (v0.7.1, done)
+- Julich-Brain 3.1 ingested via `siibra-python` into `data/anatomy/julich-brain-3.1/`
+- Dataset, DatasetVersion, Source, ReferenceSpace, Atlas, and an AtlasMapping for every region
+- Optional `--spatial` pass adds centroids and volumes for leaf regions
+- Still to do in Sprint 1b: region meshes as external assets (`geometry.uri`) for the viewer; evaluate Allen Human atlas as a second source
 
 ### Sprint 2 — Viewer MVP
 - React + TypeScript + Three.js, static build deployable to GitHub Pages

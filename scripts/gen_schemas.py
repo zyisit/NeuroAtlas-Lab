@@ -266,6 +266,7 @@ SCHEMAS["atlas-mapping"] = schema(
         "atlasParentRegionId": {"type": "string", "description": "Parent within the atlas's own hierarchy"},
         "mappingType": {"enum": ["exact", "overlap", "approximate", "curated"]},
         "datasetVersionId": ID,
+        "displayColor": {"type": "string", "pattern": "^#[0-9a-fA-F]{6}$", "description": "The atlas's own display colour for this region, for the viewer"},
         "notes": {"type": "string"},
         "provenance": PROV,
     },

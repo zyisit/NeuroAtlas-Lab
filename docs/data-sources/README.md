@@ -15,7 +15,7 @@ them via `spatial-representation.geometry.uri`.
 
 | Phase | Source | Typical license | Notes |
 |---|---|---|---|
-| 1 | Julich-Brain / EBRAINS (via siibra) | CC BY 4.0 (some data CC BY-NC) | Check per-parcellation terms |
+| 1 | Julich-Brain 3.1 / EBRAINS (via siibra) | **CC BY-NC-SA 4.0** (verified 2026-09-14) | Ingested. Non-commercial + share-alike; excluded from any commercial tier |
 | 1 | Allen Human Brain Atlas | Allen Terms of Use | Non-commercial restrictions apply to some resources |
 | 1 | UBERON | CC BY 3.0 | Anatomical identifiers |
 | 2 | Human Connectome Project | HCP Open Access terms | Registration required |
