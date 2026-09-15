@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "spatial-representation.json",
+  "title": "SpatialRepresentation",
+  "description": "A geometric or coordinate payload for an entity in a reference space.",
+  "type": "object",
+  "required": [
+    "id",
+    "referenceSpaceId",
+    "datasetVersionId",
+    "geometry"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "subjectId": {
+      "$ref": "common.json#/$defs/id",
+      "description": "The entity this geometry represents (usually a BrainRegion)"
+    },
+    "referenceSpaceId": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "datasetVersionId": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "transformationIds": {
+      "type": "array",
+      "items": {
+        "$ref": "common.json#/$defs/id"
+      },
+      "uniqueItems": true,
+      "description": "Transformations required to interpret this geometry in referenceSpaceId"
+    },
+    "geometry": {
+      "type": "object",
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "enum": [
+            "point",
+            "bounding_box",
+            "volume",
+            "surface",
+            "mask",
+            "external"
+          ]
+        },
+        "coordinates": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "uri": {
+          "$ref": "common.json#/$defs/uri",
+          "description": "Location of the asset (mesh, NIfTI, etc.). Large assets are never committed to the repo."
+        },
+        "format": {
+          "type": "string",
+          "description": "e.g. glb, obj, nii.gz, ply"
+        },
+        "resolutionUm": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": true
+    },
+    "provenance": {
+      "$ref": "common.json#/$defs/provenance"
+    }
+  }
+}

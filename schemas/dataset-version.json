@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dataset-version.json",
+  "title": "DatasetVersion",
+  "description": "One immutable, date-bounded release of a Dataset. Never overwrite a published DatasetVersion; create a new one.",
+  "type": "object",
+  "required": [
+    "id",
+    "datasetId",
+    "version",
+    "retrievedAt"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "datasetId": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "version": {
+      "$ref": "common.json#/$defs/nonEmptyString"
+    },
+    "releaseDate": {
+      "$ref": "common.json#/$defs/date"
+    },
+    "retrievedAt": {
+      "$ref": "common.json#/$defs/date",
+      "description": "Date this version was retrieved by the project. Required: it anchors reproducibility."
+    },
+    "accessUrl": {
+      "$ref": "common.json#/$defs/uri"
+    },
+    "contentHash": {
+      "type": "string",
+      "description": "Hash of the retrieved payload where feasible"
+    },
+    "license": {
+      "$ref": "common.json#/$defs/license",
+      "description": "Override when a specific release carries different terms"
+    },
+    "transformations": {
+      "type": "array",
+      "items": {
+        "$ref": "common.json#/$defs/nonEmptyString"
+      },
+      "uniqueItems": true,
+      "description": "Human-readable list of processing steps applied by this project after retrieval"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "provenance": {
+      "$ref": "common.json#/$defs/provenance"
+    }
+  }
+}

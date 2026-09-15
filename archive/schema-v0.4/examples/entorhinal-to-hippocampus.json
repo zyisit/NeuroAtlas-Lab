@@ -1,0 +1,13 @@
+{
+  "id": "connection.entorhinal_to_hippocampus.example",
+  "source": "anatomy.region.entorhinal_cortex",
+  "target": "anatomy.region.hippocampus",
+  "direction": "directed",
+  "connection_type": "anatomical_projection",
+  "method": "PLACEHOLDER \u2014 replace with documented source and method",
+  "species": "Homo sapiens",
+  "evidence_refs": [
+    "evidence.example.connectivity"
+  ],
+  "confidence": "unknown"
+}

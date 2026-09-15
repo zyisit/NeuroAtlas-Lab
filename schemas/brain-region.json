@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "brain-region.json",
+  "title": "BrainRegion",
+  "description": "A project-level anatomical region. Identity is NeuroAtlas-owned; atlas labels are mappings, not identity.",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "species",
+    "status"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "name": {
+      "$ref": "common.json#/$defs/nonEmptyString"
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "$ref": "common.json#/$defs/nonEmptyString"
+      },
+      "uniqueItems": true,
+      "description": "Synonyms and abbreviations"
+    },
+    "description": {
+      "type": "string"
+    },
+    "species": {
+      "$ref": "common.json#/$defs/species"
+    },
+    "hemisphere": {
+      "enum": [
+        "left",
+        "right",
+        "bilateral",
+        "midline",
+        "not_applicable"
+      ]
+    },
+    "anatomicalClass": {
+      "type": "string",
+      "description": "Coarse class, e.g. cortex, subcortex, brainstem, cerebellum, white_matter, ventricle"
+    },
+    "parentRegionIds": {
+      "type": "array",
+      "items": {
+        "$ref": "common.json#/$defs/id"
+      },
+      "uniqueItems": true,
+      "description": "Containing regions in the project's canonical hierarchy. Atlas-specific hierarchy belongs in AtlasMapping."
+    },
+    "atlasMappingIds": {
+      "type": "array",
+      "items": {
+        "$ref": "common.json#/$defs/id"
+      },
+      "uniqueItems": true,
+      "description": "AtlasMapping records tying this region to specific parcellations"
+    },
+    "spatialRepresentationIds": {
+      "type": "array",
+      "items": {
+        "$ref": "common.json#/$defs/id"
+      },
+      "uniqueItems": true,
+      "description": "Geometry available for this region"
+    },
+    "externalIdentifiers": {
+      "$ref": "common.json#/$defs/externalIdentifiers"
+    },
+    "evidenceRecordIds": {
+      "type": "array",
+      "items": {
+        "$ref": "common.json#/$defs/id"
+      },
+      "uniqueItems": true,
+      "description": "Evidence for the region's definition, if disputed or non-trivial"
+    },
+    "status": {
+      "$ref": "common.json#/$defs/recordStatus"
+    },
+    "provenance": {
+      "$ref": "common.json#/$defs/provenance"
+    }
+  }
+}

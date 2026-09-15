@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "source.json",
+  "title": "Source",
+  "description": "A citable publication, database, or resource. EvidenceRecords point here.",
+  "type": "object",
+  "required": [
+    "id",
+    "sourceType",
+    "title"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "sourceType": {
+      "enum": [
+        "primary_research",
+        "systematic_review",
+        "meta_analysis",
+        "textbook",
+        "curated_database",
+        "atlas",
+        "experimental_dataset",
+        "computational_model",
+        "clinical_guideline",
+        "educational_resource"
+      ]
+    },
+    "title": {
+      "$ref": "common.json#/$defs/nonEmptyString"
+    },
+    "authors": {
+      "type": "array",
+      "items": {
+        "$ref": "common.json#/$defs/nonEmptyString"
+      },
+      "uniqueItems": true,
+      "description": "Author names as published"
+    },
+    "year": {
+      "type": "integer",
+      "minimum": 1800,
+      "maximum": 2100
+    },
+    "citation": {
+      "type": "string",
+      "description": "Formatted citation string"
+    },
+    "url": {
+      "$ref": "common.json#/$defs/uri"
+    },
+    "datasetVersionId": {
+      "$ref": "common.json#/$defs/id",
+      "description": "When the source is a dataset release already recorded"
+    },
+    "externalIdentifiers": {
+      "$ref": "common.json#/$defs/externalIdentifiers"
+    },
+    "license": {
+      "$ref": "common.json#/$defs/license"
+    },
+    "provenance": {
+      "$ref": "common.json#/$defs/provenance"
+    }
+  }
+}

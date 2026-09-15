@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dataset.json",
+  "title": "Dataset",
+  "description": "An enduring data source or collection (an atlas project, a database, a repository). Concrete releases are DatasetVersion records.",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "license"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "name": {
+      "$ref": "common.json#/$defs/nonEmptyString"
+    },
+    "description": {
+      "type": "string"
+    },
+    "publisher": {
+      "type": "string",
+      "description": "Institution or project, e.g. Allen Institute, EBRAINS"
+    },
+    "homepage": {
+      "$ref": "common.json#/$defs/uri"
+    },
+    "license": {
+      "$ref": "common.json#/$defs/license",
+      "description": "Default license for the dataset; a DatasetVersion may override."
+    },
+    "externalIdentifiers": {
+      "$ref": "common.json#/$defs/externalIdentifiers"
+    },
+    "provenance": {
+      "$ref": "common.json#/$defs/provenance"
+    }
+  }
+}

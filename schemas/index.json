@@ -1,0 +1,24 @@
+{
+  "package": "NeuroAtlas Lab schema package",
+  "version": "0.7",
+  "schemaDraft": "2020-12",
+  "idConvention": "<record-type>:<slug>",
+  "recordTypes": {
+    "dataset": "dataset.json",
+    "dataset-version": "dataset-version.json",
+    "source": "source.json",
+    "reference-space": "reference-space.json",
+    "spatial-transformation": "spatial-transformation.json",
+    "atlas": "atlas.json",
+    "brain-region": "brain-region.json",
+    "atlas-mapping": "atlas-mapping.json",
+    "spatial-representation": "spatial-representation.json",
+    "brain-function": "brain-function.json",
+    "connection": "connection.json",
+    "observation": "observation.json",
+    "claim": "claim.json",
+    "evidence-record": "evidence-record.json",
+    "relationship": "relationship.json"
+  },
+  "shared": "common.json"
+}

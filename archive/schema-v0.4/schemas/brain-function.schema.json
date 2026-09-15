@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://neuroatlas-lab.org/schemas/brain-function.schema.json",
+  "title": "Brain Function",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "name",
+    "category",
+    "description"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "const": "BrainFunction"
+    },
+    "name": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "associated_regions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "associated_networks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "associated_cell_types": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

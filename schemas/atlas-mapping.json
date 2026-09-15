@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "atlas-mapping.json",
+  "title": "AtlasMapping",
+  "description": "Assignment of a BrainRegion to a region in a specific Atlas.",
+  "type": "object",
+  "required": [
+    "id",
+    "brainRegionId",
+    "atlasId",
+    "mappingType"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "brainRegionId": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "atlasId": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "atlasRegionId": {
+      "type": "string",
+      "description": "The region identifier as used inside the atlas"
+    },
+    "label": {
+      "type": "string",
+      "description": "The atlas's own label for the region"
+    },
+    "atlasParentRegionId": {
+      "type": "string",
+      "description": "Parent within the atlas's own hierarchy"
+    },
+    "mappingType": {
+      "enum": [
+        "exact",
+        "overlap",
+        "approximate",
+        "curated"
+      ]
+    },
+    "datasetVersionId": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "provenance": {
+      "$ref": "common.json#/$defs/provenance"
+    }
+  }
+}

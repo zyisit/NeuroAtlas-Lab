@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "connection.json",
+  "title": "Connection",
+  "description": "A typed edge between two anatomical or cellular entities. Species and assertionType are required because connectivity findings do not transfer silently across species or methods.",
+  "type": "object",
+  "required": [
+    "id",
+    "sourceId",
+    "targetId",
+    "direction",
+    "connectionType",
+    "species",
+    "assertionType"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "sourceId": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "targetId": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "direction": {
+      "enum": [
+        "directed",
+        "bidirectional",
+        "undirected",
+        "unknown"
+      ]
+    },
+    "connectionType": {
+      "enum": [
+        "anatomical_projection",
+        "structural_connectivity",
+        "functional_connectivity",
+        "effective_connectivity",
+        "synaptic_connection",
+        "network_relationship"
+      ]
+    },
+    "species": {
+      "$ref": "common.json#/$defs/species"
+    },
+    "context": {
+      "$ref": "common.json#/$defs/context"
+    },
+    "assertionType": {
+      "$ref": "common.json#/$defs/assertionType"
+    },
+    "method": {
+      "type": "string",
+      "description": "e.g. tract tracing, diffusion tractography, resting-state fMRI"
+    },
+    "strength": {
+      "type": "number"
+    },
+    "strengthUnit": {
+      "type": "string"
+    },
+    "neurotransmitterIds": {
+      "type": "array",
+      "items": {
+        "$ref": "common.json#/$defs/id"
+      },
+      "uniqueItems": true,
+      "description": "Reserved for Phase 4; molecule records"
+    },
+    "evidenceRecordIds": {
+      "type": "array",
+      "items": {
+        "$ref": "common.json#/$defs/id"
+      },
+      "uniqueItems": true,
+      "description": "Evidence supporting this connection"
+    },
+    "claimIds": {
+      "type": "array",
+      "items": {
+        "$ref": "common.json#/$defs/id"
+      },
+      "uniqueItems": true,
+      "description": "Claims this connection instantiates"
+    },
+    "confidence": {
+      "$ref": "common.json#/$defs/confidence"
+    },
+    "status": {
+      "$ref": "common.json#/$defs/recordStatus"
+    },
+    "provenance": {
+      "$ref": "common.json#/$defs/provenance"
+    }
+  }
+}

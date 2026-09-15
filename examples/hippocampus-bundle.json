@@ -1,0 +1,193 @@
+[
+  {
+    "id": "dataset:placeholder-human-atlas",
+    "name": "Placeholder Human Reference Atlas",
+    "description": "PLACEHOLDER. Stands in for a real atlas dataset (e.g. Julich-Brain or Allen Human) until Sprint 1 ingestion. Not a scientific source.",
+    "publisher": "NeuroAtlas Lab (synthetic)",
+    "homepage": "https://example.org/placeholder-atlas",
+    "license": { "spdx": "CC-BY-4.0", "commercialUseAllowed": true, "notes": "Illustrative only." }
+  },
+  {
+    "id": "dataset-version:placeholder-human-atlas-1.0",
+    "datasetId": "dataset:placeholder-human-atlas",
+    "version": "1.0",
+    "releaseDate": "2026-01-01",
+    "retrievedAt": "2026-08-30",
+    "accessUrl": "https://example.org/placeholder-atlas/v1.0",
+    "transformations": ["none; synthetic"],
+    "notes": "PLACEHOLDER release record."
+  },
+  {
+    "id": "source:placeholder-textbook",
+    "sourceType": "textbook",
+    "title": "Placeholder Neuroanatomy Textbook",
+    "year": 2020,
+    "citation": "PLACEHOLDER. Replace with a real citation before any claim linked here leaves draft status.",
+    "license": { "spdx": "custom", "notes": "Citation only; no content reproduced." }
+  },
+  {
+    "id": "reference-space:placeholder-mni-like",
+    "name": "Placeholder MNI-like space",
+    "coordinateSystem": "right-handed Cartesian, RAS, template-like",
+    "species": "Homo sapiens",
+    "unit": "mm",
+    "datasetVersionId": "dataset-version:placeholder-human-atlas-1.0"
+  },
+  {
+    "id": "spatial-transformation:placeholder-identity",
+    "sourceReferenceSpaceId": "reference-space:placeholder-mni-like",
+    "targetReferenceSpaceId": "reference-space:placeholder-mni-like",
+    "method": "identity",
+    "invertible": true,
+    "datasetVersionId": "dataset-version:placeholder-human-atlas-1.0"
+  },
+  {
+    "id": "atlas:placeholder-human-parcellation",
+    "name": "Placeholder Human Parcellation",
+    "species": "Homo sapiens",
+    "referenceSpaceId": "reference-space:placeholder-mni-like",
+    "datasetVersionId": "dataset-version:placeholder-human-atlas-1.0",
+    "parcellationVersion": "1.0"
+  },
+  {
+    "id": "brain-region:medial-temporal-lobe",
+    "name": "Medial temporal lobe",
+    "species": "Homo sapiens",
+    "hemisphere": "bilateral",
+    "anatomicalClass": "cortex",
+    "externalIdentifiers": [{ "namespace": "UBERON", "identifier": "UBERON:0004101", "url": "http://purl.obolibrary.org/obo/UBERON_0004101" }],
+    "status": "draft"
+  },
+  {
+    "id": "brain-region:hippocampus",
+    "name": "Hippocampus",
+    "aliases": ["hippocampal formation", "hippocampus proper"],
+    "description": "PLACEHOLDER description. Content requires source review before status moves past draft.",
+    "species": "Homo sapiens",
+    "hemisphere": "bilateral",
+    "anatomicalClass": "subcortex",
+    "parentRegionIds": ["brain-region:medial-temporal-lobe"],
+    "atlasMappingIds": ["atlas-mapping:hippocampus-placeholder-parcellation"],
+    "spatialRepresentationIds": ["spatial-representation:hippocampus-centroid-placeholder"],
+    "externalIdentifiers": [{ "namespace": "UBERON", "identifier": "UBERON:0001954", "url": "http://purl.obolibrary.org/obo/UBERON_0001954" }],
+    "status": "draft"
+  },
+  {
+    "id": "brain-region:ca1",
+    "name": "CA1 field of hippocampus",
+    "aliases": ["CA1", "cornu ammonis 1"],
+    "species": "Homo sapiens",
+    "hemisphere": "bilateral",
+    "anatomicalClass": "subcortex",
+    "parentRegionIds": ["brain-region:hippocampus"],
+    "externalIdentifiers": [{ "namespace": "UBERON", "identifier": "UBERON:0003881" }],
+    "status": "draft"
+  },
+  {
+    "id": "brain-region:entorhinal-cortex",
+    "name": "Entorhinal cortex",
+    "species": "Homo sapiens",
+    "hemisphere": "bilateral",
+    "anatomicalClass": "cortex",
+    "parentRegionIds": ["brain-region:medial-temporal-lobe"],
+    "externalIdentifiers": [{ "namespace": "UBERON", "identifier": "UBERON:0002728" }],
+    "status": "draft"
+  },
+  {
+    "id": "atlas-mapping:hippocampus-placeholder-parcellation",
+    "brainRegionId": "brain-region:hippocampus",
+    "atlasId": "atlas:placeholder-human-parcellation",
+    "atlasRegionId": "PH-017",
+    "label": "Hippocampus (placeholder label)",
+    "mappingType": "exact",
+    "datasetVersionId": "dataset-version:placeholder-human-atlas-1.0"
+  },
+  {
+    "id": "spatial-representation:hippocampus-centroid-placeholder",
+    "subjectId": "brain-region:hippocampus",
+    "referenceSpaceId": "reference-space:placeholder-mni-like",
+    "datasetVersionId": "dataset-version:placeholder-human-atlas-1.0",
+    "transformationIds": ["spatial-transformation:placeholder-identity"],
+    "geometry": { "type": "point", "coordinates": [0, 0, 0], "format": "xyz-mm" }
+  },
+  {
+    "id": "brain-function:spatial-memory",
+    "name": "Spatial memory",
+    "category": "memory",
+    "status": "draft"
+  },
+  {
+    "id": "observation:placeholder-hippocampus-volume",
+    "observationType": "reported",
+    "datasetVersionId": "dataset-version:placeholder-human-atlas-1.0",
+    "sourceId": "source:placeholder-textbook",
+    "subjectId": "brain-region:hippocampus",
+    "species": "Homo sapiens",
+    "context": { "preparation": "post_mortem", "sex": "mixed" },
+    "value": 0,
+    "unit": "mm3",
+    "method": "PLACEHOLDER value; not a measurement",
+    "spatialRepresentationId": "spatial-representation:hippocampus-centroid-placeholder"
+  },
+  {
+    "id": "claim:hippocampus-spatial-memory",
+    "statement": "The hippocampus contributes to spatial memory in humans.",
+    "subjectIds": ["brain-region:hippocampus", "brain-function:spatial-memory"],
+    "species": "Homo sapiens",
+    "evidenceStatus": "uncertain",
+    "evidenceRecordIds": ["evidence-record:hippocampus-spatial-memory-textbook"],
+    "status": "draft",
+    "provenance": { "createdBy": "example bundle", "notes": "evidenceStatus is deliberately 'uncertain' because the only linked source is a placeholder. Real curation will raise it." }
+  },
+  {
+    "id": "evidence-record:hippocampus-spatial-memory-textbook",
+    "claimId": "claim:hippocampus-spatial-memory",
+    "sourceId": "source:placeholder-textbook",
+    "evidenceType": "mixed",
+    "polarity": "supports",
+    "species": "Homo sapiens",
+    "locator": "PLACEHOLDER chapter/page"
+  },
+  {
+    "id": "relationship:hippocampus-contributes-to-spatial-memory",
+    "subjectId": "brain-region:hippocampus",
+    "predicate": "contributes_to",
+    "objectId": "brain-function:spatial-memory",
+    "species": "Homo sapiens",
+    "assertionType": "curated",
+    "claimIds": ["claim:hippocampus-spatial-memory"],
+    "status": "draft"
+  },
+  {
+    "id": "relationship:ca1-part-of-hippocampus",
+    "subjectId": "brain-region:ca1",
+    "predicate": "part_of",
+    "objectId": "brain-region:hippocampus",
+    "species": "Homo sapiens",
+    "assertionType": "curated",
+    "status": "draft"
+  },
+  {
+    "id": "connection:entorhinal-to-hippocampus-placeholder",
+    "sourceId": "brain-region:entorhinal-cortex",
+    "targetId": "brain-region:hippocampus",
+    "direction": "directed",
+    "connectionType": "anatomical_projection",
+    "species": "Homo sapiens",
+    "context": { "preparation": "unknown" },
+    "assertionType": "curated",
+    "method": "PLACEHOLDER; replace with documented tracing or tractography source",
+    "evidenceRecordIds": ["evidence-record:hippocampus-spatial-memory-textbook"],
+    "status": "draft"
+  },
+  {
+    "id": "relationship:model-derived-example",
+    "subjectId": "brain-region:ca1",
+    "predicate": "modeled_by",
+    "objectId": "source:placeholder-textbook",
+    "assertionType": "model_derived",
+    "confidence": 0.3,
+    "status": "draft",
+    "provenance": { "notes": "Shows a model_derived edge. The validator would reject this if it were linked to an 'established' claim." }
+  }
+]

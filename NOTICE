@@ -1,0 +1,9 @@
+NeuroAtlas Lab
+Copyright 2026 NeuroAtlas Lab contributors
+
+This product includes software developed under the Apache License, Version 2.0.
+
+Scientific data ingested into this project retains the license of its original
+source. See docs/data-sources/README.md and each Dataset / DatasetVersion record
+for per-source terms and attribution requirements. Data licensed for
+non-commercial use only is flagged with license.commercialUseAllowed = false.

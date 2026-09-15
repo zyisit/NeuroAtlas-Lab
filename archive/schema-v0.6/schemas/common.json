@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "common.json",
+  "$defs": {
+    "id": { "type": "string", "minLength": 1 },
+    "nonEmptyString": { "type": "string", "minLength": 1 },
+    "uri": { "type": "string", "format": "uri" },
+    "provenance": {
+      "type": "object",
+      "properties": { "createdAt": { "type": "string", "format": "date-time" }, "createdBy": { "$ref": "#/$defs/nonEmptyString" } },
+      "additionalProperties": true
+    }
+  }
+}

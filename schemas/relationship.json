@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "relationship.json",
+  "title": "Relationship",
+  "description": "A generic typed edge between any two entities using the controlled predicate vocabulary.",
+  "type": "object",
+  "required": [
+    "id",
+    "subjectId",
+    "predicate",
+    "objectId",
+    "assertionType",
+    "status"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "subjectId": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "predicate": {
+      "$ref": "common.json#/$defs/nonEmptyString",
+      "description": "Must be a term in docs/ontology/predicate-vocabulary.md. Enforced by scripts/validate.py, not by JSON Schema."
+    },
+    "objectId": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "species": {
+      "$ref": "common.json#/$defs/species"
+    },
+    "context": {
+      "$ref": "common.json#/$defs/context"
+    },
+    "assertionType": {
+      "$ref": "common.json#/$defs/assertionType"
+    },
+    "confidence": {
+      "$ref": "common.json#/$defs/confidence"
+    },
+    "observationIds": {
+      "type": "array",
+      "items": {
+        "$ref": "common.json#/$defs/id"
+      },
+      "uniqueItems": true,
+      "description": "Supporting observations"
+    },
+    "claimIds": {
+      "type": "array",
+      "items": {
+        "$ref": "common.json#/$defs/id"
+      },
+      "uniqueItems": true,
+      "description": "Claims this edge instantiates"
+    },
+    "evidenceRecordIds": {
+      "type": "array",
+      "items": {
+        "$ref": "common.json#/$defs/id"
+      },
+      "uniqueItems": true,
+      "description": "Direct evidence for this edge"
+    },
+    "status": {
+      "$ref": "common.json#/$defs/recordStatus"
+    },
+    "provenance": {
+      "$ref": "common.json#/$defs/provenance"
+    }
+  }
+}

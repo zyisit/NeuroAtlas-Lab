@@ -1,0 +1,194 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "common.json",
+  "title": "NeuroAtlas common definitions",
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*:[a-z0-9][a-z0-9._-]*$",
+      "description": "Stable local identifier of the form <record-type>:<slug>, e.g. brain-region:hippocampus. Never encode an external database ID here; use externalIdentifiers."
+    },
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "uri": {
+      "type": "string",
+      "format": "uri"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "provenance": {
+      "type": "object",
+      "description": "Who/what created this record and when. Curatorial provenance, not scientific provenance (that lives in evidence/dataset records).",
+      "properties": {
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "createdBy": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedBy": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "method": {
+          "type": "string",
+          "description": "e.g. manual curation, script name and version, import pipeline"
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "externalIdentifier": {
+      "type": "object",
+      "required": [
+        "namespace",
+        "identifier"
+      ],
+      "properties": {
+        "namespace": {
+          "$ref": "#/$defs/nonEmptyString",
+          "description": "e.g. UBERON, NeuroNames, Allen, JulichBrain, ChEBI, IUPHAR, GO, MONDO, DOID, PubMed, DOI"
+        },
+        "identifier": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "url": {
+          "$ref": "#/$defs/uri"
+        },
+        "sourceVersion": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "externalIdentifiers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/externalIdentifier"
+      }
+    },
+    "species": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Binomial name or NCBI Taxonomy label (e.g. 'Homo sapiens', 'Mus musculus'). Use 'multiple' only on records that explicitly aggregate across species."
+    },
+    "context": {
+      "type": "object",
+      "description": "Experimental / interpretive context on which a statement depends.",
+      "properties": {
+        "preparation": {
+          "enum": [
+            "in_vivo",
+            "ex_vivo",
+            "in_vitro",
+            "post_mortem",
+            "in_silico",
+            "clinical",
+            "mixed",
+            "unknown"
+          ]
+        },
+        "developmentalStage": {
+          "type": "string"
+        },
+        "sex": {
+          "enum": [
+            "female",
+            "male",
+            "mixed",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "strain": {
+          "type": "string"
+        },
+        "condition": {
+          "type": "string",
+          "description": "e.g. healthy, disease model name, anaesthetised"
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "recordStatus": {
+      "enum": [
+        "draft",
+        "proposed",
+        "active",
+        "deprecated",
+        "superseded",
+        "retracted"
+      ],
+      "description": "Lifecycle of the record itself, not the truth of its content."
+    },
+    "assertionType": {
+      "enum": [
+        "observed",
+        "curated",
+        "inferred",
+        "model_derived",
+        "hypothetical"
+      ],
+      "description": "How the assertion came to exist. Required on every relationship/connection so model output is never confused with observation. Not a truth score."
+    },
+    "evidenceStatus": {
+      "enum": [
+        "established",
+        "well_supported",
+        "supported",
+        "emerging",
+        "uncertain",
+        "contested",
+        "model_derived",
+        "hypothetical"
+      ],
+      "description": "Communication metadata about the weight of evidence behind a claim. See docs/scientific-governance/principles.md."
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Optional curator confidence. Omit rather than guess."
+    },
+    "license": {
+      "type": "object",
+      "required": [
+        "spdx"
+      ],
+      "properties": {
+        "spdx": {
+          "$ref": "#/$defs/nonEmptyString",
+          "description": "SPDX identifier, e.g. CC-BY-4.0, CC-BY-NC-4.0, ODbL-1.0, or 'custom' with a url"
+        },
+        "url": {
+          "$ref": "#/$defs/uri"
+        },
+        "attributionText": {
+          "type": "string",
+          "description": "Verbatim attribution the licensor requires"
+        },
+        "commercialUseAllowed": {
+          "type": "boolean",
+          "description": "Explicitly recorded so downstream tiers can filter data by permitted use"
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

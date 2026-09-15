@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "relationship.json", "title": "Relationship",
+  "type": "object", "required": ["id", "subjectId", "predicate", "objectId", "assertionType"], "additionalProperties": false,
+  "properties": {
+    "id": { "$ref": "common.json#/$defs/id" }, "subjectId": { "$ref": "common.json#/$defs/id" }, "predicate": { "$ref": "common.json#/$defs/nonEmptyString" }, "objectId": { "$ref": "common.json#/$defs/id" }, "assertionType": { "enum": ["observed", "curated", "inferred", "model-derived", "hypothetical"] }, "confidence": { "type": "number", "minimum": 0, "maximum": 1 }, "observationIds": { "type": "array", "items": { "$ref": "common.json#/$defs/id" }, "uniqueItems": true }, "claimIds": { "type": "array", "items": { "$ref": "common.json#/$defs/id" }, "uniqueItems": true }, "provenance": { "$ref": "common.json#/$defs/provenance" }
+  }
+}

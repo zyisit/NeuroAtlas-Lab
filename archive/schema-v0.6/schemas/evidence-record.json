@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "evidence-record.json", "title": "EvidenceRecord",
+  "type": "object", "required": ["id", "claimId", "evidenceType"], "additionalProperties": false,
+  "properties": {
+    "id": { "$ref": "common.json#/$defs/id" }, "claimId": { "$ref": "common.json#/$defs/id" }, "evidenceType": { "enum": ["publication", "dataset", "observation", "analysis", "curation"] }, "observationIds": { "type": "array", "items": { "$ref": "common.json#/$defs/id" }, "uniqueItems": true }, "datasetVersionId": { "$ref": "common.json#/$defs/id" }, "citation": { "type": "string" }, "url": { "$ref": "common.json#/$defs/uri" }, "notes": { "type": "string" }, "provenance": { "$ref": "common.json#/$defs/provenance" }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "function.spatial_memory",
+  "type": "BrainFunction",
+  "name": "Spatial memory",
+  "category": "cognitive_process",
+  "description": "Example function record.",
+  "associated_regions": [
+    "anatomy.region.hippocampus"
+  ],
+  "associated_networks": [],
+  "associated_cell_types": [],
+  "evidence_refs": []
+}

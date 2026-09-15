@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "observation.json",
+  "title": "Observation",
+  "description": "The atomic record of a measured, annotated, computed, or reported result.",
+  "type": "object",
+  "required": [
+    "id",
+    "observationType",
+    "datasetVersionId"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "observationType": {
+      "enum": [
+        "measurement",
+        "annotation",
+        "derived",
+        "reported"
+      ]
+    },
+    "datasetVersionId": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "sourceId": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "subjectId": {
+      "$ref": "common.json#/$defs/id",
+      "description": "Entity the observation is about"
+    },
+    "species": {
+      "$ref": "common.json#/$defs/species"
+    },
+    "context": {
+      "$ref": "common.json#/$defs/context"
+    },
+    "value": {},
+    "unit": {
+      "type": "string"
+    },
+    "method": {
+      "type": "string"
+    },
+    "spatialRepresentationId": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "provenance": {
+      "$ref": "common.json#/$defs/provenance"
+    }
+  }
+}

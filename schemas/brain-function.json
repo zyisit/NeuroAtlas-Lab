@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "brain-function.json",
+  "title": "BrainFunction",
+  "description": "A named function or process that entities can be associated with via relationships. Functional association is a claim, not an anatomical fact.",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "status"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "name": {
+      "$ref": "common.json#/$defs/nonEmptyString"
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "$ref": "common.json#/$defs/nonEmptyString"
+      },
+      "uniqueItems": true,
+      "description": "Synonyms"
+    },
+    "description": {
+      "type": "string"
+    },
+    "category": {
+      "enum": [
+        "sensory",
+        "motor",
+        "cognitive",
+        "affective",
+        "memory",
+        "language",
+        "autonomic",
+        "homeostatic",
+        "arousal",
+        "other"
+      ]
+    },
+    "externalIdentifiers": {
+      "$ref": "common.json#/$defs/externalIdentifiers",
+      "description": "e.g. Cognitive Atlas, NeuroLex"
+    },
+    "status": {
+      "$ref": "common.json#/$defs/recordStatus"
+    },
+    "provenance": {
+      "$ref": "common.json#/$defs/provenance"
+    }
+  }
+}

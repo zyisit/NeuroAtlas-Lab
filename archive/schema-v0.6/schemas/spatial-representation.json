@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "spatial-representation.json", "title": "SpatialRepresentation",
+  "type": "object", "required": ["id", "referenceSpaceId", "datasetVersionId", "geometry"], "additionalProperties": false,
+  "properties": {
+    "id": { "$ref": "common.json#/$defs/id" }, "referenceSpaceId": { "$ref": "common.json#/$defs/id" }, "datasetVersionId": { "$ref": "common.json#/$defs/id" },
+    "transformationIds": { "type": "array", "items": { "$ref": "common.json#/$defs/id" }, "uniqueItems": true },
+    "geometry": { "type": "object", "required": ["type"], "properties": { "type": { "enum": ["point", "volume", "surface", "mask", "external"] }, "coordinates": { "type": "array", "items": { "type": "number" } }, "uri": { "$ref": "common.json#/$defs/uri" } }, "additionalProperties": true }, "provenance": { "$ref": "common.json#/$defs/provenance" }
+  }
+}

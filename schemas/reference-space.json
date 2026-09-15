@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "reference-space.json",
+  "title": "ReferenceSpace",
+  "description": "A named coordinate frame. Reference anatomy is not an individual brain; every space records the species and template it is defined on.",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "coordinateSystem",
+    "species"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "name": {
+      "$ref": "common.json#/$defs/nonEmptyString"
+    },
+    "coordinateSystem": {
+      "$ref": "common.json#/$defs/nonEmptyString",
+      "description": "e.g. MNI152 NLin2009cAsym, Talairach, CCFv3, native-scanner"
+    },
+    "species": {
+      "$ref": "common.json#/$defs/species"
+    },
+    "unit": {
+      "enum": [
+        "mm",
+        "um",
+        "voxel"
+      ]
+    },
+    "description": {
+      "type": "string"
+    },
+    "datasetVersionId": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "externalIdentifiers": {
+      "$ref": "common.json#/$defs/externalIdentifiers"
+    },
+    "provenance": {
+      "$ref": "common.json#/$defs/provenance"
+    }
+  }
+}

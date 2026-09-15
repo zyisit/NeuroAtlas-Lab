@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "atlas.json",
+  "title": "Atlas",
+  "description": "A named parcellation of a reference space (e.g. Julich-Brain 3.0, Allen CCFv3). Regions map into atlases via AtlasMapping.",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "species",
+    "referenceSpaceId",
+    "datasetVersionId"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "name": {
+      "$ref": "common.json#/$defs/nonEmptyString"
+    },
+    "species": {
+      "$ref": "common.json#/$defs/species"
+    },
+    "referenceSpaceId": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "datasetVersionId": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "parcellationVersion": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "externalIdentifiers": {
+      "$ref": "common.json#/$defs/externalIdentifiers"
+    },
+    "provenance": {
+      "$ref": "common.json#/$defs/provenance"
+    }
+  }
+}

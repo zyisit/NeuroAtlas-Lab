@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "claim.json",
+  "title": "Claim",
+  "description": "A human-readable scientific statement with an explicit evidence status. Claims are what the UI shows; relationships are how the graph is walked.",
+  "type": "object",
+  "required": [
+    "id",
+    "statement",
+    "evidenceStatus",
+    "status"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "statement": {
+      "$ref": "common.json#/$defs/nonEmptyString"
+    },
+    "subjectIds": {
+      "type": "array",
+      "items": {
+        "$ref": "common.json#/$defs/id"
+      },
+      "uniqueItems": true,
+      "description": "Entities the claim is about"
+    },
+    "species": {
+      "$ref": "common.json#/$defs/species"
+    },
+    "context": {
+      "$ref": "common.json#/$defs/context"
+    },
+    "evidenceStatus": {
+      "$ref": "common.json#/$defs/evidenceStatus"
+    },
+    "observationIds": {
+      "type": "array",
+      "items": {
+        "$ref": "common.json#/$defs/id"
+      },
+      "uniqueItems": true,
+      "description": "Observations directly supporting the claim"
+    },
+    "evidenceRecordIds": {
+      "type": "array",
+      "items": {
+        "$ref": "common.json#/$defs/id"
+      },
+      "uniqueItems": true,
+      "description": "Evidence records for and against"
+    },
+    "supersededByClaimId": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "status": {
+      "$ref": "common.json#/$defs/recordStatus"
+    },
+    "provenance": {
+      "$ref": "common.json#/$defs/provenance"
+    }
+  }
+}

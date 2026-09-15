@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "evidence-record.json",
+  "title": "EvidenceRecord",
+  "description": "Links a Claim to a Source, states whether the source supports or contradicts it, and preserves species/context.",
+  "type": "object",
+  "required": [
+    "id",
+    "claimId",
+    "sourceId",
+    "evidenceType",
+    "polarity"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "claimId": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "sourceId": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "evidenceType": {
+      "enum": [
+        "anatomical",
+        "electrophysiological",
+        "molecular",
+        "imaging",
+        "behavioral",
+        "clinical",
+        "computational",
+        "curation",
+        "mixed"
+      ]
+    },
+    "polarity": {
+      "enum": [
+        "supports",
+        "contradicts",
+        "mixed",
+        "uninformative"
+      ],
+      "description": "Contradicting evidence is recorded, not discarded."
+    },
+    "species": {
+      "$ref": "common.json#/$defs/species"
+    },
+    "context": {
+      "$ref": "common.json#/$defs/context"
+    },
+    "methods": {
+      "type": "array",
+      "items": {
+        "$ref": "common.json#/$defs/nonEmptyString"
+      },
+      "uniqueItems": true,
+      "description": "Methods used in the source"
+    },
+    "observationIds": {
+      "type": "array",
+      "items": {
+        "$ref": "common.json#/$defs/id"
+      },
+      "uniqueItems": true,
+      "description": "Specific observations cited"
+    },
+    "datasetVersionId": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "locator": {
+      "type": "string",
+      "description": "Page, figure, table, or record ID within the source"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "provenance": {
+      "$ref": "common.json#/$defs/provenance"
+    }
+  }
+}

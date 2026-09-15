@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "spatial-transformation.json",
+  "title": "SpatialTransformation",
+  "description": "A directed registration between two reference spaces.",
+  "type": "object",
+  "required": [
+    "id",
+    "sourceReferenceSpaceId",
+    "targetReferenceSpaceId",
+    "method"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "sourceReferenceSpaceId": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "targetReferenceSpaceId": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "method": {
+      "$ref": "common.json#/$defs/nonEmptyString",
+      "description": "e.g. affine, SyN nonlinear, identity"
+    },
+    "datasetVersionId": {
+      "$ref": "common.json#/$defs/id"
+    },
+    "parametersUrl": {
+      "$ref": "common.json#/$defs/uri"
+    },
+    "invertible": {
+      "type": "boolean"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "provenance": {
+      "$ref": "common.json#/$defs/provenance"
+    }
+  }
+}
