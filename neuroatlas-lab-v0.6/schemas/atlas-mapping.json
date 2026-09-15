@@ -1,8 +1,0 @@
-{
-  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "atlas-mapping.json", "title": "AtlasMapping",
-  "type": "object", "required": ["id", "brainRegionId", "atlasId"], "additionalProperties": false,
-  "properties": {
-    "id": { "$ref": "common.json#/$defs/id" }, "brainRegionId": { "$ref": "common.json#/$defs/id" }, "atlasId": { "$ref": "common.json#/$defs/id" },
-    "atlasRegionId": { "type": "string" }, "label": { "type": "string" }, "datasetVersionId": { "$ref": "common.json#/$defs/id" }, "mappingType": { "enum": ["exact", "overlap", "approximate", "curated"] }, "provenance": { "$ref": "common.json#/$defs/provenance" }
-  }
-}

@@ -1,9 +1,0 @@
-{
-  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "reference-space.json", "title": "ReferenceSpace",
-  "type": "object", "required": ["id", "name", "coordinateSystem"], "additionalProperties": false,
-  "properties": {
-    "id": { "$ref": "common.json#/$defs/id" }, "name": { "$ref": "common.json#/$defs/nonEmptyString" },
-    "coordinateSystem": { "$ref": "common.json#/$defs/nonEmptyString" }, "description": { "type": "string" },
-    "unit": { "type": "string" }, "datasetVersionId": { "$ref": "common.json#/$defs/id" }, "provenance": { "$ref": "common.json#/$defs/provenance" }
-  }
-}

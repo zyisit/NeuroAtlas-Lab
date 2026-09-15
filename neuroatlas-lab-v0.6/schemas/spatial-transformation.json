@@ -1,8 +1,0 @@
-{
-  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "spatial-transformation.json", "title": "SpatialTransformation",
-  "type": "object", "required": ["id", "sourceReferenceSpaceId", "targetReferenceSpaceId", "method"], "additionalProperties": false,
-  "properties": {
-    "id": { "$ref": "common.json#/$defs/id" }, "sourceReferenceSpaceId": { "$ref": "common.json#/$defs/id" }, "targetReferenceSpaceId": { "$ref": "common.json#/$defs/id" },
-    "method": { "$ref": "common.json#/$defs/nonEmptyString" }, "datasetVersionId": { "$ref": "common.json#/$defs/id" }, "parametersUrl": { "$ref": "common.json#/$defs/uri" }, "provenance": { "$ref": "common.json#/$defs/provenance" }
-  }
-}

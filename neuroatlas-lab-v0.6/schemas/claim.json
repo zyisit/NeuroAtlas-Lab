@@ -1,7 +1,0 @@
-{
-  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "claim.json", "title": "Claim",
-  "type": "object", "required": ["id", "statement"], "additionalProperties": false,
-  "properties": {
-    "id": { "$ref": "common.json#/$defs/id" }, "statement": { "$ref": "common.json#/$defs/nonEmptyString" }, "observationIds": { "type": "array", "items": { "$ref": "common.json#/$defs/id" }, "uniqueItems": true }, "evidenceRecordIds": { "type": "array", "items": { "$ref": "common.json#/$defs/id" }, "uniqueItems": true }, "status": { "enum": ["active", "superseded", "retracted"] }, "provenance": { "$ref": "common.json#/$defs/provenance" }
-  }
-}
