@@ -102,6 +102,11 @@ def load_schemas():
 def iter_records(paths):
     for p in paths:
         p = Path(p)
+        if not p.exists():
+            if p in DEFAULT_PATHS:
+                continue  # data/ is empty until Sprint 1; that's fine
+            yield p, None, "path does not exist"
+            continue
         files = sorted(p.rglob("*.json")) if p.is_dir() else [p]
         for f in files:
             try:
