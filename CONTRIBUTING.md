@@ -9,7 +9,7 @@ import scripts.
 2. Record species and context wherever interpretation depends on them.
 3. Set `assertionType` honestly. `curated` means a human read the source and
    entered it; `observed` means the record *is* the observation.
-4. Leave new claims at `evidenceStatus: uncertain` or lower until reviewed.
+4. Author claims with `status: proposed`; a curator sets them `active` after reading the sources. See `docs/curation.md`.
 5. Run `python scripts/validate.py` and `pytest` before opening a PR. CI runs both.
 
 ## Changing the schema

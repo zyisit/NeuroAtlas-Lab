@@ -45,6 +45,27 @@ def slug(text: str) -> str:
     return re.sub(r"-{2,}", "-", s)
 
 
+def mapped_leaves(parc, lmap):
+    """Regions that have a label in the map and none of whose descendants do.
+
+    Julich defines some sub-areas (e.g. amygdala subnuclei) in the hierarchy but
+    maps only their parent, so 'leaf' must mean leaf-of-the-map, not leaf-of-the-tree.
+    """
+    import logging
+    logging.getLogger("siibra").setLevel(logging.ERROR)
+    mapped = []
+    for r in parc:
+        if r is parc:
+            continue
+        try:
+            lmap.get_index(r)
+            mapped.append(r)
+        except Exception:
+            pass
+    mapped_set = set(mapped)
+    return [r for r in mapped if not any(d in mapped_set for d in r.descendants)]
+
+
 def to_mm(verts_vox: np.ndarray, affine: np.ndarray) -> np.ndarray:
     homog = np.c_[verts_vox, np.ones(len(verts_vox))]
     return (affine @ homog.T).T[:, :3].astype(np.float32)
@@ -108,13 +129,11 @@ def main():
                 by_key[e["identifier"]] = r
 
     scene = trimesh.Scene()
-    leaves = [r for r in parc.leaves]
+    leaves = mapped_leaves(parc, lmap)
+    print(f"{len(leaves)} mapped leaf regions (regions with a label and no labelled descendant)", file=sys.stderr)
     n_ok = 0
     for i, r in enumerate(leaves, 1):
-        try:
-            idx = lmap.get_index(r)
-        except Exception:
-            continue
+        idx = lmap.get_index(r)
         frag = idx.fragment if idx.fragment in labels else next(iter(labels))
         m = mesh_from_mask(labels[frag] == idx.label, affine, sigma=1.0, level=0.5, step=1, target_faces=700)
         if m is None or len(m.faces) < 12:

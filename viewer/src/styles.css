@@ -67,7 +67,12 @@ dl { margin: 0; }
 .status-contested, .status-uncertain { background: #f5ecd2; color: #6d5414; }
 .polarity-contradicts { background: #f7e3d9; color: #7a3d22; }
 .polarity-supports { background: #d9efe3; color: #1f5a3c; }
-.claim ul { margin: 4px 0 8px; padding-left: 18px; }
+.claim { margin: 0 0 14px; }
+.claim-statement { margin: 0 0 2px; }
+.claim .evidence { margin: 4px 0 0; padding-left: 0; list-style: none; }
+.claim .evidence li { padding: 4px 0 4px 10px; border-left: 2px solid var(--rule); margin-bottom: 4px; font-size: 13px; }
+.claim .evidence small { display: block; color: var(--ink-2); font-size: 12px; margin-top: 2px; }
+.inherited { margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--rule); }
 .error { margin: 12px 20px; color: #8a2f1f; }
 
 .attribution { padding: 10px 20px; border-top: 1px solid var(--rule); font-size: 12px; color: var(--ink-2); }

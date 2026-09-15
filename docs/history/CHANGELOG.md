@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.9.0 — 2026-09-14
+- Sprint 3: first curated claims — 12 claims, 23 sources (DOIs verified), 28 evidence records (5 `contradicts`), 8 relationships, 6 brain-function records, in `data/function/curated-claims-v1.json`; `docs/curation.md` documents the rules and review lifecycle
+- Viewer: evidence records show polarity, species, preparation, method, locator and notes with DOI links; claims about containing regions are shown for sub-regions; region colour falls back to the nearest coloured relative; selecting a region swings the camera to its side
+- Meshes and centroids now cover *map* leaves (regions with a label and no labelled descendant) rather than tree leaves, so amygdala nuclear groups and other parent-mapped structures get surfaces (406 meshes, up from 386)
+
 ## 0.8.0 — 2026-09-14
 - Sprint 2: viewer MVP in `viewer/` (React 19, three.js, Vite) — region tree with search, 3D region surfaces, evidence/detail panel, attribution footer
 - `scripts/build/build_meshes.py`: whole-brain hull and 386 per-region GLB meshes from the Julich labelled MPM, with spatial-representation records (`data/anatomy/julich-brain-3.1/meshes.json`)

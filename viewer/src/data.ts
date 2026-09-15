@@ -24,10 +24,10 @@ export interface Observation {
   spatialRepresentationId?: string;
 }
 export interface Claim {
-  id: string; statement: string; subjectIds?: string[]; species?: string; evidenceStatus: string;
+  id: string; statement: string; subjectIds?: string[]; species?: string; context?: Record<string, string>; evidenceStatus: string;
   evidenceRecordIds?: string[]; status: string;
 }
-export interface EvidenceRecord { id: string; claimId: string; sourceId: string; evidenceType: string; polarity: string; locator?: string }
+export interface EvidenceRecord { id: string; claimId: string; sourceId: string; evidenceType: string; polarity: string; species?: string; context?: Record<string, string>; locator?: string; methods?: string[]; notes?: string }
 export interface Source { id: string; sourceType: string; title: string; authors?: string[]; year?: number; citation?: string; url?: string }
 export interface Dataset { id: string; name: string; publisher?: string; homepage?: string; license: { spdx: string; url?: string; attributionText?: string; commercialUseAllowed?: boolean } }
 export interface DatasetVersion { id: string; datasetId: string; version: string; retrievedAt: string; accessUrl?: string }
@@ -95,13 +95,20 @@ export async function loadBundle(): Promise<Index> {
   const byId = new Map<string, unknown>();
   for (const list of Object.values(R)) for (const rec of list ?? []) byId.set((rec as { id: string }).id, rec);
 
-  const colorOf = (id: string) => mappingsByRegion.get(id)?.find((m) => m.displayColor)?.displayColor;
-  const centroidOf = (id: string) => spatialByRegion.get(id)?.find((s) => s.geometry.type === "point")?.geometry.coordinates;
   const descendants = (id: string): string[] => {
     const out: string[] = []; const stack = [...(children.get(id) ?? [])];
     while (stack.length) { const c = stack.pop()!; out.push(c); stack.push(...(children.get(c) ?? [])); }
     return out;
   };
+  const ownColor = (id: string) => mappingsByRegion.get(id)?.find((m) => m.displayColor)?.displayColor;
+  const colorOf = (id: string): string | undefined => {
+    // own colour, else nearest coloured ancestor, else first coloured descendant
+    let cur: string | undefined = id;
+    while (cur) { const c = ownColor(cur); if (c) return c; cur = regions.get(cur)?.parentRegionIds?.[0]; }
+    for (const d of descendants(id)) { const c = ownColor(d); if (c) return c; }
+    return undefined;
+  };
+  const centroidOf = (id: string) => spatialByRegion.get(id)?.find((s) => s.geometry.type === "point")?.geometry.coordinates;
   const ancestors = (id: string): BrainRegion[] => {
     const out: BrainRegion[] = []; let cur = regions.get(id)?.parentRegionIds?.[0];
     while (cur && regions.has(cur)) { out.unshift(regions.get(cur)!); cur = regions.get(cur)!.parentRegionIds?.[0]; }

@@ -220,9 +220,26 @@ def build_regions(parcellation, regions) -> tuple[list[dict], list[dict]]:
     return region_recs, mapping_recs
 
 
-def build_spatial(space, regions, region_recs_by_id) -> list[dict]:
+def mapped_leaves(parcellation, space, regions):
+    """Regions with a label in the labelled map and no labelled descendant."""
+    import logging
+    logging.getLogger("siibra").setLevel(logging.ERROR)
+    lmap = parcellation.get_map(space=space, maptype="labelled")
+    mapped = []
+    for r in regions:
+        try:
+            lmap.get_index(r)
+            mapped.append(r)
+        except Exception:
+            pass
+    mapped_set = set(mapped)
+    return [r for r in mapped if not any(d in mapped_set for d in r.descendants)]
+
+
+def build_spatial(space, regions, region_recs_by_id, parcellation) -> list[dict]:
     recs = []
-    leaves = [r for r in regions if r.is_leaf]
+    leaves = mapped_leaves(parcellation, space, regions)
+    print(f"{len(leaves)} mapped leaf regions", file=sys.stderr)
     for i, r in enumerate(leaves, 1):
         try:
             props = r.spatial_props(space)
@@ -298,7 +315,7 @@ def main():
     spatial_recs = []
     if args.spatial:
         print("computing spatial properties (this fetches one mask per leaf region) ...", file=sys.stderr)
-        spatial_recs = build_spatial(space, regions, by_id)
+        spatial_recs = build_spatial(space, regions, by_id, parcellation)
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     for name in ("provenance.json", "regions.json", "mappings.json", "spatial.json"):

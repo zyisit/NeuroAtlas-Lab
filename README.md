@@ -13,7 +13,7 @@ hypotheses are never silently mixed.
 
 ## Status
 
-**v0.8.0 · Sprint 2 (viewer MVP)**
+**v0.9.0 · Sprint 3 (first curated claims)**
 
 What exists today:
 
@@ -29,8 +29,11 @@ What exists today:
   (`scripts/import/import_julich_brain.py`)
 
 - **The viewer:** a React + three.js atlas browser (`viewer/`) — searchable region
-  hierarchy, 3D surfaces for 386 Julich regions in MNI152 space, and a detail panel
+  hierarchy, 3D surfaces for 406 Julich regions in MNI152 space, and a detail panel
   that shows only what the records contain, with sources and license attached
+- **First curated claims** (`data/function/`): twelve cited statements about the
+  hippocampus, V1, M1 and amygdala, each with species, preparation, evidence status,
+  and evidence for *and against* — see `docs/curation.md`
 
 Run it: see `viewer/README.md`. Roadmap: `docs/roadmap.md`.
 

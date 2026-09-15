@@ -131,10 +131,33 @@ export function createScene(container: HTMLElement, index: Index, cb: SceneCallb
   return {
     setSelection(ids) { selected = new Set(ids); applySelection(); },
     focus(rid) {
-      const c = index.centroidOf(rid);
-      if (!c) return;
-      const p = new THREE.Vector3(c[0], c[1], c[2]).applyMatrix4(world.matrixWorld);
+      // Centre of the loaded meshes for this region (and its descendants); fall back to record centroids.
+      world.updateMatrixWorld();
+      const ids = [rid, ...index.descendants(rid)];
+      const p = new THREE.Vector3();
+      let n = 0;
+      for (const id of ids) {
+        const m = meshes.get(id);
+        if (!m) continue;
+        m.geometry.computeBoundingSphere();
+        p.add(m.geometry.boundingSphere!.center.clone().applyMatrix4(m.matrixWorld));
+        n++;
+      }
+      if (n === 0) {
+        const c = index.centroidOf(rid);
+        if (!c) return;
+        p.set(c[0], c[1], c[2]).applyMatrix4(world.matrixWorld);
+      } else {
+        p.divideScalar(n);
+      }
+      // Swing the camera to the side of the brain the region is on, keeping the current distance.
+      const centre = new THREE.Vector3(0, 10, 0);
+      const dist = camera.position.distanceTo(controls.target);
+      const dir = p.clone().sub(centre);
+      if (dir.lengthSq() < 1) dir.set(1, 0.4, -1);
+      dir.normalize().add(new THREE.Vector3(0, 0.25, 0)).normalize();
       controls.target.copy(p);
+      camera.position.copy(p.clone().add(dir.multiplyScalar(dist)));
     },
     dispose() {
       cancelAnimationFrame(raf); ro.disconnect();

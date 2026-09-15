@@ -18,10 +18,14 @@
 - Per-region surfaces from the Julich labelled map; click or search a region; detail panel with mapping, measurements, claims, identifiers
 - Evidence-status and polarity badges render as soon as claim records exist
 
-### Sprint 3 — First curated claims
-- Author the first hand-curated claims with real sources for a small set of well-studied regions (hippocampus, V1, M1, amygdala)
-- Exercise `contradicts` polarity at least once so the UI proves it shows disagreement
-- Decide the workflow for claim review before opening the repo to contributors
+### Sprint 3 — First curated claims (v0.9.0, done)
+- 12 claims for hippocampal formation / CA1, hOc1, 4a/4p, amygdala; 5 contradicting evidence records; 2 contested claims
+- `docs/curation.md` sets the rules and the proposed → active review lifecycle
+
+### Sprint 4 — Public release and connectivity
+- Human review of the v1 claims; flip to `active`
+- Go public; enable GitHub Pages
+- Begin Phase 2: structural connectivity (candidate: HCP-derived tractography summaries, or Julich's own fibre-bundle atlas via siibra)
 
 ## Phases
 

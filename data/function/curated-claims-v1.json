@@ -1,0 +1,1611 @@
+[
+  {
+    "id": "brain-function:episodic-memory",
+    "name": "Episodic memory",
+    "category": "memory",
+    "status": "active",
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "aliases": [
+      "declarative memory (episodic)"
+    ]
+  },
+  {
+    "id": "brain-function:spatial-navigation",
+    "name": "Spatial navigation",
+    "category": "cognitive",
+    "status": "active",
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "aliases": [
+      "spatial memory",
+      "wayfinding"
+    ]
+  },
+  {
+    "id": "brain-function:vision",
+    "name": "Vision",
+    "category": "sensory",
+    "status": "active",
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "aliases": [
+      "visual perception"
+    ]
+  },
+  {
+    "id": "brain-function:voluntary-movement",
+    "name": "Voluntary movement",
+    "category": "motor",
+    "status": "active",
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "aliases": [
+      "skeletomotor control"
+    ]
+  },
+  {
+    "id": "brain-function:fear-processing",
+    "name": "Fear processing",
+    "category": "affective",
+    "status": "active",
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "aliases": [
+      "threat processing",
+      "fear conditioning"
+    ]
+  },
+  {
+    "id": "brain-function:facial-emotion-recognition",
+    "name": "Recognition of emotion from facial expressions",
+    "category": "affective",
+    "status": "active",
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    }
+  },
+  {
+    "id": "source:scoville-milner-1957",
+    "sourceType": "primary_research",
+    "title": "Loss of recent memory after bilateral hippocampal lesions",
+    "authors": [
+      "Scoville WB",
+      "Milner B"
+    ],
+    "year": 1957,
+    "citation": "Scoville WB, Milner B (1957). J Neurol Neurosurg Psychiatry 20(1):11-21.",
+    "url": "https://doi.org/10.1136/jnnp.20.1.11",
+    "externalIdentifiers": [
+      {
+        "namespace": "DOI",
+        "identifier": "10.1136/jnnp.20.1.11"
+      }
+    ],
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    }
+  },
+  {
+    "id": "source:squire-zola-morgan-1991",
+    "sourceType": "systematic_review",
+    "title": "The medial temporal lobe memory system",
+    "authors": [
+      "Squire LR",
+      "Zola-Morgan S"
+    ],
+    "year": 1991,
+    "citation": "Squire LR, Zola-Morgan S (1991). Science 253(5026):1380-1386.",
+    "url": "https://doi.org/10.1126/science.1896849",
+    "externalIdentifiers": [
+      {
+        "namespace": "DOI",
+        "identifier": "10.1126/science.1896849"
+      }
+    ],
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    }
+  },
+  {
+    "id": "source:zola-morgan-1986",
+    "sourceType": "primary_research",
+    "title": "Human amnesia and the medial temporal region: enduring memory impairment following a bilateral lesion limited to field CA1 of the hippocampus",
+    "authors": [
+      "Zola-Morgan S",
+      "Squire LR",
+      "Amaral DG"
+    ],
+    "year": 1986,
+    "citation": "Zola-Morgan S, Squire LR, Amaral DG (1986). J Neurosci 6(10):2950-2967.",
+    "url": "https://doi.org/10.1523/JNEUROSCI.06-10-02950.1986",
+    "externalIdentifiers": [
+      {
+        "namespace": "DOI",
+        "identifier": "10.1523/JNEUROSCI.06-10-02950.1986"
+      }
+    ],
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    }
+  },
+  {
+    "id": "source:rempel-clower-1996",
+    "sourceType": "primary_research",
+    "title": "Three cases of enduring memory impairment after bilateral damage limited to the hippocampal formation",
+    "authors": [
+      "Rempel-Clower NL",
+      "Zola SM",
+      "Squire LR",
+      "Amaral DG"
+    ],
+    "year": 1996,
+    "citation": "Rempel-Clower NL, Zola SM, Squire LR, Amaral DG (1996). J Neurosci 16(16):5233-5255.",
+    "url": "https://doi.org/10.1523/JNEUROSCI.16-16-05233.1996",
+    "externalIdentifiers": [
+      {
+        "namespace": "DOI",
+        "identifier": "10.1523/JNEUROSCI.16-16-05233.1996"
+      }
+    ],
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    }
+  },
+  {
+    "id": "source:okeefe-dostrovsky-1971",
+    "sourceType": "primary_research",
+    "title": "The hippocampus as a spatial map. Preliminary evidence from unit activity in the freely-moving rat",
+    "authors": [
+      "O'Keefe J",
+      "Dostrovsky J"
+    ],
+    "year": 1971,
+    "citation": "O'Keefe J, Dostrovsky J (1971). Brain Res 34(1):171-175.",
+    "url": "https://doi.org/10.1016/0006-8993(71)90358-1",
+    "externalIdentifiers": [
+      {
+        "namespace": "DOI",
+        "identifier": "10.1016/0006-8993(71)90358-1"
+      }
+    ],
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    }
+  },
+  {
+    "id": "source:moser-2008",
+    "sourceType": "systematic_review",
+    "title": "Place cells, grid cells, and the brain's spatial representation system",
+    "authors": [
+      "Moser EI",
+      "Kropff E",
+      "Moser MB"
+    ],
+    "year": 2008,
+    "citation": "Moser EI, Kropff E, Moser MB (2008). Annu Rev Neurosci 31:69-89.",
+    "url": "https://doi.org/10.1146/annurev.neuro.31.061307.090723",
+    "externalIdentifiers": [
+      {
+        "namespace": "DOI",
+        "identifier": "10.1146/annurev.neuro.31.061307.090723"
+      }
+    ],
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    }
+  },
+  {
+    "id": "source:maguire-2000",
+    "sourceType": "primary_research",
+    "title": "Navigation-related structural change in the hippocampi of taxi drivers",
+    "authors": [
+      "Maguire EA",
+      "Gadian DG",
+      "Johnsrude IS",
+      "Good CD",
+      "Ashburner J",
+      "Frackowiak RSJ",
+      "Frith CD"
+    ],
+    "year": 2000,
+    "citation": "Maguire EA et al. (2000). Proc Natl Acad Sci USA 97(8):4398-4403.",
+    "url": "https://doi.org/10.1073/pnas.070039597",
+    "externalIdentifiers": [
+      {
+        "namespace": "DOI",
+        "identifier": "10.1073/pnas.070039597"
+      }
+    ],
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    }
+  },
+  {
+    "id": "source:woollett-maguire-2011",
+    "sourceType": "primary_research",
+    "title": "Acquiring \"the Knowledge\" of London's layout drives structural brain changes",
+    "authors": [
+      "Woollett K",
+      "Maguire EA"
+    ],
+    "year": 2011,
+    "citation": "Woollett K, Maguire EA (2011). Curr Biol 21(24):2109-2114.",
+    "url": "https://doi.org/10.1016/j.cub.2011.11.018",
+    "externalIdentifiers": [
+      {
+        "namespace": "DOI",
+        "identifier": "10.1016/j.cub.2011.11.018"
+      }
+    ],
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    }
+  },
+  {
+    "id": "source:amunts-2000",
+    "sourceType": "primary_research",
+    "title": "Brodmann's areas 17 and 18 brought into stereotaxic space - where and how variable?",
+    "authors": [
+      "Amunts K",
+      "Malikovic A",
+      "Mohlberg H",
+      "Schormann T",
+      "Zilles K"
+    ],
+    "year": 2000,
+    "citation": "Amunts K et al. (2000). NeuroImage 11(1):66-84.",
+    "url": "https://doi.org/10.1006/nimg.1999.0516",
+    "externalIdentifiers": [
+      {
+        "namespace": "DOI",
+        "identifier": "10.1006/nimg.1999.0516"
+      }
+    ],
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    }
+  },
+  {
+    "id": "source:hubel-wiesel-1962",
+    "sourceType": "primary_research",
+    "title": "Receptive fields, binocular interaction and functional architecture in the cat's visual cortex",
+    "authors": [
+      "Hubel DH",
+      "Wiesel TN"
+    ],
+    "year": 1962,
+    "citation": "Hubel DH, Wiesel TN (1962). J Physiol 160(1):106-154.",
+    "url": "https://doi.org/10.1113/jphysiol.1962.sp006837",
+    "externalIdentifiers": [
+      {
+        "namespace": "DOI",
+        "identifier": "10.1113/jphysiol.1962.sp006837"
+      }
+    ],
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    }
+  },
+  {
+    "id": "source:hubel-wiesel-1968",
+    "sourceType": "primary_research",
+    "title": "Receptive fields and functional architecture of monkey striate cortex",
+    "authors": [
+      "Hubel DH",
+      "Wiesel TN"
+    ],
+    "year": 1968,
+    "citation": "Hubel DH, Wiesel TN (1968). J Physiol 195(1):215-243.",
+    "url": "https://doi.org/10.1113/jphysiol.1968.sp008455",
+    "externalIdentifiers": [
+      {
+        "namespace": "DOI",
+        "identifier": "10.1113/jphysiol.1968.sp008455"
+      }
+    ],
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    }
+  },
+  {
+    "id": "source:engel-1994",
+    "sourceType": "primary_research",
+    "title": "fMRI of human visual cortex",
+    "authors": [
+      "Engel SA",
+      "Rumelhart DE",
+      "Wandell BA",
+      "Lee AT",
+      "Glover GH",
+      "Chichilnisky EJ",
+      "Shadlen MN"
+    ],
+    "year": 1994,
+    "citation": "Engel SA et al. (1994). Nature 369(6481):525.",
+    "url": "https://doi.org/10.1038/369525a0",
+    "externalIdentifiers": [
+      {
+        "namespace": "DOI",
+        "identifier": "10.1038/369525a0"
+      }
+    ],
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    }
+  },
+  {
+    "id": "source:sereno-1995",
+    "sourceType": "primary_research",
+    "title": "Borders of multiple visual areas in humans revealed by functional magnetic resonance imaging",
+    "authors": [
+      "Sereno MI",
+      "Dale AM",
+      "Reppas JB",
+      "Kwong KK",
+      "Belliveau JW",
+      "Brady TJ",
+      "Rosen BR",
+      "Tootell RBH"
+    ],
+    "year": 1995,
+    "citation": "Sereno MI et al. (1995). Science 268(5212):889-893.",
+    "url": "https://doi.org/10.1126/science.7754376",
+    "externalIdentifiers": [
+      {
+        "namespace": "DOI",
+        "identifier": "10.1126/science.7754376"
+      }
+    ],
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    }
+  },
+  {
+    "id": "source:penfield-boldrey-1937",
+    "sourceType": "primary_research",
+    "title": "Somatic motor and sensory representation in the cerebral cortex of man as studied by electrical stimulation",
+    "authors": [
+      "Penfield W",
+      "Boldrey E"
+    ],
+    "year": 1937,
+    "citation": "Penfield W, Boldrey E (1937). Brain 60(4):389-443.",
+    "url": "https://doi.org/10.1093/brain/60.4.389",
+    "externalIdentifiers": [
+      {
+        "namespace": "DOI",
+        "identifier": "10.1093/brain/60.4.389"
+      }
+    ],
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    }
+  },
+  {
+    "id": "source:schieber-hibbard-1993",
+    "sourceType": "primary_research",
+    "title": "How somatotopic is the motor cortex hand area?",
+    "authors": [
+      "Schieber MH",
+      "Hibbard LS"
+    ],
+    "year": 1993,
+    "citation": "Schieber MH, Hibbard LS (1993). Science 261(5120):489-492.",
+    "url": "https://doi.org/10.1126/science.8342021",
+    "externalIdentifiers": [
+      {
+        "namespace": "DOI",
+        "identifier": "10.1126/science.8342021"
+      }
+    ],
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    }
+  },
+  {
+    "id": "source:gordon-2023",
+    "sourceType": "primary_research",
+    "title": "A somato-cognitive action network alternates with effector regions in motor cortex",
+    "authors": [
+      "Gordon EM",
+      "Chauvin RJ",
+      "Van AN",
+      "Dosenbach NUF",
+      "et al."
+    ],
+    "year": 2023,
+    "citation": "Gordon EM et al. (2023). Nature 617(7960):351-359.",
+    "url": "https://doi.org/10.1038/s41586-023-05964-2",
+    "externalIdentifiers": [
+      {
+        "namespace": "DOI",
+        "identifier": "10.1038/s41586-023-05964-2"
+      }
+    ],
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    }
+  },
+  {
+    "id": "source:ledoux-2000",
+    "sourceType": "systematic_review",
+    "title": "Emotion circuits in the brain",
+    "authors": [
+      "LeDoux JE"
+    ],
+    "year": 2000,
+    "citation": "LeDoux JE (2000). Annu Rev Neurosci 23:155-184.",
+    "url": "https://doi.org/10.1146/annurev.neuro.23.1.155",
+    "externalIdentifiers": [
+      {
+        "namespace": "DOI",
+        "identifier": "10.1146/annurev.neuro.23.1.155"
+      }
+    ],
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    }
+  },
+  {
+    "id": "source:phillips-ledoux-1992",
+    "sourceType": "primary_research",
+    "title": "Differential contribution of amygdala and hippocampus to cued and contextual fear conditioning",
+    "authors": [
+      "Phillips RG",
+      "LeDoux JE"
+    ],
+    "year": 1992,
+    "citation": "Phillips RG, LeDoux JE (1992). Behav Neurosci 106(2):274-285.",
+    "url": "https://doi.org/10.1037/0735-7044.106.2.274",
+    "externalIdentifiers": [
+      {
+        "namespace": "DOI",
+        "identifier": "10.1037/0735-7044.106.2.274"
+      }
+    ],
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    }
+  },
+  {
+    "id": "source:adolphs-1994",
+    "sourceType": "primary_research",
+    "title": "Impaired recognition of emotion in facial expressions following bilateral damage to the human amygdala",
+    "authors": [
+      "Adolphs R",
+      "Tranel D",
+      "Damasio H",
+      "Damasio A"
+    ],
+    "year": 1994,
+    "citation": "Adolphs R, Tranel D, Damasio H, Damasio A (1994). Nature 372(6507):669-672.",
+    "url": "https://doi.org/10.1038/372669a0",
+    "externalIdentifiers": [
+      {
+        "namespace": "DOI",
+        "identifier": "10.1038/372669a0"
+      }
+    ],
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    }
+  },
+  {
+    "id": "source:adolphs-2005",
+    "sourceType": "primary_research",
+    "title": "A mechanism for impaired fear recognition after amygdala damage",
+    "authors": [
+      "Adolphs R",
+      "Gosselin F",
+      "Buchanan TW",
+      "Tranel D",
+      "Schyns P",
+      "Damasio AR"
+    ],
+    "year": 2005,
+    "citation": "Adolphs R et al. (2005). Nature 433(7021):68-72.",
+    "url": "https://doi.org/10.1038/nature03086",
+    "externalIdentifiers": [
+      {
+        "namespace": "DOI",
+        "identifier": "10.1038/nature03086"
+      }
+    ],
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    }
+  },
+  {
+    "id": "source:feinstein-2013",
+    "sourceType": "primary_research",
+    "title": "Fear and panic in humans with bilateral amygdala damage",
+    "authors": [
+      "Feinstein JS",
+      "Buzza C",
+      "Hurlemann R",
+      "Follmer RL",
+      "Dahdaleh NS",
+      "Coryell WH",
+      "Welsh MJ",
+      "Tranel D",
+      "Wemmie JA"
+    ],
+    "year": 2013,
+    "citation": "Feinstein JS et al. (2013). Nat Neurosci 16(3):270-272.",
+    "url": "https://doi.org/10.1038/nn.3323",
+    "externalIdentifiers": [
+      {
+        "namespace": "DOI",
+        "identifier": "10.1038/nn.3323"
+      }
+    ],
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    }
+  },
+  {
+    "id": "source:pessoa-adolphs-2010",
+    "sourceType": "systematic_review",
+    "title": "Emotion processing and the amygdala: from a 'low road' to 'many roads' of evaluating biological significance",
+    "authors": [
+      "Pessoa L",
+      "Adolphs R"
+    ],
+    "year": 2010,
+    "citation": "Pessoa L, Adolphs R (2010). Nat Rev Neurosci 11(11):773-783.",
+    "url": "https://doi.org/10.1038/nrn2920",
+    "externalIdentifiers": [
+      {
+        "namespace": "DOI",
+        "identifier": "10.1038/nrn2920"
+      }
+    ],
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    }
+  },
+  {
+    "id": "source:ledoux-pine-2016",
+    "sourceType": "systematic_review",
+    "title": "Using neuroscience to help understand fear and anxiety: a two-system framework",
+    "authors": [
+      "LeDoux JE",
+      "Pine DS"
+    ],
+    "year": 2016,
+    "citation": "LeDoux JE, Pine DS (2016). Am J Psychiatry 173(11):1083-1093.",
+    "url": "https://doi.org/10.1176/appi.ajp.2016.16030353",
+    "externalIdentifiers": [
+      {
+        "namespace": "DOI",
+        "identifier": "10.1176/appi.ajp.2016.16030353"
+      }
+    ],
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    }
+  },
+  {
+    "id": "claim:hf-bilateral-mtl-damage-anterograde-amnesia",
+    "statement": "Bilateral damage to the medial temporal lobe that includes the hippocampal formation produces severe, enduring anterograde amnesia in humans, with relative sparing of general intelligence, perception, and procedural learning.",
+    "subjectIds": [
+      "brain-region:julich-hippocampal-formation"
+    ],
+    "species": "Homo sapiens",
+    "evidenceStatus": "established",
+    "evidenceRecordIds": [
+      "evidence-record:hf-bilateral-mtl-damage-anterograde-amnesia-1",
+      "evidence-record:hf-bilateral-mtl-damage-anterograde-amnesia-2",
+      "evidence-record:hf-bilateral-mtl-damage-anterograde-amnesia-3"
+    ],
+    "status": "proposed",
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "context": {
+      "preparation": "clinical"
+    }
+  },
+  {
+    "id": "evidence-record:hf-bilateral-mtl-damage-anterograde-amnesia-1",
+    "claimId": "claim:hf-bilateral-mtl-damage-anterograde-amnesia",
+    "sourceId": "source:scoville-milner-1957",
+    "evidenceType": "clinical",
+    "polarity": "supports",
+    "species": "Homo sapiens",
+    "context": {
+      "preparation": "clinical"
+    },
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "locator": "patient H.M. and eight further cases",
+    "methods": [
+      "bilateral medial temporal resection",
+      "neuropsychological testing"
+    ]
+  },
+  {
+    "id": "evidence-record:hf-bilateral-mtl-damage-anterograde-amnesia-2",
+    "claimId": "claim:hf-bilateral-mtl-damage-anterograde-amnesia",
+    "sourceId": "source:zola-morgan-1986",
+    "evidenceType": "clinical",
+    "polarity": "supports",
+    "species": "Homo sapiens",
+    "context": {
+      "preparation": "post_mortem"
+    },
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "locator": "patient R.B.",
+    "methods": [
+      "neuropsychological testing",
+      "histology"
+    ]
+  },
+  {
+    "id": "evidence-record:hf-bilateral-mtl-damage-anterograde-amnesia-3",
+    "claimId": "claim:hf-bilateral-mtl-damage-anterograde-amnesia",
+    "sourceId": "source:squire-zola-morgan-1991",
+    "evidenceType": "mixed",
+    "polarity": "supports",
+    "species": "Homo sapiens",
+    "context": {
+      "preparation": "mixed"
+    },
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "notes": "Review integrating human lesion cases and monkey lesion studies into the medial temporal lobe memory system model."
+  },
+  {
+    "id": "claim:ca1-bilateral-lesion-sufficient-for-amnesia",
+    "statement": "Bilateral damage confined to the CA1 field of the hippocampus is sufficient to produce enduring anterograde amnesia in humans.",
+    "subjectIds": [
+      "brain-region:julich-ca1-hippocampus"
+    ],
+    "species": "Homo sapiens",
+    "evidenceStatus": "well_supported",
+    "evidenceRecordIds": [
+      "evidence-record:ca1-bilateral-lesion-sufficient-for-amnesia-1",
+      "evidence-record:ca1-bilateral-lesion-sufficient-for-amnesia-2"
+    ],
+    "status": "proposed",
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "context": {
+      "preparation": "post_mortem",
+      "condition": "ischaemic injury"
+    }
+  },
+  {
+    "id": "evidence-record:ca1-bilateral-lesion-sufficient-for-amnesia-1",
+    "claimId": "claim:ca1-bilateral-lesion-sufficient-for-amnesia",
+    "sourceId": "source:zola-morgan-1986",
+    "evidenceType": "clinical",
+    "polarity": "supports",
+    "species": "Homo sapiens",
+    "context": {
+      "preparation": "post_mortem"
+    },
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "locator": "patient R.B.; histology showed the lesion limited to CA1 bilaterally",
+    "methods": [
+      "neuropsychological testing",
+      "post-mortem histology"
+    ]
+  },
+  {
+    "id": "evidence-record:ca1-bilateral-lesion-sufficient-for-amnesia-2",
+    "claimId": "claim:ca1-bilateral-lesion-sufficient-for-amnesia",
+    "sourceId": "source:rempel-clower-1996",
+    "evidenceType": "clinical",
+    "polarity": "supports",
+    "species": "Homo sapiens",
+    "context": {
+      "preparation": "post_mortem"
+    },
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "locator": "patients G.D., L.M., W.H.",
+    "notes": "Damage in these cases extended beyond CA1 within the hippocampal formation; they support hippocampal sufficiency, and R.B. remains the single CA1-limited case."
+  },
+  {
+    "id": "claim:hf-place-cells-rat",
+    "statement": "Hippocampal pyramidal neurons in freely moving rats fire selectively when the animal occupies a particular location in its environment (place cells).",
+    "subjectIds": [
+      "brain-region:julich-hippocampal-formation",
+      "brain-region:julich-ca1-hippocampus"
+    ],
+    "species": "Rattus norvegicus",
+    "evidenceStatus": "established",
+    "evidenceRecordIds": [
+      "evidence-record:hf-place-cells-rat-1",
+      "evidence-record:hf-place-cells-rat-2"
+    ],
+    "status": "proposed",
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "context": {
+      "preparation": "in_vivo",
+      "condition": "awake, freely moving"
+    }
+  },
+  {
+    "id": "evidence-record:hf-place-cells-rat-1",
+    "claimId": "claim:hf-place-cells-rat",
+    "sourceId": "source:okeefe-dostrovsky-1971",
+    "evidenceType": "electrophysiological",
+    "polarity": "supports",
+    "species": "Rattus norvegicus",
+    "context": {
+      "preparation": "in_vivo"
+    },
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "methods": [
+      "single-unit recording in dorsal hippocampus"
+    ]
+  },
+  {
+    "id": "evidence-record:hf-place-cells-rat-2",
+    "claimId": "claim:hf-place-cells-rat",
+    "sourceId": "source:moser-2008",
+    "evidenceType": "electrophysiological",
+    "polarity": "supports",
+    "species": "Rattus norvegicus",
+    "context": {
+      "preparation": "in_vivo"
+    },
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "notes": "Review of four decades of replication and extension, including grid cells in entorhinal cortex."
+  },
+  {
+    "id": "claim:hf-posterior-volume-taxi-drivers",
+    "statement": "Posterior hippocampal grey-matter volume is greater in licensed London taxi drivers than in matched controls and increases with time spent navigating.",
+    "subjectIds": [
+      "brain-region:julich-hippocampal-formation"
+    ],
+    "species": "Homo sapiens",
+    "evidenceStatus": "supported",
+    "evidenceRecordIds": [
+      "evidence-record:hf-posterior-volume-taxi-drivers-1",
+      "evidence-record:hf-posterior-volume-taxi-drivers-2"
+    ],
+    "status": "proposed",
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "context": {
+      "preparation": "in_vivo",
+      "condition": "healthy adults"
+    }
+  },
+  {
+    "id": "evidence-record:hf-posterior-volume-taxi-drivers-1",
+    "claimId": "claim:hf-posterior-volume-taxi-drivers",
+    "sourceId": "source:maguire-2000",
+    "evidenceType": "imaging",
+    "polarity": "supports",
+    "species": "Homo sapiens",
+    "context": {
+      "preparation": "in_vivo"
+    },
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "methods": [
+      "structural MRI",
+      "voxel-based morphometry",
+      "manual volumetry"
+    ],
+    "notes": "Cross-sectional; n=16 drivers. Anterior hippocampus showed the opposite pattern."
+  },
+  {
+    "id": "evidence-record:hf-posterior-volume-taxi-drivers-2",
+    "claimId": "claim:hf-posterior-volume-taxi-drivers",
+    "sourceId": "source:woollett-maguire-2011",
+    "evidenceType": "imaging",
+    "polarity": "supports",
+    "species": "Homo sapiens",
+    "context": {
+      "preparation": "in_vivo"
+    },
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "methods": [
+      "longitudinal structural MRI"
+    ],
+    "notes": "Longitudinal design: trainees who qualified showed posterior hippocampal increase; those who failed did not."
+  },
+  {
+    "id": "relationship:hf-required-for-episodic-memory",
+    "subjectId": "brain-region:julich-hippocampal-formation",
+    "predicate": "required_for",
+    "objectId": "brain-function:episodic-memory",
+    "species": "Homo sapiens",
+    "assertionType": "curated",
+    "claimIds": [
+      "claim:hf-bilateral-mtl-damage-anterograde-amnesia",
+      "claim:ca1-bilateral-lesion-sufficient-for-amnesia"
+    ],
+    "status": "proposed",
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    }
+  },
+  {
+    "id": "relationship:ca1-required-for-episodic-memory",
+    "subjectId": "brain-region:julich-ca1-hippocampus",
+    "predicate": "required_for",
+    "objectId": "brain-function:episodic-memory",
+    "species": "Homo sapiens",
+    "assertionType": "curated",
+    "claimIds": [
+      "claim:ca1-bilateral-lesion-sufficient-for-amnesia"
+    ],
+    "status": "proposed",
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    }
+  },
+  {
+    "id": "relationship:hf-contributes-to-spatial-navigation",
+    "subjectId": "brain-region:julich-hippocampal-formation",
+    "predicate": "contributes_to",
+    "objectId": "brain-function:spatial-navigation",
+    "species": "multiple",
+    "assertionType": "curated",
+    "claimIds": [
+      "claim:hf-place-cells-rat",
+      "claim:hf-posterior-volume-taxi-drivers"
+    ],
+    "status": "proposed",
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    }
+  },
+  {
+    "id": "claim:hoc1-is-brodmann-17",
+    "statement": "Area hOc1 corresponds to Brodmann area 17, the primary visual cortex, identified cytoarchitectonically by the stria of Gennari in layer IV; its extent varies substantially between individuals in stereotaxic space.",
+    "subjectIds": [
+      "brain-region:julich-area-hoc1-v1-17-calcs"
+    ],
+    "species": "Homo sapiens",
+    "evidenceStatus": "established",
+    "evidenceRecordIds": [
+      "evidence-record:hoc1-is-brodmann-17-1",
+      "evidence-record:hoc1-is-brodmann-17-2"
+    ],
+    "status": "proposed",
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "context": {
+      "preparation": "post_mortem"
+    }
+  },
+  {
+    "id": "evidence-record:hoc1-is-brodmann-17-1",
+    "claimId": "claim:hoc1-is-brodmann-17",
+    "sourceId": "source:amunts-2000",
+    "evidenceType": "anatomical",
+    "polarity": "supports",
+    "species": "Homo sapiens",
+    "context": {
+      "preparation": "post_mortem"
+    },
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "methods": [
+      "observer-independent cytoarchitectonic mapping",
+      "ten post-mortem brains"
+    ]
+  },
+  {
+    "id": "evidence-record:hoc1-is-brodmann-17-2",
+    "claimId": "claim:hoc1-is-brodmann-17",
+    "sourceId": "source:amunts-2020-julich-brain",
+    "evidenceType": "anatomical",
+    "polarity": "supports",
+    "species": "Homo sapiens",
+    "context": {
+      "preparation": "post_mortem"
+    },
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "notes": "The Julich-Brain probability map for hOc1 is built from the same cytoarchitectonic definition."
+  },
+  {
+    "id": "claim:v1-orientation-selectivity",
+    "statement": "Neurons in primary visual cortex respond selectively to the orientation of edges within their receptive field, and cells with similar preferences are grouped in columns.",
+    "subjectIds": [
+      "brain-region:julich-area-hoc1-v1-17-calcs"
+    ],
+    "species": "multiple",
+    "evidenceStatus": "established",
+    "evidenceRecordIds": [
+      "evidence-record:v1-orientation-selectivity-1",
+      "evidence-record:v1-orientation-selectivity-2"
+    ],
+    "status": "proposed",
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "context": {
+      "preparation": "in_vivo",
+      "condition": "anaesthetised"
+    }
+  },
+  {
+    "id": "evidence-record:v1-orientation-selectivity-1",
+    "claimId": "claim:v1-orientation-selectivity",
+    "sourceId": "source:hubel-wiesel-1962",
+    "evidenceType": "electrophysiological",
+    "polarity": "supports",
+    "species": "Felis catus",
+    "context": {
+      "preparation": "in_vivo"
+    },
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "methods": [
+      "single-unit recording"
+    ]
+  },
+  {
+    "id": "evidence-record:v1-orientation-selectivity-2",
+    "claimId": "claim:v1-orientation-selectivity",
+    "sourceId": "source:hubel-wiesel-1968",
+    "evidenceType": "electrophysiological",
+    "polarity": "supports",
+    "species": "Macaca mulatta",
+    "context": {
+      "preparation": "in_vivo"
+    },
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "methods": [
+      "single-unit recording"
+    ],
+    "notes": "Confirms and extends the cat findings in macaque striate cortex."
+  },
+  {
+    "id": "claim:v1-retinotopic-map-human",
+    "statement": "Human primary visual cortex contains a retinotopic map of the contralateral visual hemifield that can be measured non-invasively with fMRI.",
+    "subjectIds": [
+      "brain-region:julich-area-hoc1-v1-17-calcs"
+    ],
+    "species": "Homo sapiens",
+    "evidenceStatus": "established",
+    "evidenceRecordIds": [
+      "evidence-record:v1-retinotopic-map-human-1",
+      "evidence-record:v1-retinotopic-map-human-2"
+    ],
+    "status": "proposed",
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "context": {
+      "preparation": "in_vivo",
+      "condition": "healthy adults"
+    }
+  },
+  {
+    "id": "evidence-record:v1-retinotopic-map-human-1",
+    "claimId": "claim:v1-retinotopic-map-human",
+    "sourceId": "source:engel-1994",
+    "evidenceType": "imaging",
+    "polarity": "supports",
+    "species": "Homo sapiens",
+    "context": {
+      "preparation": "in_vivo"
+    },
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "methods": [
+      "phase-encoded fMRI"
+    ]
+  },
+  {
+    "id": "evidence-record:v1-retinotopic-map-human-2",
+    "claimId": "claim:v1-retinotopic-map-human",
+    "sourceId": "source:sereno-1995",
+    "evidenceType": "imaging",
+    "polarity": "supports",
+    "species": "Homo sapiens",
+    "context": {
+      "preparation": "in_vivo"
+    },
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "methods": [
+      "phase-encoded fMRI",
+      "cortical surface reconstruction"
+    ]
+  },
+  {
+    "id": "relationship:hoc1-required-for-vision",
+    "subjectId": "brain-region:julich-area-hoc1-v1-17-calcs",
+    "predicate": "required_for",
+    "objectId": "brain-function:vision",
+    "species": "Homo sapiens",
+    "assertionType": "curated",
+    "claimIds": [
+      "claim:hoc1-is-brodmann-17",
+      "claim:v1-retinotopic-map-human"
+    ],
+    "status": "proposed",
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    }
+  },
+  {
+    "id": "claim:m1-stimulation-somatotopic-order",
+    "statement": "Electrical stimulation of the human precentral gyrus evokes movements of body parts in a broadly somatotopic order, with the lower limb represented medially and the face laterally.",
+    "subjectIds": [
+      "brain-region:julich-area-4a-precg",
+      "brain-region:julich-area-4p-precg"
+    ],
+    "species": "Homo sapiens",
+    "evidenceStatus": "established",
+    "evidenceRecordIds": [
+      "evidence-record:m1-stimulation-somatotopic-order-1",
+      "evidence-record:m1-stimulation-somatotopic-order-2"
+    ],
+    "status": "proposed",
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "context": {
+      "preparation": "clinical",
+      "condition": "awake neurosurgery"
+    }
+  },
+  {
+    "id": "evidence-record:m1-stimulation-somatotopic-order-1",
+    "claimId": "claim:m1-stimulation-somatotopic-order",
+    "sourceId": "source:penfield-boldrey-1937",
+    "evidenceType": "clinical",
+    "polarity": "supports",
+    "species": "Homo sapiens",
+    "context": {
+      "preparation": "clinical"
+    },
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "methods": [
+      "intraoperative electrical stimulation"
+    ],
+    "notes": "Origin of the motor homunculus figure."
+  },
+  {
+    "id": "evidence-record:m1-stimulation-somatotopic-order-2",
+    "claimId": "claim:m1-stimulation-somatotopic-order",
+    "sourceId": "source:gordon-2023",
+    "evidenceType": "imaging",
+    "polarity": "supports",
+    "species": "Homo sapiens",
+    "context": {
+      "preparation": "in_vivo"
+    },
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "methods": [
+      "precision fMRI"
+    ],
+    "notes": "Confirms distinct foot, hand and mouth effector zones in the expected medial-to-lateral order."
+  },
+  {
+    "id": "claim:m1-continuous-homunculus",
+    "statement": "The motor cortex forms a single continuous, orderly somatotopic map (the classic homunculus) along the precentral gyrus.",
+    "subjectIds": [
+      "brain-region:julich-area-4a-precg",
+      "brain-region:julich-area-4p-precg"
+    ],
+    "species": "multiple",
+    "evidenceStatus": "contested",
+    "evidenceRecordIds": [
+      "evidence-record:m1-continuous-homunculus-1",
+      "evidence-record:m1-continuous-homunculus-2",
+      "evidence-record:m1-continuous-homunculus-3"
+    ],
+    "status": "proposed",
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "context": {
+      "preparation": "mixed"
+    }
+  },
+  {
+    "id": "evidence-record:m1-continuous-homunculus-1",
+    "claimId": "claim:m1-continuous-homunculus",
+    "sourceId": "source:penfield-boldrey-1937",
+    "evidenceType": "clinical",
+    "polarity": "supports",
+    "species": "Homo sapiens",
+    "context": {
+      "preparation": "clinical"
+    },
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "notes": "The original stimulation maps were drawn as a continuous strip."
+  },
+  {
+    "id": "evidence-record:m1-continuous-homunculus-2",
+    "claimId": "claim:m1-continuous-homunculus",
+    "sourceId": "source:schieber-hibbard-1993",
+    "evidenceType": "electrophysiological",
+    "polarity": "contradicts",
+    "species": "Macaca mulatta",
+    "context": {
+      "preparation": "in_vivo"
+    },
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "methods": [
+      "intracortical microstimulation",
+      "single-unit recording"
+    ],
+    "notes": "Representations of individual fingers overlap extensively; the hand area is not cleanly somatotopic at fine scale."
+  },
+  {
+    "id": "evidence-record:m1-continuous-homunculus-3",
+    "claimId": "claim:m1-continuous-homunculus",
+    "sourceId": "source:gordon-2023",
+    "evidenceType": "imaging",
+    "polarity": "contradicts",
+    "species": "Homo sapiens",
+    "context": {
+      "preparation": "in_vivo"
+    },
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "methods": [
+      "precision fMRI"
+    ],
+    "notes": "Effector regions are interrupted by inter-effector regions with distinct connectivity (somato-cognitive action network)."
+  },
+  {
+    "id": "relationship:m1-4a-contributes-to-voluntary-movement",
+    "subjectId": "brain-region:julich-area-4a-precg",
+    "predicate": "contributes_to",
+    "objectId": "brain-function:voluntary-movement",
+    "species": "Homo sapiens",
+    "assertionType": "curated",
+    "claimIds": [
+      "claim:m1-stimulation-somatotopic-order"
+    ],
+    "status": "proposed",
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    }
+  },
+  {
+    "id": "relationship:m1-4p-contributes-to-voluntary-movement",
+    "subjectId": "brain-region:julich-area-4p-precg",
+    "predicate": "contributes_to",
+    "objectId": "brain-function:voluntary-movement",
+    "species": "Homo sapiens",
+    "assertionType": "curated",
+    "claimIds": [
+      "claim:m1-stimulation-somatotopic-order"
+    ],
+    "status": "proposed",
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    }
+  },
+  {
+    "id": "claim:amygdala-required-for-cued-fear-conditioning-rat",
+    "statement": "The amygdala is required for the acquisition and expression of conditioned fear responses to discrete external cues in rats.",
+    "subjectIds": [
+      "brain-region:julich-amygdala"
+    ],
+    "species": "Rattus norvegicus",
+    "evidenceStatus": "established",
+    "evidenceRecordIds": [
+      "evidence-record:amygdala-required-for-cued-fear-conditioning-rat-1",
+      "evidence-record:amygdala-required-for-cued-fear-conditioning-rat-2"
+    ],
+    "status": "proposed",
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "context": {
+      "preparation": "in_vivo"
+    }
+  },
+  {
+    "id": "evidence-record:amygdala-required-for-cued-fear-conditioning-rat-1",
+    "claimId": "claim:amygdala-required-for-cued-fear-conditioning-rat",
+    "sourceId": "source:phillips-ledoux-1992",
+    "evidenceType": "behavioral",
+    "polarity": "supports",
+    "species": "Rattus norvegicus",
+    "context": {
+      "preparation": "in_vivo"
+    },
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "methods": [
+      "electrolytic lesions",
+      "Pavlovian fear conditioning"
+    ],
+    "notes": "Amygdala lesions abolished cued and contextual conditioning; hippocampal lesions affected contextual only."
+  },
+  {
+    "id": "evidence-record:amygdala-required-for-cued-fear-conditioning-rat-2",
+    "claimId": "claim:amygdala-required-for-cued-fear-conditioning-rat",
+    "sourceId": "source:ledoux-2000",
+    "evidenceType": "mixed",
+    "polarity": "supports",
+    "species": "Rattus norvegicus",
+    "context": {
+      "preparation": "mixed"
+    },
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "notes": "Review of the lesion, tracing and physiology literature on the amygdala fear circuit."
+  },
+  {
+    "id": "claim:amygdala-damage-impairs-fear-recognition-human",
+    "statement": "Bilateral amygdala damage in humans impairs recognition of fear in facial expressions.",
+    "subjectIds": [
+      "brain-region:julich-amygdala"
+    ],
+    "species": "Homo sapiens",
+    "evidenceStatus": "well_supported",
+    "evidenceRecordIds": [
+      "evidence-record:amygdala-damage-impairs-fear-recognition-human-1",
+      "evidence-record:amygdala-damage-impairs-fear-recognition-human-2"
+    ],
+    "status": "proposed",
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "context": {
+      "preparation": "clinical"
+    }
+  },
+  {
+    "id": "evidence-record:amygdala-damage-impairs-fear-recognition-human-1",
+    "claimId": "claim:amygdala-damage-impairs-fear-recognition-human",
+    "sourceId": "source:adolphs-1994",
+    "evidenceType": "clinical",
+    "polarity": "supports",
+    "species": "Homo sapiens",
+    "context": {
+      "preparation": "clinical"
+    },
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "locator": "patient S.M. (Urbach-Wiethe disease)",
+    "methods": [
+      "facial expression rating tasks"
+    ]
+  },
+  {
+    "id": "evidence-record:amygdala-damage-impairs-fear-recognition-human-2",
+    "claimId": "claim:amygdala-damage-impairs-fear-recognition-human",
+    "sourceId": "source:adolphs-2005",
+    "evidenceType": "behavioral",
+    "polarity": "supports",
+    "species": "Homo sapiens",
+    "context": {
+      "preparation": "clinical"
+    },
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "locator": "patient S.M.",
+    "methods": [
+      "eye tracking",
+      "bubbles method"
+    ],
+    "notes": "The deficit reflects failure to fixate the eye region; instructing fixation restored fear recognition."
+  },
+  {
+    "id": "claim:amygdala-is-the-fear-centre",
+    "statement": "The amygdala is the brain's fear centre, necessary for the subjective experience of fear.",
+    "subjectIds": [
+      "brain-region:julich-amygdala"
+    ],
+    "species": "Homo sapiens",
+    "evidenceStatus": "contested",
+    "evidenceRecordIds": [
+      "evidence-record:amygdala-is-the-fear-centre-1",
+      "evidence-record:amygdala-is-the-fear-centre-2",
+      "evidence-record:amygdala-is-the-fear-centre-3",
+      "evidence-record:amygdala-is-the-fear-centre-4"
+    ],
+    "status": "proposed",
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "context": {
+      "preparation": "mixed"
+    }
+  },
+  {
+    "id": "evidence-record:amygdala-is-the-fear-centre-1",
+    "claimId": "claim:amygdala-is-the-fear-centre",
+    "sourceId": "source:ledoux-2000",
+    "evidenceType": "mixed",
+    "polarity": "supports",
+    "species": "Rattus norvegicus",
+    "context": {
+      "preparation": "mixed"
+    },
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "notes": "Supports a central role in threat detection and conditioned fear responses in rodents, which is often extended to human fear experience."
+  },
+  {
+    "id": "evidence-record:amygdala-is-the-fear-centre-2",
+    "claimId": "claim:amygdala-is-the-fear-centre",
+    "sourceId": "source:feinstein-2013",
+    "evidenceType": "clinical",
+    "polarity": "contradicts",
+    "species": "Homo sapiens",
+    "context": {
+      "preparation": "clinical"
+    },
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "locator": "patients S.M., A.M., B.G.",
+    "methods": [
+      "35% CO2 inhalation challenge"
+    ],
+    "notes": "Fear and panic were evoked, and panic was more frequent than in controls, despite bilateral amygdala lesions."
+  },
+  {
+    "id": "evidence-record:amygdala-is-the-fear-centre-3",
+    "claimId": "claim:amygdala-is-the-fear-centre",
+    "sourceId": "source:pessoa-adolphs-2010",
+    "evidenceType": "mixed",
+    "polarity": "contradicts",
+    "species": "Homo sapiens",
+    "context": {
+      "preparation": "mixed"
+    },
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "notes": "Argues for a broader role in evaluating biological relevance rather than fear specifically."
+  },
+  {
+    "id": "evidence-record:amygdala-is-the-fear-centre-4",
+    "claimId": "claim:amygdala-is-the-fear-centre",
+    "sourceId": "source:ledoux-pine-2016",
+    "evidenceType": "mixed",
+    "polarity": "contradicts",
+    "species": "Homo sapiens",
+    "context": {
+      "preparation": "mixed"
+    },
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    },
+    "notes": "Distinguishes defensive-survival circuits from the conscious feeling of fear; the amygdala is central to the former, not established for the latter."
+  },
+  {
+    "id": "relationship:amygdala-contributes-to-fear-processing",
+    "subjectId": "brain-region:julich-amygdala",
+    "predicate": "contributes_to",
+    "objectId": "brain-function:fear-processing",
+    "species": "multiple",
+    "assertionType": "curated",
+    "claimIds": [
+      "claim:amygdala-required-for-cued-fear-conditioning-rat",
+      "claim:amygdala-damage-impairs-fear-recognition-human",
+      "claim:amygdala-is-the-fear-centre"
+    ],
+    "status": "proposed",
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    }
+  },
+  {
+    "id": "relationship:amygdala-contributes-to-facial-emotion-recognition",
+    "subjectId": "brain-region:julich-amygdala",
+    "predicate": "contributes_to",
+    "objectId": "brain-function:facial-emotion-recognition",
+    "species": "Homo sapiens",
+    "assertionType": "curated",
+    "claimIds": [
+      "claim:amygdala-damage-impairs-fear-recognition-human"
+    ],
+    "status": "proposed",
+    "provenance": {
+      "createdAt": "2026-09-14T00:00:00Z",
+      "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
+      "method": "manual curation from primary literature; DOIs verified 2026-09-14"
+    }
+  }
+]

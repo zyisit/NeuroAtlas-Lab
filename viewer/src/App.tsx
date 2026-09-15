@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { loadBundle, type Index, type BrainRegion, type Dataset, type DatasetVersion, type Atlas, type Source, type ReferenceSpace } from "./data";
+import { loadBundle, type Index, type BrainRegion, type Claim, type Dataset, type DatasetVersion, type Atlas, type Source, type ReferenceSpace } from "./data";
 import { createScene, type SceneHandle } from "./scene";
 
 // ---------- region tree ---------------------------------------------------
@@ -61,6 +61,36 @@ function Row({ k, children }: { k: string; children: React.ReactNode }) {
   return <div className="row"><dt>{k}</dt><dd>{children}</dd></div>;
 }
 
+const PREP: Record<string, string> = { in_vivo: "in vivo", ex_vivo: "ex vivo", in_vitro: "in vitro", post_mortem: "post-mortem", in_silico: "in silico", clinical: "clinical", mixed: "mixed methods", unknown: "" };
+
+function ClaimView({ idx, c }: { idx: Index; c: Claim }) {
+  const evidence = idx.evidenceByClaim.get(c.id) ?? [];
+  return (
+    <div className="claim">
+      <p className="claim-statement">
+        {c.statement}
+        <span className={"tag status-" + c.evidenceStatus}>{c.evidenceStatus.replace("_", " ")}</span>
+        {c.status !== "active" && <span className="tag">{c.status}</span>}
+      </p>
+      <p className="muted small">{c.species}{c.context?.preparation && c.context.preparation !== "unknown" && `, ${PREP[c.context.preparation] ?? c.context.preparation}`}</p>
+      <ul className="evidence">
+        {evidence.map((e) => {
+          const s = idx.byId.get(e.sourceId) as Source | undefined;
+          const prep = e.context?.preparation ? PREP[e.context.preparation] : "";
+          return (
+            <li key={e.id}>
+              <span className={"tag polarity-" + e.polarity}>{e.polarity}</span>{" "}
+              {s?.url ? <a href={s.url} target="_blank" rel="noreferrer">{s.citation ?? s.title}</a> : (s?.citation ?? s?.title ?? e.sourceId)}
+              <small>{[e.species, prep, e.evidenceType].filter(Boolean).join(" · ")}{e.locator && ` — ${e.locator}`}</small>
+              {e.notes && <small>{e.notes}</small>}
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+}
+
 function Detail({ idx, id, onSelect }: { idx: Index; id: string | null; onSelect: (id: string) => void }) {
   if (!id) return (
     <section className="detail">
@@ -74,6 +104,7 @@ function Detail({ idx, id, onSelect }: { idx: Index; id: string | null; onSelect
   const obs = idx.observationsByRegion.get(id) ?? [];
   const claims = idx.claimsByRegion.get(id) ?? [];
   const chain = idx.ancestors(id);
+  const inherited = [...chain].reverse().map((a) => ({ region: a, claims: idx.claimsByRegion.get(a.id) ?? [] })).filter((x) => x.claims.length > 0);
   const kids = idx.children.get(id) ?? [];
   const centroid = idx.centroidOf(id);
   const dv = (dvid?: string) => dvid ? (idx.byId.get(dvid) as DatasetVersion | undefined) : undefined;
@@ -129,17 +160,14 @@ function Detail({ idx, id, onSelect }: { idx: Index; id: string | null; onSelect
 
       <div className="block">
         <h3>Claims</h3>
-        {claims.length === 0 ? (
+        {claims.length === 0 && inherited.length === 0 && (
           <p className="muted">No curated claims about this region yet. When they are added, each will show its evidence status and the sources for and against it.</p>
-        ) : claims.map((c) => (
-          <div key={c.id} className="claim">
-            <p>{c.statement} <span className={"tag status-" + c.evidenceStatus}>{c.evidenceStatus.replace("_", " ")}</span></p>
-            <ul>
-              {(idx.evidenceByClaim.get(c.id) ?? []).map((e) => {
-                const s = idx.byId.get(e.sourceId) as Source | undefined;
-                return <li key={e.id}><span className={"tag polarity-" + e.polarity}>{e.polarity}</span> {s?.citation ?? s?.title ?? e.sourceId}{e.locator && `, ${e.locator}`}</li>;
-              })}
-            </ul>
+        )}
+        {claims.map((c) => <ClaimView key={c.id} idx={idx} c={c} />)}
+        {inherited.map(({ region, claims: cs }) => (
+          <div key={region.id} className="inherited">
+            <p className="muted small">About <button className="link" onClick={() => onSelect(region.id)}>{region.name}</button>, which contains this region:</p>
+            {cs.map((c) => <ClaimView key={c.id} idx={idx} c={c} />)}
           </div>
         ))}
       </div>
