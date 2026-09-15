@@ -60,7 +60,7 @@ an `established` or `well_supported` claim.
 dataset → dataset-version → reference-space → atlas → atlas-mapping → brain-region
                                      ↘ spatial-transformation → spatial-representation
 source → evidence-record → claim ← relationship / connection
-dataset-version → observation ↗
+dataset-version → observation ↗          ↖ dataset-version (imported connectomes)
 ```
 
 `examples/hippocampus-bundle.json` walks every link above.

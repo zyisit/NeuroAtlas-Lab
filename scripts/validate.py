@@ -18,6 +18,9 @@ Checks performed:
   5. Dataset versions must not be duplicated (same datasetId + version).
   6. Records whose assertionType is model_derived or hypothetical must not
      carry evidenceStatus established/well_supported (via linked claims).
+  7. Connections must not be self-loops, and undirected/bidirectional
+     connections must not repeat the same unordered pair within one dataset
+     version (each symmetric edge is stored once).
 
 Exit code 0 on success, 1 on any failure.
 """
@@ -151,6 +154,7 @@ def main(argv):
 
     # pass 2: cross-record checks
     dv_keys = defaultdict(list)
+    pair_keys = defaultdict(list)
     for rid, rec in records.items():
         rtype = rid.split(":", 1)[0]
         for field, expected in REF_FIELDS.items():
@@ -174,6 +178,12 @@ def main(argv):
                 errors.append(f"{origin[rid]}: {rid}: predicate '{pred}' not in predicate vocabulary")
         if rtype == "dataset-version":
             dv_keys[(rec.get("datasetId"), rec.get("version"))].append(rid)
+        if rtype == "connection":
+            a, b = rec.get("sourceId"), rec.get("targetId")
+            if a == b:
+                errors.append(f"{origin[rid]}: {rid}: connection is a self-loop ({a})")
+            elif rec.get("direction") in ("undirected", "bidirectional"):
+                pair_keys[(rec.get("datasetVersionId"), rec.get("connectionType"), *sorted((str(a), str(b))))].append(rid)
         if rtype in ("relationship", "connection") and rec.get("assertionType") in WEAK_ASSERTIONS:
             for cid in rec.get("claimIds", []):
                 c = records.get(cid, {})
@@ -182,6 +192,9 @@ def main(argv):
     for key, ids in dv_keys.items():
         if len(ids) > 1:
             errors.append(f"duplicate DatasetVersion for {key}: {ids}")
+    for key, ids in pair_keys.items():
+        if len(ids) > 1:
+            errors.append(f"duplicate undirected connection for {key[2]} <-> {key[3]} ({key[1]}, {key[0]}): {ids}")
 
     if errors:
         print(f"FAILED: {len(errors)} problem(s) across {len(records)} record(s)")

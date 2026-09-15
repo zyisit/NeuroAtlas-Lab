@@ -1,0 +1,108 @@
+[
+  {
+    "id": "dataset:hcp-julich-brain-connectomes",
+    "name": "Parcellation-based structural and resting-state functional brain connectomes of a healthy cohort",
+    "description": "Individual structural (dwMRI tractography) and functional (resting-state fMRI) connectomes for 200 Human Connectome Project subjects, computed for 20 parcellations including Julich-Brain. NeuroAtlas uses the Julich-Brain 3.1 streamline-count matrices only.",
+    "publisher": "Forschungszentrum Jülich (INM-7) / EBRAINS",
+    "homepage": "https://doi.org/10.25493/3PMM-FPW",
+    "license": {
+      "spdx": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "attributionText": "Domhof JWM, Jung K, Eickhoff SB, Popovych OV (2022). Parcellation-based structural and resting-state functional brain connectomes of a healthy cohort (v1.2) [Data set]. EBRAINS. https://doi.org/10.25493/3PMM-FPW Licensed Creative Commons Attribution 4.0 International.",
+      "commercialUseAllowed": true,
+      "notes": "License applies to the derived connectome matrices published on EBRAINS. The underlying HCP images are governed by HCP Open Access terms and are not redistributed by this project."
+    },
+    "externalIdentifiers": [
+      {
+        "namespace": "EBRAINS",
+        "identifier": "0f1ccc4a-9a11-4697-b43f-9c9c8ac543e6"
+      },
+      {
+        "namespace": "DOI",
+        "identifier": "10.25493/3PMM-FPW",
+        "url": "https://doi.org/10.25493/3PMM-FPW"
+      }
+    ],
+    "provenance": {
+      "createdAt": "2026-09-15T00:00:00Z",
+      "createdBy": "scripts/import/import_connectivity.py",
+      "method": "siibra-python import, group mean"
+    }
+  },
+  {
+    "id": "dataset-version:hcp-julich-brain-connectomes-1.2",
+    "datasetId": "dataset:hcp-julich-brain-connectomes",
+    "version": "1.2",
+    "retrievedAt": "2026-09-15",
+    "accessUrl": "https://doi.org/10.25493/3PMM-FPW",
+    "transformations": [
+      "Diffusion MRI whole-brain probabilistic tractography (MRtrix3, multi-shell multi-tissue constrained spherical deconvolution) on HCP data; streamline count between Julich-Brain 3.1 parcels, averaged across subjects.",
+      "Per-subject streamline-count matrices for Julich-Brain 3.1 (414 mapped leaf regions) read via siibra-python for 200 HCP subjects.",
+      "Group mean of streamline counts computed per region pair; matrix diagonal (self-connections) dropped.",
+      "Pairs retained only if mean count >= 20.0 and present (>= 1 streamline) in >= 90% of subjects.",
+      "Each symmetric pair written once as an undirected connection; strength = group-mean streamline count.",
+      "Streamline lengths and functional-connectivity matrices in the same dataset are not imported."
+    ],
+    "notes": "Imported with siibra-python 1.0.1-alpha.21. EBRAINS dataset version id 2a52e7c3-9aad-49db-bb71-4ed0208ae7cb.",
+    "provenance": {
+      "createdAt": "2026-09-15T00:00:00Z",
+      "createdBy": "scripts/import/import_connectivity.py",
+      "method": "siibra-python import, group mean"
+    }
+  },
+  {
+    "id": "source:domhof-2022-hcp-julich-connectomes-dataset",
+    "sourceType": "experimental_dataset",
+    "title": "Parcellation-based structural and resting-state functional brain connectomes of a healthy cohort (v1.2)",
+    "authors": [
+      "Domhof JWM",
+      "Jung K",
+      "Eickhoff SB",
+      "Popovych OV"
+    ],
+    "year": 2022,
+    "citation": "Domhof JWM, Jung K, Eickhoff SB, Popovych OV (2022). Parcellation-based structural and resting-state functional brain connectomes of a healthy cohort (v1.2) [Data set]. EBRAINS. https://doi.org/10.25493/3PMM-FPW",
+    "url": "https://doi.org/10.25493/3PMM-FPW",
+    "datasetVersionId": "dataset-version:hcp-julich-brain-connectomes-1.2",
+    "externalIdentifiers": [
+      {
+        "namespace": "DOI",
+        "identifier": "10.25493/3PMM-FPW"
+      }
+    ],
+    "provenance": {
+      "createdAt": "2026-09-15T00:00:00Z",
+      "createdBy": "scripts/import/import_connectivity.py",
+      "method": "siibra-python import, group mean"
+    }
+  },
+  {
+    "id": "source:domhof-2021-parcellation-induced-variation",
+    "sourceType": "primary_research",
+    "title": "Parcellation-induced variation of empirical and simulated brain connectomes at group and subject levels",
+    "authors": [
+      "Domhof JWM",
+      "Jung K",
+      "Eickhoff SB",
+      "Popovych OV"
+    ],
+    "year": 2021,
+    "citation": "Domhof JWM, Jung K, Eickhoff SB, Popovych OV (2021). Parcellation-induced variation of empirical and simulated brain connectomes at group and subject levels. Network Neuroscience 5(3):798-830. https://doi.org/10.1162/netn_a_00202",
+    "url": "https://doi.org/10.1162/netn_a_00202",
+    "externalIdentifiers": [
+      {
+        "namespace": "DOI",
+        "identifier": "10.1162/netn_a_00202"
+      },
+      {
+        "namespace": "PMID",
+        "identifier": "34746628"
+      }
+    ],
+    "provenance": {
+      "createdAt": "2026-09-15T00:00:00Z",
+      "createdBy": "scripts/import/import_connectivity.py",
+      "method": "siibra-python import, group mean"
+    }
+  }
+]

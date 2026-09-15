@@ -1,5 +1,7 @@
 # Only needed to run scripts/import/*. Not required for validation or CI.
 siibra>=1.0.1a
+# for scripts/import/import_connectivity.py (siibra pulls it in anyway)
+numpy>=1.26
 # for scripts/build/build_meshes.py
 trimesh>=4
 fast-simplification>=0.1

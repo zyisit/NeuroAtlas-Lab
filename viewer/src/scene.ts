@@ -3,8 +3,12 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import type { Index } from "./data";
 
+export interface Edge { from: string; to: string; weight: number } // weight in [0, 1], 1 = strongest edge of the selected region
+
 export interface SceneHandle {
   setSelection: (regionIds: string[]) => void;
+  /** Draw tubes from the selected region to its connected regions. Pass [] to clear. */
+  setConnections: (edges: Edge[]) => void;
   focus: (regionId: string) => void;
   dispose: () => void;
 }
@@ -16,7 +20,9 @@ export interface SceneCallbacks {
 }
 
 const DIM_OPACITY = 0.18;
+const CONNECTED_OPACITY = 0.6;
 const FULL_OPACITY = 0.95;
+const TUBE_MIN_R = 0.45, TUBE_MAX_R = 1.8; // mm; MNI brain is ~150 mm across
 
 /** Mounts a three.js scene into `container`. Geometry is in MNI RAS mm; the
  *  world group is rotated so superior (+z MNI) becomes +y in three.js. */
@@ -104,17 +110,58 @@ export function createScene(container: HTMLElement, index: Index, cb: SceneCallb
 
   // selection
   let selected = new Set<string>();
+  let connected = new Set<string>();
   const applySelection = () => {
     const any = selected.size > 0;
     for (const [rid, m] of meshes) {
       const mat = m.material as THREE.MeshStandardMaterial;
       const on = selected.has(rid);
-      mat.opacity = !any ? FULL_OPACITY : on ? 1 : DIM_OPACITY;
+      const near = !on && connected.has(rid);
+      mat.opacity = !any ? FULL_OPACITY : on ? 1 : near ? CONNECTED_OPACITY : DIM_OPACITY;
       mat.emissive.set(on ? mat.color : 0x000000);
       mat.emissiveIntensity = on ? 0.35 : 0;
-      mat.depthWrite = !any || on;
-      m.renderOrder = on ? 2 : 0;
+      mat.depthWrite = !any || on || near;
+      m.renderOrder = on ? 2 : near ? 1 : 0;
     }
+  };
+
+  // connections: one tube per edge, bowed outward so bundles don't all run through the centre of the brain
+  const tubes = new THREE.Group();
+  world.add(tubes);
+  // Tube endpoints in `world` (MNI) coordinates: mesh bounding-sphere centre, else the record centroid.
+  const centreOf = (rid: string): THREE.Vector3 | undefined => {
+    const m = meshes.get(rid);
+    if (m) {
+      m.geometry.computeBoundingSphere();
+      return world.worldToLocal(m.geometry.boundingSphere!.center.clone().applyMatrix4(m.matrixWorld));
+    }
+    const c = index.centroidOf(rid);
+    return c ? new THREE.Vector3(c[0], c[1], c[2]) : undefined;
+  };
+  const clearTubes = () => {
+    for (const t of tubes.children) { (t as THREE.Mesh).geometry.dispose(); ((t as THREE.Mesh).material as THREE.Material).dispose(); }
+    tubes.clear();
+  };
+  const setConnections = (edges: Edge[]) => {
+    clearTubes();
+    world.updateMatrixWorld();
+    connected = new Set(edges.map((e) => e.to));
+    for (const e of edges) {
+      const a = centreOf(e.from), b = centreOf(e.to);
+      if (!a || !b) continue;
+      const mid = a.clone().add(b).multiplyScalar(0.5);
+      const bow = mid.clone().normalize().multiplyScalar(a.distanceTo(b) * 0.25); // push the control point away from the origin
+      const curve = new THREE.QuadraticBezierCurve3(a, mid.add(bow), b);
+      const r = TUBE_MIN_R + (TUBE_MAX_R - TUBE_MIN_R) * Math.sqrt(e.weight);
+      const geom = new THREE.TubeGeometry(curve, 16, r, 6, false);
+      const color = new THREE.Color(index.colorOf(e.to) ?? "#e8c26a");
+      // depthTest off: the tubes are an overlay and must stay visible where they pass inside a surface.
+      const mat = new THREE.MeshStandardMaterial({ color, emissive: color, emissiveIntensity: 0.7, roughness: 0.6, transparent: true, opacity: 0.55 + 0.45 * e.weight, depthWrite: false, depthTest: false });
+      const t = new THREE.Mesh(geom, mat);
+      t.renderOrder = 3;
+      tubes.add(t);
+    }
+    applySelection();
   };
 
   const resize = () => {
@@ -130,6 +177,7 @@ export function createScene(container: HTMLElement, index: Index, cb: SceneCallb
 
   return {
     setSelection(ids) { selected = new Set(ids); applySelection(); },
+    setConnections,
     focus(rid) {
       // Centre of the loaded meshes for this region (and its descendants); fall back to record centroids.
       world.updateMatrixWorld();
@@ -160,7 +208,7 @@ export function createScene(container: HTMLElement, index: Index, cb: SceneCallb
       camera.position.copy(p.clone().add(dir.multiplyScalar(dist)));
     },
     dispose() {
-      cancelAnimationFrame(raf); ro.disconnect();
+      cancelAnimationFrame(raf); ro.disconnect(); clearTubes();
       renderer.domElement.removeEventListener("pointermove", onMove);
       renderer.domElement.removeEventListener("pointerdown", onDown);
       renderer.domElement.removeEventListener("pointerup", onUp);

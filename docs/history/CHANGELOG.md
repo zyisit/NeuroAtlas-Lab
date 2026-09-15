@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.10.0 — 2026-09-15
+- Sprint 4, Phase 2 begins: HCP structural connectivity for Julich-Brain 3.1 — `scripts/import/import_connectivity.py` reads the 200-subject streamline-count matrices (Domhof et al., EBRAINS v1.2, CC BY 4.0) via siibra, averages them, and writes 10,990 undirected `connection` records (pairs with mean ≥ 20 streamlines present in ≥ 90% of subjects) plus dataset / dataset-version / source records to `data/connectivity/hcp-julich-3.1/`
+- Schema (additive, still v0.7): optional `datasetVersionId` on `connection`
+- Validator rule 7: no self-loop connections; an undirected or bidirectional pair is stored once per dataset version. Three new tests
+- Viewer: "Connections" section in the detail panel (strongest first, subject-consistency per edge, threshold slider, dataset and method stated, explicit note that tractography edges are undirected) and bowed tubes in 3D from the selected region to its connected regions, tube width and opacity ∝ strength, connected regions half-lit. Grouping nodes point to their mapped leaves; the 50 small nuclei with no retained edges say why
+- `docs/data-sources/hcp-connectivity.md`; data-sources table and roadmap updated
+- CI: `workflow_dispatch` on viewer.yml; actions moved to their Node 24 majors (checkout v5, setup-python v6, setup-node v5, upload-pages-artifact v5, deploy-pages v5)
+
 ## 0.9.0 — 2026-09-14
 - Sprint 3: first curated claims — 12 claims, 23 sources (DOIs verified), 28 evidence records (5 `contradicts`), 8 relationships, 6 brain-function records, in `data/function/curated-claims-v1.json`; `docs/curation.md` documents the rules and review lifecycle
 - Viewer: evidence records show polarity, species, preparation, method, locator and notes with DOI links; claims about containing regions are shown for sub-regions; region colour falls back to the nearest coloured relative; selecting a region swings the camera to its side

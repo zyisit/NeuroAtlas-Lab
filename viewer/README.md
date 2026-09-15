@@ -22,12 +22,13 @@ python scripts/build/build_meshes.py          # ~3 min; writes viewer/public/ass
 
 ## How it works
 
-- `src/data.ts` loads the bundle and builds lookup indexes (hierarchy, mappings, spatial, claims).
+- `src/data.ts` loads the bundle and builds lookup indexes (hierarchy, mappings, spatial, claims, connections).
 - `src/scene.ts` is the three.js scene: whole-brain hull at low opacity, one mesh per mapped leaf
-  region coloured with the atlas's own colours, raycast picking, selection dims everything else.
+  region coloured with the atlas's own colours, raycast picking, selection dims everything else,
+  and one bowed tube per drawn connection from the selected region (width and opacity follow strength).
 - `src/App.tsx` is the UI: searchable region tree, detail panel that renders only what the records
   contain (atlas mapping, measurements with their method and dataset version, claims with evidence
-  polarity, external identifiers), and the dataset attribution footer.
+  polarity, connections with a strength threshold, external identifiers), and the dataset attribution footer.
 
 The viewer never owns facts. If something should appear in the panel, it goes into a record
 in `data/`, gets validated, and the bundle is rebuilt.

@@ -18,7 +18,8 @@ them via `spatial-representation.geometry.uri`.
 | 1 | Julich-Brain 3.1 / EBRAINS (via siibra) | **CC BY-NC-SA 4.0** (verified 2026-09-14) | Ingested. Non-commercial + share-alike; excluded from any commercial tier |
 | 1 | Allen Human Brain Atlas | Allen Terms of Use | Non-commercial restrictions apply to some resources |
 | 1 | UBERON | CC BY 3.0 | Anatomical identifiers |
-| 2 | Human Connectome Project | HCP Open Access terms | Registration required |
+| 2 | HCP connectomes for Julich-Brain (Domhof et al., EBRAINS v1.2, via siibra) | **CC BY 4.0** (verified 2026-09-15) | Ingested (`hcp-connectivity.md`). Derived matrices only; raw HCP images stay under HCP terms |
+| 2 | Human Connectome Project (raw) | HCP Open Access terms | Registration required; not redistributed |
 | 2 | OpenNeuro | CC0 | |
 | 3 | NeuroMorpho.Org | CC BY | Morphologies |
 | 3 | Allen Cell Types Database | Allen Terms of Use | |

@@ -29,6 +29,11 @@ export interface Claim {
 }
 export interface EvidenceRecord { id: string; claimId: string; sourceId: string; evidenceType: string; polarity: string; species?: string; context?: Record<string, string>; locator?: string; methods?: string[]; notes?: string }
 export interface Source { id: string; sourceType: string; title: string; authors?: string[]; year?: number; citation?: string; url?: string }
+export interface Connection {
+  id: string; sourceId: string; targetId: string; direction: string; connectionType: string; species: string;
+  context?: { preparation?: string; subjectFraction?: number; notes?: string }; assertionType: string; method?: string;
+  strength?: number; strengthUnit?: string; datasetVersionId?: string; status?: string;
+}
 export interface Dataset { id: string; name: string; publisher?: string; homepage?: string; license: { spdx: string; url?: string; attributionText?: string; commercialUseAllowed?: boolean } }
 export interface DatasetVersion { id: string; datasetId: string; version: string; retrievedAt: string; accessUrl?: string }
 export interface Atlas { id: string; name: string; species: string; referenceSpaceId: string; datasetVersionId: string; parcellationVersion?: string }
@@ -40,6 +45,7 @@ export interface Bundle {
     "brain-region"?: BrainRegion[]; "atlas-mapping"?: AtlasMapping[]; "spatial-representation"?: SpatialRepresentation[];
     observation?: Observation[]; claim?: Claim[]; "evidence-record"?: EvidenceRecord[]; source?: Source[];
     dataset?: Dataset[]; "dataset-version"?: DatasetVersion[]; atlas?: Atlas[]; "reference-space"?: ReferenceSpace[];
+    connection?: Connection[];
   };
 }
 
@@ -53,6 +59,7 @@ export interface Index {
   observationsByRegion: Map<string, Observation[]>;
   claimsByRegion: Map<string, Claim[]>;
   evidenceByClaim: Map<string, EvidenceRecord[]>;
+  connectionsByRegion: Map<string, Connection[]>; // both endpoints; sorted by strength, strongest first
   byId: Map<string, unknown>;
   colorOf: (regionId: string) => string | undefined;
   centroidOf: (regionId: string) => number[] | undefined;
@@ -92,6 +99,10 @@ export async function loadBundle(): Promise<Index> {
   const evidenceByClaim = new Map<string, EvidenceRecord[]>();
   for (const e of R["evidence-record"] ?? []) push(evidenceByClaim, e.claimId, e);
 
+  const connectionsByRegion = new Map<string, Connection[]>();
+  for (const c of R.connection ?? []) { push(connectionsByRegion, c.sourceId, c); push(connectionsByRegion, c.targetId, c); }
+  for (const arr of connectionsByRegion.values()) arr.sort((a, b) => (b.strength ?? 0) - (a.strength ?? 0));
+
   const byId = new Map<string, unknown>();
   for (const list of Object.values(R)) for (const rec of list ?? []) byId.set((rec as { id: string }).id, rec);
 
@@ -115,5 +126,8 @@ export async function loadBundle(): Promise<Index> {
     return out;
   };
 
-  return { bundle, regions, children, roots, mappingsByRegion, spatialByRegion, observationsByRegion, claimsByRegion, evidenceByClaim, byId, colorOf, centroidOf, descendants, ancestors };
+  return { bundle, regions, children, roots, mappingsByRegion, spatialByRegion, observationsByRegion, claimsByRegion, evidenceByClaim, connectionsByRegion, byId, colorOf, centroidOf, descendants, ancestors };
 }
+
+/** The region at the far end of an undirected/bidirectional edge, seen from `regionId`. */
+export function otherEnd(c: Connection, regionId: string): string { return c.sourceId === regionId ? c.targetId : c.sourceId; }

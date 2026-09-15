@@ -22,10 +22,16 @@
 - 12 claims for hippocampal formation / CA1, hOc1, 4a/4p, amygdala; 5 contradicting evidence records; 2 contested claims
 - `docs/curation.md` sets the rules and the proposed → active review lifecycle
 
-### Sprint 4 — Public release and connectivity
-- Human review of the v1 claims; flip to `active`
-- Go public; enable GitHub Pages
-- Begin Phase 2: structural connectivity (candidate: HCP-derived tractography summaries, or Julich's own fibre-bundle atlas via siibra)
+### Sprint 4 — Public release and connectivity (v0.10.0, done)
+- v1 claims flipped to `active`; repository public; GitHub Pages live
+- Phase 2 begun: HCP structural connectivity (Domhof et al. 2021, via siibra) — 10,990 undirected
+  streamline-count edges between the 414 mapped Julich leaves, drawn in the viewer with a strength threshold
+
+### Sprint 5 — Second atlas and connectivity follow-ups
+- Evaluate the Allen Human Brain Atlas as a second parcellation; introduce atlas-neutral region ids
+- Streamline lengths and resting-state functional connectivity from the same HCP dataset (same import script, new `connectionType`)
+- Consider Julich's fibre-bundle atlas for anatomically named tracts (directed `anatomical_projection` edges need tracer data, not tractography)
+- Viewer: connection tubes along real fibre paths are out of scope; keep centre-to-centre arcs and say so
 
 ## Phases
 

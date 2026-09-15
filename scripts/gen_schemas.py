@@ -330,6 +330,7 @@ SCHEMAS["connection"] = schema(
         "neurotransmitterIds": idlist("Reserved for Phase 4; molecule records"),
         "evidenceRecordIds": idlist("Evidence supporting this connection"),
         "claimIds": idlist("Claims this connection instantiates"),
+        "datasetVersionId": {**ID, "description": "The dataset release this edge was read from, for imported connectomes (added 0.10.0)"},
         "confidence": CONFIDENCE,
         "status": RECORD_STATUS,
         "provenance": PROV,

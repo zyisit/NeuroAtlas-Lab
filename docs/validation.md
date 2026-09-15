@@ -11,6 +11,7 @@ Checks:
 4. `causes` is rejected.
 5. No duplicate `dataset-version` for the same dataset + version.
 6. `model_derived` / `hypothetical` edges may not be linked to `established` / `well_supported` claims.
+7. `connection` records may not be self-loops, and an `undirected` / `bidirectional` connection may not repeat the same unordered pair (same `connectionType` and `datasetVersionId`); symmetric edges are stored once.
 
 Not checked (application-level, later): controlled vocabularies for `species`,
 immutability of published dataset versions across commits, asset URI reachability.

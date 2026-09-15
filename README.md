@@ -13,7 +13,7 @@ hypotheses are never silently mixed.
 
 ## Status
 
-**v0.9.0 · Sprint 3 (first curated claims)**
+**v0.10.0 · Sprint 4 (structural connectivity)**
 
 What exists today:
 
@@ -34,6 +34,9 @@ What exists today:
 - **First curated claims** (`data/function/`): twelve cited statements about the
   hippocampus, V1, M1 and amygdala, each with species, preparation, evidence status,
   and evidence for *and against* — see `docs/curation.md`
+- **Structural connectivity** (`data/connectivity/`): 10,990 undirected streamline-count
+  edges between Julich regions from 200 HCP subjects (Domhof et al., CC BY 4.0), with
+  per-edge subject consistency, drawn in the viewer from any selected region
 
 Run it: see `viewer/README.md`. Roadmap: `docs/roadmap.md`.
 
@@ -54,6 +57,12 @@ To (re)build the Julich-Brain records:
 pip install -r requirements-import.txt
 python scripts/import/import_julich_brain.py            # regions + mappings, ~1 min
 python scripts/import/import_julich_brain.py --spatial  # adds centroids + volumes, ~30 min first run
+```
+
+To (re)build the connectivity records (needs the Julich records above):
+
+```bash
+python scripts/import/import_connectivity.py            # 200 HCP subjects, ~2 min first run
 ```
 
 ## Scientific principles

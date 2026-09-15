@@ -85,6 +85,10 @@
       "uniqueItems": true,
       "description": "Claims this connection instantiates"
     },
+    "datasetVersionId": {
+      "$ref": "common.json#/$defs/id",
+      "description": "The dataset release this edge was read from, for imported connectomes (added 0.10.0)"
+    },
     "confidence": {
       "$ref": "common.json#/$defs/confidence"
     },
