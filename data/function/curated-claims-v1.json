@@ -662,7 +662,7 @@
       "evidence-record:hf-bilateral-mtl-damage-anterograde-amnesia-2",
       "evidence-record:hf-bilateral-mtl-damage-anterograde-amnesia-3"
     ],
-    "status": "proposed",
+    "status": "active",
     "provenance": {
       "createdAt": "2026-09-14T00:00:00Z",
       "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
@@ -743,7 +743,7 @@
       "evidence-record:ca1-bilateral-lesion-sufficient-for-amnesia-1",
       "evidence-record:ca1-bilateral-lesion-sufficient-for-amnesia-2"
     ],
-    "status": "proposed",
+    "status": "active",
     "provenance": {
       "createdAt": "2026-09-14T00:00:00Z",
       "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
@@ -806,7 +806,7 @@
       "evidence-record:hf-place-cells-rat-1",
       "evidence-record:hf-place-cells-rat-2"
     ],
-    "status": "proposed",
+    "status": "active",
     "provenance": {
       "createdAt": "2026-09-14T00:00:00Z",
       "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
@@ -865,7 +865,7 @@
       "evidence-record:hf-posterior-volume-taxi-drivers-1",
       "evidence-record:hf-posterior-volume-taxi-drivers-2"
     ],
-    "status": "proposed",
+    "status": "active",
     "provenance": {
       "createdAt": "2026-09-14T00:00:00Z",
       "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
@@ -929,7 +929,7 @@
       "claim:hf-bilateral-mtl-damage-anterograde-amnesia",
       "claim:ca1-bilateral-lesion-sufficient-for-amnesia"
     ],
-    "status": "proposed",
+    "status": "active",
     "provenance": {
       "createdAt": "2026-09-14T00:00:00Z",
       "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
@@ -946,7 +946,7 @@
     "claimIds": [
       "claim:ca1-bilateral-lesion-sufficient-for-amnesia"
     ],
-    "status": "proposed",
+    "status": "active",
     "provenance": {
       "createdAt": "2026-09-14T00:00:00Z",
       "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
@@ -964,7 +964,7 @@
       "claim:hf-place-cells-rat",
       "claim:hf-posterior-volume-taxi-drivers"
     ],
-    "status": "proposed",
+    "status": "active",
     "provenance": {
       "createdAt": "2026-09-14T00:00:00Z",
       "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
@@ -983,7 +983,7 @@
       "evidence-record:hoc1-is-brodmann-17-1",
       "evidence-record:hoc1-is-brodmann-17-2"
     ],
-    "status": "proposed",
+    "status": "active",
     "provenance": {
       "createdAt": "2026-09-14T00:00:00Z",
       "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
@@ -1042,7 +1042,7 @@
       "evidence-record:v1-orientation-selectivity-1",
       "evidence-record:v1-orientation-selectivity-2"
     ],
-    "status": "proposed",
+    "status": "active",
     "provenance": {
       "createdAt": "2026-09-14T00:00:00Z",
       "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
@@ -1104,7 +1104,7 @@
       "evidence-record:v1-retinotopic-map-human-1",
       "evidence-record:v1-retinotopic-map-human-2"
     ],
-    "status": "proposed",
+    "status": "active",
     "provenance": {
       "createdAt": "2026-09-14T00:00:00Z",
       "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
@@ -1165,7 +1165,7 @@
       "claim:hoc1-is-brodmann-17",
       "claim:v1-retinotopic-map-human"
     ],
-    "status": "proposed",
+    "status": "active",
     "provenance": {
       "createdAt": "2026-09-14T00:00:00Z",
       "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
@@ -1185,7 +1185,7 @@
       "evidence-record:m1-stimulation-somatotopic-order-1",
       "evidence-record:m1-stimulation-somatotopic-order-2"
     ],
-    "status": "proposed",
+    "status": "active",
     "provenance": {
       "createdAt": "2026-09-14T00:00:00Z",
       "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
@@ -1250,7 +1250,7 @@
       "evidence-record:m1-continuous-homunculus-2",
       "evidence-record:m1-continuous-homunculus-3"
     ],
-    "status": "proposed",
+    "status": "active",
     "provenance": {
       "createdAt": "2026-09-14T00:00:00Z",
       "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
@@ -1328,7 +1328,7 @@
     "claimIds": [
       "claim:m1-stimulation-somatotopic-order"
     ],
-    "status": "proposed",
+    "status": "active",
     "provenance": {
       "createdAt": "2026-09-14T00:00:00Z",
       "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
@@ -1345,7 +1345,7 @@
     "claimIds": [
       "claim:m1-stimulation-somatotopic-order"
     ],
-    "status": "proposed",
+    "status": "active",
     "provenance": {
       "createdAt": "2026-09-14T00:00:00Z",
       "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
@@ -1364,7 +1364,7 @@
       "evidence-record:amygdala-required-for-cued-fear-conditioning-rat-1",
       "evidence-record:amygdala-required-for-cued-fear-conditioning-rat-2"
     ],
-    "status": "proposed",
+    "status": "active",
     "provenance": {
       "createdAt": "2026-09-14T00:00:00Z",
       "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
@@ -1424,7 +1424,7 @@
       "evidence-record:amygdala-damage-impairs-fear-recognition-human-1",
       "evidence-record:amygdala-damage-impairs-fear-recognition-human-2"
     ],
-    "status": "proposed",
+    "status": "active",
     "provenance": {
       "createdAt": "2026-09-14T00:00:00Z",
       "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
@@ -1490,7 +1490,7 @@
       "evidence-record:amygdala-is-the-fear-centre-3",
       "evidence-record:amygdala-is-the-fear-centre-4"
     ],
-    "status": "proposed",
+    "status": "active",
     "provenance": {
       "createdAt": "2026-09-14T00:00:00Z",
       "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
@@ -1584,7 +1584,7 @@
       "claim:amygdala-damage-impairs-fear-recognition-human",
       "claim:amygdala-is-the-fear-centre"
     ],
-    "status": "proposed",
+    "status": "active",
     "provenance": {
       "createdAt": "2026-09-14T00:00:00Z",
       "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",
@@ -1601,7 +1601,7 @@
     "claimIds": [
       "claim:amygdala-damage-impairs-fear-recognition-human"
     ],
-    "status": "proposed",
+    "status": "active",
     "provenance": {
       "createdAt": "2026-09-14T00:00:00Z",
       "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)",

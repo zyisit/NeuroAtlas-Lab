@@ -15,18 +15,18 @@ OUT = ROOT / "data" / "function" / "curated-claims-v1.json"
 # confirmed the statement says what they say. Everything not listed stays
 # `proposed`. Slugs are the part after "claim:" (see the claim(...) calls below).
 REVIEWED_ACTIVE = {
-    # "hf-bilateral-mtl-damage-anterograde-amnesia",
-    # "ca1-bilateral-lesion-sufficient-for-amnesia",
-    # "hf-place-cells-rat",
-    # "hf-posterior-volume-taxi-drivers",
-    # "hoc1-is-brodmann-17",
-    # "v1-orientation-selectivity",
-    # "v1-retinotopic-map-human",
-    # "m1-stimulation-somatotopic-order",
-    # "m1-continuous-homunculus",
-    # "amygdala-required-for-cued-fear-conditioning-rat",
-    # "amygdala-damage-impairs-fear-recognition-human",
-    # "amygdala-is-the-fear-centre",
+     "hf-bilateral-mtl-damage-anterograde-amnesia",
+     "ca1-bilateral-lesion-sufficient-for-amnesia",
+     "hf-place-cells-rat",
+     "hf-posterior-volume-taxi-drivers",
+     "hoc1-is-brodmann-17",
+     "v1-orientation-selectivity",
+     "v1-retinotopic-map-human",
+     "m1-stimulation-somatotopic-order",
+     "m1-continuous-homunculus",
+     "amygdala-required-for-cued-fear-conditioning-rat",
+     "amygdala-damage-impairs-fear-recognition-human",
+     "amygdala-is-the-fear-centre",
 }
 
 PROV = {"createdAt": "2026-09-14T00:00:00Z", "createdBy": "NeuroAtlas curation v1 (AI-assisted draft; pending human review)", "method": "manual curation from primary literature; DOIs verified 2026-09-14"}
