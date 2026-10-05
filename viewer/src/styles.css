@@ -97,3 +97,13 @@ dl { margin: 0; }
   .left, .right { border: 0; border-top: 1px solid var(--rule); max-height: 40vh; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* atlas switch */
+.atlas-switch { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 4px; margin-bottom: 10px; }
+.atlas-switch button { border: 1px solid var(--rule); background: #fff; color: var(--ink); border-radius: 4px; padding: 6px 8px; font: inherit; font-size: 12.5px; cursor: pointer; text-align: left; line-height: 1.25; }
+.atlas-switch button small { display: block; color: var(--ink-2); font-size: 11px; }
+.atlas-switch button.is-on { border-color: var(--accent); background: #e6f1f3; }
+.atlas-switch button.is-on small { color: var(--accent); }
+
+/* overlaps reuse the connection list layout */
+.overlap li .conn-strength { min-width: 3.5em; text-align: right; }

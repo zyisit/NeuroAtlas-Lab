@@ -13,7 +13,7 @@ hypotheses are never silently mixed.
 
 ## Status
 
-**v0.10.0 · Sprint 4 (structural connectivity)**
+**v0.11.0 · Sprint 5 (second atlas)**
 
 What exists today:
 
@@ -23,14 +23,16 @@ What exists today:
   and governance rules (`scripts/validate.py`), run in CI on every push
 - Scientific-governance principles the data model is designed to uphold
 - A synthetic example bundle exercising the full record chain (`examples/`)
-- **Real data:** the full Julich-Brain 3.1 cytoarchitectonic atlas — 771 regions
+- **Real data, two atlases:** the full Julich-Brain 3.1 cytoarchitectonic atlas — 771 regions
   with hierarchy, atlas mappings, display colours, and provenance
-  (`data/anatomy/julich-brain-3.1/`), produced by a reproducible import script
-  (`scripts/import/import_julich_brain.py`)
-
-- **The viewer:** a React + three.js atlas browser (`viewer/`) — searchable region
-  hierarchy, 3D surfaces for 406 Julich regions in MNI152 space, and a detail panel
-  that shows only what the records contain, with sources and license attached
+  (`data/anatomy/julich-brain-3.1/`, CC BY-NC-SA) — and the Allen Human Reference Atlas – 3D,
+  2020 — 473 regions with hemisphere leaves (`data/anatomy/allen-hra-3d-2020/`, CC BY 4.0), each
+  produced by a reproducible import script under `scripts/import/`. The atlases sit on different
+  MNI templates; the records say so, and 1,137 computed overlap relationships
+  (`data/anatomy/cross-atlas/`) join them without pretending they share regions
+- **The viewer:** a React + three.js atlas browser (`viewer/`) — atlas switch, searchable region
+  hierarchy, 3D surfaces for 406 Julich and 275 Allen regions, cross-atlas overlaps, and a detail
+  panel that shows only what the records contain, with sources and license attached
 - **First curated claims** (`data/function/`): twelve cited statements about the
   hippocampus, V1, M1 and amygdala, each with species, preparation, evidence status,
   and evidence for *and against* — see `docs/curation.md`
@@ -65,6 +67,14 @@ To (re)build the connectivity records (needs the Julich records above):
 python scripts/import/import_connectivity.py            # 200 HCP subjects, ~2 min first run
 ```
 
+To (re)build the Allen atlas, its meshes and the cross-atlas overlaps:
+
+```bash
+python scripts/import/import_allen_hra_3d.py            # downloads ~3 MB once, ~1 min
+python scripts/build/build_meshes.py --atlas allen      # ~3 min
+python scripts/build/build_overlaps.py                  # ~2 min, needs the Julich siibra cache
+```
+
 ## Scientific principles
 
 1. Evidence before aesthetics.
@@ -86,7 +96,7 @@ Full text: `docs/scientific-governance/principles.md`.
 | `scripts/` | `gen_schemas.py` (schema source of truth), `validate.py`, `import/` (data ingestion), `build/` (meshes, viewer bundle) |
 | `docs/` | Data model, ontology, governance, architecture, data-source policy, roadmap |
 | `examples/` | Synthetic placeholder records. **Not scientific content.** |
-| `data/` | Curated project records, by domain. `anatomy/julich-brain-3.1/` is the first real dataset. |
+| `data/` | Curated project records, by domain: `anatomy/` (Julich, Allen, cross-atlas overlaps), `connectivity/`, `function/` |
 | `tests/` | Validator tests |
 | `archive/` | Schema v0.4 and v0.6 packages, retained for history |
 | `viewer/` | The web viewer (React, three.js). Reads `viewer/public/data/bundle.json` built from `data/` |

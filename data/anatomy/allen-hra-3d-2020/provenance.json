@@ -1,0 +1,193 @@
+[
+  {
+    "id": "dataset:allen-human-reference-atlas-3d",
+    "name": "Allen Human Reference Atlas - 3D",
+    "description": "A voxel-level parcellation of the adult human brain into 141 structures, drawn by Song-Lin Ding on the ICBM 2009b Nonlinear Symmetric template at 0.5 mm, using the anatomic ontology of the 2016 Allen adult human brain atlas.",
+    "publisher": "Allen Institute for Brain Science",
+    "homepage": "https://community.brain-map.org/t/allen-human-reference-atlas-3d-2020-new/405",
+    "license": {
+      "spdx": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "attributionText": "Ding S-L, Royall JJ, Sunkin SM, Facer BAC, Lesnar P, Bernard A, Ng L, Lein ES (2020). \"Allen Human Reference Atlas - 3D, 2020\", RRID:SCR_017764, version 1.0.0. Available from https://download.alleninstitute.org/informatics-archive/allen_human_reference_atlas_3d_2020/version_1/ . (c) 2019 Allen Institute for Brain Science.",
+      "commercialUseAllowed": true,
+      "notes": "The release page states these materials are provided under CC BY 4.0 as of 2022-09-01, which overrides the non-commercial clause of the general Allen Institute Terms of Use for this resource. Citation must follow the Allen Institute Citation Policy."
+    },
+    "externalIdentifiers": [
+      {
+        "namespace": "RRID",
+        "identifier": "SCR_017764",
+        "url": "https://scicrunch.org/resolver/RRID:SCR_017764"
+      }
+    ],
+    "provenance": {
+      "createdAt": "2026-10-05T00:00:00Z",
+      "createdBy": "scripts/import/import_allen_hra_3d.py",
+      "method": "direct import of the Allen release files (NIfTI label volume + voxel_count.csv ontology)"
+    }
+  },
+  {
+    "id": "dataset-version:allen-hra-3d-2020-1.0.0",
+    "datasetId": "dataset:allen-human-reference-atlas-3d",
+    "version": "1.0.0",
+    "releaseDate": "2020-01-11",
+    "retrievedAt": "2026-10-05",
+    "accessUrl": "https://download.alleninstitute.org/informatics-archive/allen_human_reference_atlas_3d_2020/version_1/",
+    "contentHash": "sha256:2b05581e39c44f2623d9b0a69f64e3df0823c20d054abef92973812313335dc3",
+    "transformations": [
+      "Structure names, acronyms, colours and hierarchy read from examples/voxel_count/voxel_count.csv in the release directory; no Allen API call.",
+      "annotation_full.nii.gz is Allen's left-hemisphere drawing mirrored across x = 0 (verified voxel-for-voxel at import); the right-hemisphere geometry in this project is therefore a mirror image, not an independent drawing.",
+      "Each bilateral structure split at x = 0 (RAS) into a left and a right leaf region; voxels at x = 0 assigned to the left. Ventricles, commissures and the pineal body kept as single midline regions.",
+      "Centroids and volumes computed from the label volume in template voxel space (0.5 mm isotropic)."
+    ],
+    "notes": "voxel_count.csv sha256: 7348be087e6c2b6cb1fde1d604761cdd2d70e0e33ded6e1f322db334959d162f. Developmental scaffolding nodes above 'brain' (neural plate, neural tube, brain) are not imported.",
+    "provenance": {
+      "createdAt": "2026-10-05T00:00:00Z",
+      "createdBy": "scripts/import/import_allen_hra_3d.py",
+      "method": "direct import of the Allen release files (NIfTI label volume + voxel_count.csv ontology)"
+    }
+  },
+  {
+    "id": "source:ding-2020-allen-hra-3d",
+    "sourceType": "atlas",
+    "title": "Allen Human Reference Atlas - 3D, 2020",
+    "authors": [
+      "Ding S-L",
+      "Royall JJ",
+      "Sunkin SM",
+      "Facer BAC",
+      "Lesnar P",
+      "Bernard A",
+      "Ng L",
+      "Lein ES"
+    ],
+    "year": 2020,
+    "citation": "Ding S-L, Royall JJ, Sunkin SM, Facer BAC, Lesnar P, Bernard A, Ng L, Lein ES (2020). \"Allen Human Reference Atlas - 3D, 2020\", RRID:SCR_017764, version 1.0.0.",
+    "url": "https://community.brain-map.org/t/allen-human-reference-atlas-3d-2020-new/405",
+    "datasetVersionId": "dataset-version:allen-hra-3d-2020-1.0.0",
+    "externalIdentifiers": [
+      {
+        "namespace": "RRID",
+        "identifier": "SCR_017764"
+      }
+    ],
+    "provenance": {
+      "createdAt": "2026-10-05T00:00:00Z",
+      "createdBy": "scripts/import/import_allen_hra_3d.py",
+      "method": "direct import of the Allen release files (NIfTI label volume + voxel_count.csv ontology)"
+    }
+  },
+  {
+    "id": "source:ding-2016-allen-human-atlas",
+    "sourceType": "primary_research",
+    "title": "Comprehensive cellular-resolution atlas of the adult human brain",
+    "authors": [
+      "Ding S-L",
+      "Royall JJ",
+      "Sunkin SM",
+      "Ng L",
+      "Facer BAC",
+      "Lesnar P",
+      "Guillozet-Bongaarts A",
+      "McMurray B",
+      "Szafer A",
+      "Dolbeare TA",
+      "Stevens A",
+      "Tirrell L",
+      "Benner T",
+      "Caldejon S",
+      "Dalley RA",
+      "Dee N",
+      "Lau C",
+      "Nyhus J",
+      "Reding M",
+      "Riley ZL",
+      "Sandman D",
+      "Shen E",
+      "van der Kouwe A",
+      "Varjabedian A",
+      "Write M",
+      "Zollei L",
+      "Dang C",
+      "Knowles JA",
+      "Koch C",
+      "Phillips JW",
+      "Sestan N",
+      "Wohnoutka P",
+      "Zielke HR",
+      "Hohmann JG",
+      "Jones AR",
+      "Bernard A",
+      "Hawrylycz MJ",
+      "Hof PR",
+      "Fischl B",
+      "Lein ES"
+    ],
+    "year": 2016,
+    "citation": "Ding S-L, Royall JJ, Sunkin SM, Ng L, Facer BAC, Lesnar P, et al. (2016). Comprehensive cellular-resolution atlas of the adult human brain. Journal of Comparative Neurology 524(16):3127-3481. doi:10.1002/cne.24080",
+    "url": "https://doi.org/10.1002/cne.24080",
+    "externalIdentifiers": [
+      {
+        "namespace": "DOI",
+        "identifier": "10.1002/cne.24080"
+      }
+    ],
+    "provenance": {
+      "createdAt": "2026-10-05T00:00:00Z",
+      "createdBy": "scripts/import/import_allen_hra_3d.py",
+      "method": "direct import of the Allen release files (NIfTI label volume + voxel_count.csv ontology)"
+    }
+  },
+  {
+    "id": "reference-space:mni152-icbm-2009b-nonlin-sym",
+    "name": "MNI 152 ICBM 2009b Nonlinear Symmetric",
+    "coordinateSystem": "MNI152 ICBM 2009b Nonlinear Symmetric, RAS, mm",
+    "species": "Homo sapiens",
+    "unit": "mm",
+    "description": "Symmetric non-linear average of 152 adult brains (McConnell Brain Imaging Centre, MNI). Template space of the Allen Human Reference Atlas - 3D. Not the same template as the Julich-Brain maps (2009c asymmetric).",
+    "externalIdentifiers": [
+      {
+        "namespace": "MNI",
+        "identifier": "ICBM 152 Nonlinear atlases 2009",
+        "url": "http://www.bic.mni.mcgill.ca/ServicesAtlases/ICBM152NLin2009"
+      }
+    ],
+    "provenance": {
+      "createdAt": "2026-10-05T00:00:00Z",
+      "createdBy": "scripts/import/import_allen_hra_3d.py",
+      "method": "direct import of the Allen release files (NIfTI label volume + voxel_count.csv ontology)"
+    }
+  },
+  {
+    "id": "spatial-transformation:mni152-2009b-sym-to-2009c-asym-approx-identity",
+    "sourceReferenceSpaceId": "reference-space:mni152-icbm-2009b-nonlin-sym",
+    "targetReferenceSpaceId": "reference-space:mni152-icbm-2009c-nonlin-asym",
+    "method": "identity (approximate)",
+    "invertible": true,
+    "notes": "The 2009b symmetric and 2009c asymmetric ICBM templates are both non-linear averages of the same 152 subjects and are treated as the same millimetre space in this project. No registration was computed. Expect discrepancies of the order of a millimetre at structure boundaries; the viewer says so wherever the two atlases are compared.",
+    "provenance": {
+      "createdAt": "2026-10-05T00:00:00Z",
+      "createdBy": "scripts/import/import_allen_hra_3d.py",
+      "method": "direct import of the Allen release files (NIfTI label volume + voxel_count.csv ontology)"
+    }
+  },
+  {
+    "id": "atlas:allen-hra-3d-2020",
+    "name": "Allen Human Reference Atlas - 3D, 2020",
+    "species": "Homo sapiens",
+    "referenceSpaceId": "reference-space:mni152-icbm-2009b-nonlin-sym",
+    "datasetVersionId": "dataset-version:allen-hra-3d-2020-1.0.0",
+    "parcellationVersion": "1.0.0",
+    "description": "141 annotated structures covering cortex (gyral level), cerebral nuclei, diencephalon, brainstem, cerebellum, white-matter tracts and ventricles, with the 2016 Allen adult human structural ontology as hierarchy.",
+    "externalIdentifiers": [
+      {
+        "namespace": "RRID",
+        "identifier": "SCR_017764"
+      }
+    ],
+    "provenance": {
+      "createdAt": "2026-10-05T00:00:00Z",
+      "createdBy": "scripts/import/import_allen_hra_3d.py",
+      "method": "direct import of the Allen release files (NIfTI label volume + voxel_count.csv ontology)"
+    }
+  }
+]

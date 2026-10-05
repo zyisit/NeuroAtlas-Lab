@@ -26,7 +26,7 @@
 parent level in the labelled maximum-probability map. Their parents get centroids and meshes.
 
 ## Meshes
-`scripts/build/build_meshes.py` produces display surfaces from the same labelled map:
+`scripts/build/build_meshes.py --atlas julich` produces display surfaces from the same labelled map:
 a whole-brain hull and one mesh per mapped leaf region, recorded as `spatial-representation`
 records of type `surface` in `meshes.json`. They are smoothed and decimated for the viewer
 and are not measurement-grade.
@@ -36,7 +36,9 @@ and are not measurement-grade.
 - Julich's linked data features (receptor densities, cell densities, connectivity). Those
   are Phases 2–4 and will come in through their own scripts with their own provenance.
 
-## Identity caveat
-Region ids are `brain-region:julich-<key>`. They are derived from one atlas and will be
-merged into atlas-neutral project ids once a second atlas is ingested; the Julich mapping
-records will survive that merge unchanged.
+## Identity
+Region ids are `brain-region:julich-<key>` and stay atlas-scoped. The plan to merge them into
+atlas-neutral ids was dropped in Sprint 5: the second atlas (Allen HRA 3D 2020) parcellates the
+brain differently, so a shared id would be a fiction. Cross-atlas navigation uses the computed
+`overlaps` relationships in `data/anatomy/cross-atlas/` instead
+(see `allen-human-reference-atlas-3d-2020.md`).

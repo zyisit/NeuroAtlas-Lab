@@ -11,7 +11,7 @@ export interface BrainRegion {
 }
 export interface AtlasMapping {
   id: string; brainRegionId: string; atlasId: string; atlasRegionId?: string; label?: string;
-  atlasParentRegionId?: string; mappingType: string; datasetVersionId?: string; displayColor?: string;
+  atlasParentRegionId?: string; mappingType: string; datasetVersionId?: string; displayColor?: string; notes?: string;
 }
 export interface SpatialRepresentation {
   id: string; subjectId?: string; referenceSpaceId: string; datasetVersionId: string;
@@ -34,6 +34,11 @@ export interface Connection {
   context?: { preparation?: string; subjectFraction?: number; notes?: string }; assertionType: string; method?: string;
   strength?: number; strengthUnit?: string; datasetVersionId?: string; status?: string;
 }
+export interface Relationship {
+  id: string; subjectId: string; predicate: string; objectId: string; species?: string; assertionType: string; status: string;
+  context?: { preparation?: string; overlapFractionOfSubject?: number; overlapFractionOfObject?: number; overlapVolumeMm3?: number; transformationId?: string; notes?: string };
+}
+export interface SpatialTransformation { id: string; sourceReferenceSpaceId: string; targetReferenceSpaceId: string; method: string; notes?: string }
 export interface Dataset { id: string; name: string; publisher?: string; homepage?: string; license: { spdx: string; url?: string; attributionText?: string; commercialUseAllowed?: boolean } }
 export interface DatasetVersion { id: string; datasetId: string; version: string; retrievedAt: string; accessUrl?: string }
 export interface Atlas { id: string; name: string; species: string; referenceSpaceId: string; datasetVersionId: string; parcellationVersion?: string }
@@ -45,9 +50,15 @@ export interface Bundle {
     "brain-region"?: BrainRegion[]; "atlas-mapping"?: AtlasMapping[]; "spatial-representation"?: SpatialRepresentation[];
     observation?: Observation[]; claim?: Claim[]; "evidence-record"?: EvidenceRecord[]; source?: Source[];
     dataset?: Dataset[]; "dataset-version"?: DatasetVersion[]; atlas?: Atlas[]; "reference-space"?: ReferenceSpace[];
-    connection?: Connection[];
+    connection?: Connection[]; relationship?: Relationship[]; "spatial-transformation"?: SpatialTransformation[];
   };
 }
+
+/** Where an atlas's display meshes live, as URL paths relative to the viewer base (derived from spatial-representation uris). */
+export interface AtlasAssets { hull?: string; regions?: string }
+
+/** An `overlaps` relationship seen from one of its two regions. */
+export interface Overlap { rel: Relationship; other: string; fractionOfThis?: number; fractionOfOther?: number }
 
 export interface Index {
   bundle: Bundle;
@@ -60,6 +71,13 @@ export interface Index {
   claimsByRegion: Map<string, Claim[]>;
   evidenceByClaim: Map<string, EvidenceRecord[]>;
   connectionsByRegion: Map<string, Connection[]>; // both endpoints; sorted by strength, strongest first
+  atlases: Atlas[];                                // in the order they joined the project (dataset-version retrievedAt)
+  atlasOfRegion: Map<string, string>;             // region id -> atlas id (from its first atlas-mapping)
+  rootsByAtlas: Map<string, string[]>;
+  regionCountByAtlas: Map<string, number>;
+  assetsByAtlas: Map<string, AtlasAssets>;
+  atlasesWithConnections: Set<string>;
+  overlapsByRegion: Map<string, Overlap[]>;       // both directions; sorted by the share of *this* region, largest first
   byId: Map<string, unknown>;
   colorOf: (regionId: string) => string | undefined;
   centroidOf: (regionId: string) => number[] | undefined;
@@ -106,6 +124,38 @@ export async function loadBundle(): Promise<Index> {
   const byId = new Map<string, unknown>();
   for (const list of Object.values(R)) for (const rec of list ?? []) byId.set((rec as { id: string }).id, rec);
 
+  // atlases, in the order their dataset versions were retrieved (first imported first)
+  const retrieved = (a: Atlas) => (byId.get(a.datasetVersionId) as DatasetVersion | undefined)?.retrievedAt ?? "";
+  const atlases = [...(R.atlas ?? [])].sort((a, b) => retrieved(a).localeCompare(retrieved(b)) || a.name.localeCompare(b.name));
+  const atlasOfRegion = new Map<string, string>();
+  for (const m of R["atlas-mapping"] ?? []) if (!atlasOfRegion.has(m.brainRegionId)) atlasOfRegion.set(m.brainRegionId, m.atlasId);
+  const rootsByAtlas = new Map<string, string[]>();
+  const regionCountByAtlas = new Map<string, number>();
+  for (const id of roots) push(rootsByAtlas, atlasOfRegion.get(id) ?? "", id);
+  for (const id of regions.keys()) { const a = atlasOfRegion.get(id) ?? ""; regionCountByAtlas.set(a, (regionCountByAtlas.get(a) ?? 0) + 1); }
+  // mesh assets: the hull is the surface whose subject is the atlas itself; region meshes are the surface of any region of that atlas
+  const toUrl = (uri: string) => uri.replace(/^viewer\/public\//, "");
+  const assetsByAtlas = new Map<string, AtlasAssets>();
+  for (const s of R["spatial-representation"] ?? []) {
+    if (s.geometry.type !== "surface" || !s.geometry.uri || !s.subjectId) continue;
+    const atlasId = s.subjectId.startsWith("atlas:") ? s.subjectId : atlasOfRegion.get(s.subjectId);
+    if (!atlasId) continue;
+    const a = assetsByAtlas.get(atlasId) ?? {};
+    if (s.subjectId.startsWith("atlas:")) a.hull = toUrl(s.geometry.uri); else a.regions ??= toUrl(s.geometry.uri);
+    assetsByAtlas.set(atlasId, a);
+  }
+  const atlasesWithConnections = new Set<string>();
+  for (const c of R.connection ?? []) { const a = atlasOfRegion.get(c.sourceId); if (a) atlasesWithConnections.add(a); }
+
+  const overlapsByRegion = new Map<string, Overlap[]>();
+  for (const rel of R.relationship ?? []) {
+    if (rel.predicate !== "overlaps") continue;
+    const c = rel.context ?? {};
+    push(overlapsByRegion, rel.subjectId, { rel, other: rel.objectId, fractionOfThis: c.overlapFractionOfSubject, fractionOfOther: c.overlapFractionOfObject });
+    push(overlapsByRegion, rel.objectId, { rel, other: rel.subjectId, fractionOfThis: c.overlapFractionOfObject, fractionOfOther: c.overlapFractionOfSubject });
+  }
+  for (const arr of overlapsByRegion.values()) arr.sort((a, b) => (b.fractionOfThis ?? 0) - (a.fractionOfThis ?? 0));
+
   const descendants = (id: string): string[] => {
     const out: string[] = []; const stack = [...(children.get(id) ?? [])];
     while (stack.length) { const c = stack.pop()!; out.push(c); stack.push(...(children.get(c) ?? [])); }
@@ -126,7 +176,8 @@ export async function loadBundle(): Promise<Index> {
     return out;
   };
 
-  return { bundle, regions, children, roots, mappingsByRegion, spatialByRegion, observationsByRegion, claimsByRegion, evidenceByClaim, connectionsByRegion, byId, colorOf, centroidOf, descendants, ancestors };
+  return { bundle, regions, children, roots, mappingsByRegion, spatialByRegion, observationsByRegion, claimsByRegion, evidenceByClaim, connectionsByRegion,
+    atlases, atlasOfRegion, rootsByAtlas, regionCountByAtlas, assetsByAtlas, atlasesWithConnections, overlapsByRegion, byId, colorOf, centroidOf, descendants, ancestors };
 }
 
 /** The region at the far end of an undirected/bidirectional edge, seen from `regionId`. */

@@ -5,3 +5,5 @@ numpy>=1.26
 # for scripts/build/build_meshes.py
 trimesh>=4
 fast-simplification>=0.1
+# for scripts/import/import_allen_hra_3d.py and scripts/build/build_overlaps.py (siibra pulls it in anyway)
+nibabel>=5

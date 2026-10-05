@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.11.0 — 2026-09-17
+- Sprint 5: second atlas — the Allen Human Reference Atlas – 3D, 2020 (Ding et al., RRID:SCR_017764, CC BY 4.0) imported by `scripts/import/import_allen_hra_3d.py` directly from the Allen release directory (siibra has no Allen human parcellation): 473 brain-region records (205 ontology nodes, 268 hemisphere leaves split at x = 0, 7 midline leaves), 473 atlas-mappings with Allen colours, 275 centroids and volumes, plus dataset / dataset-version / source / reference-space / atlas records in `data/anatomy/allen-hra-3d-2020/`. First anatomy dataset with `commercialUseAllowed: true`
+- The Allen template (ICBM 2009b symmetric) gets its own reference-space and an explicit approximate-identity `spatial-transformation` to the Julich space (2009c asymmetric); the importer verifies that the release volume is a left→right mirror and records it
+- Decision: atlas-neutral region ids dropped; the atlases are joined by 1,137 computed `overlaps` relationships (`assertionType: inferred`, both overlap fractions and shared volume in context) from the new `scripts/build/build_overlaps.py`, in `data/anatomy/cross-atlas/`
+- `scripts/build/build_meshes.py` takes `--atlas julich|allen|all`; 275 Allen surfaces in `viewer/public/assets/allen-hra-3d-2020/` (smoothing halved for structures under 500 mm³ so thin tracts survive)
+- Viewer: atlas switch, per-atlas surfaces loaded without resetting the camera, "In <other atlas>" panel on every leaf with the template caveat (clicking an overlap switches atlas), mapping notes shown (hemisphere split / mirror), Allen regions state that connectivity is Julich-only, masthead and centroid label name the current atlas and its space
+- `tests/test_cross_atlas.py`: six invariants of the second atlas and the overlap records (14 tests total)
+- `docs/data-sources/allen-human-reference-atlas-3d-2020.md` (includes the atlas decision record); data-sources table, Julich notes and roadmap updated
+- Total 16,789 validated records
+
 ## 0.10.0 — 2026-09-15
 - Sprint 4, Phase 2 begins: HCP structural connectivity for Julich-Brain 3.1 — `scripts/import/import_connectivity.py` reads the 200-subject streamline-count matrices (Domhof et al., EBRAINS v1.2, CC BY 4.0) via siibra, averages them, and writes 10,990 undirected `connection` records (pairs with mean ≥ 20 streamlines present in ≥ 90% of subjects) plus dataset / dataset-version / source records to `data/connectivity/hcp-julich-3.1/`
 - Schema (additive, still v0.7): optional `datasetVersionId` on `connection`

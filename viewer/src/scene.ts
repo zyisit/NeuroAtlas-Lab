@@ -1,11 +1,13 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
-import type { Index } from "./data";
+import type { AtlasAssets, Index } from "./data";
 
 export interface Edge { from: string; to: string; weight: number } // weight in [0, 1], 1 = strongest edge of the selected region
 
 export interface SceneHandle {
+  /** Unload the current atlas's surfaces and load another's. The camera stays where it is. */
+  setAtlas: (assets: AtlasAssets) => void;
   setSelection: (regionIds: string[]) => void;
   /** Draw tubes from the selected region to its connected regions. Pass [] to clear. */
   setConnections: (edges: Edge[]) => void;
@@ -60,30 +62,53 @@ export function createScene(container: HTMLElement, index: Index, cb: SceneCallb
   for (const rid of index.regions.keys()) idBySanitized.set(THREE.PropertyBinding.sanitizeNodeName(rid), rid);
   const loader = new GLTFLoader();
 
-  loader.load(`${base}assets/julich-3.1/hull.glb`, (g) => {
-    g.scene.traverse((o) => {
-      if ((o as THREE.Mesh).isMesh) {
-        const m = o as THREE.Mesh;
-        m.material = new THREE.MeshStandardMaterial({ color: 0xc9d3dc, transparent: true, opacity: 0.07, depthWrite: false, roughness: 0.9, side: THREE.DoubleSide });
-        m.renderOrder = -1;
-      }
-    });
-    world.add(g.scene);
-  });
-
-  loader.load(`${base}assets/julich-3.1/regions.glb`, (g) => {
-    g.scene.traverse((o) => {
-      if (!(o as THREE.Mesh).isMesh) return;
+  // One group per loaded atlas so a switch can drop everything at once.
+  let atlasGroup: THREE.Group | null = null;
+  let loadToken = 0; // ignores loads that finish after a newer setAtlas call
+  let pendingFocus: string | null = null;
+  const disposeGroup = (g: THREE.Object3D) => {
+    g.traverse((o) => {
       const m = o as THREE.Mesh;
-      const rid = idBySanitized.get(m.name) ?? m.name;
-      const color = index.colorOf(rid) ?? "#8a9aa8";
-      m.material = new THREE.MeshStandardMaterial({ color, transparent: true, opacity: FULL_OPACITY, roughness: 0.75, metalness: 0.0 });
-      m.userData.regionId = rid;
-      meshes.set(rid, m);
+      if (m.isMesh) { m.geometry.dispose(); (m.material as THREE.Material).dispose(); }
     });
-    world.add(g.scene);
-    cb.onReady(meshes.size);
-  });
+    world.remove(g);
+  };
+  const setAtlas = (assets: AtlasAssets) => {
+    if (atlasGroup) disposeGroup(atlasGroup);
+    meshes.clear();
+    const group = new THREE.Group();
+    atlasGroup = group;
+    world.add(group);
+    const token = ++loadToken;
+    if (assets.hull) loader.load(`${base}${assets.hull}`, (g) => {
+      if (token !== loadToken) return;
+      g.scene.traverse((o) => {
+        if ((o as THREE.Mesh).isMesh) {
+          const m = o as THREE.Mesh;
+          m.material = new THREE.MeshStandardMaterial({ color: 0xc9d3dc, transparent: true, opacity: 0.07, depthWrite: false, roughness: 0.9, side: THREE.DoubleSide });
+          m.renderOrder = -1;
+        }
+      });
+      group.add(g.scene);
+    });
+    if (!assets.regions) { cb.onReady(0); return; }
+    loader.load(`${base}${assets.regions}`, (g) => {
+      if (token !== loadToken) return;
+      g.scene.traverse((o) => {
+        if (!(o as THREE.Mesh).isMesh) return;
+        const m = o as THREE.Mesh;
+        const rid = idBySanitized.get(m.name) ?? m.name;
+        const color = index.colorOf(rid) ?? "#8a9aa8";
+        m.material = new THREE.MeshStandardMaterial({ color, transparent: true, opacity: FULL_OPACITY, roughness: 0.75, metalness: 0.0 });
+        m.userData.regionId = rid;
+        meshes.set(rid, m);
+      });
+      group.add(g.scene);
+      applySelection();
+      if (pendingFocus) { focus(pendingFocus); pendingFocus = null; }
+      cb.onReady(meshes.size);
+    });
+  };
 
   // picking
   const ray = new THREE.Raycaster();
@@ -175,11 +200,10 @@ export function createScene(container: HTMLElement, index: Index, cb: SceneCallb
   const tick = () => { controls.update(); renderer.render(scene, camera); raf = requestAnimationFrame(tick); };
   tick();
 
-  return {
-    setSelection(ids) { selected = new Set(ids); applySelection(); },
-    setConnections,
-    focus(rid) {
+  const focus = (rid: string) => {
       // Centre of the loaded meshes for this region (and its descendants); fall back to record centroids.
+      // If the atlas's surfaces are still loading, remember the request and focus when they arrive.
+      if (meshes.size === 0) { pendingFocus = rid; }
       world.updateMatrixWorld();
       const ids = [rid, ...index.descendants(rid)];
       const p = new THREE.Vector3();
@@ -206,9 +230,16 @@ export function createScene(container: HTMLElement, index: Index, cb: SceneCallb
       dir.normalize().add(new THREE.Vector3(0, 0.25, 0)).normalize();
       controls.target.copy(p);
       camera.position.copy(p.clone().add(dir.multiplyScalar(dist)));
-    },
+  };
+
+  return {
+    setAtlas,
+    setSelection(ids) { selected = new Set(ids); applySelection(); },
+    setConnections,
+    focus,
     dispose() {
       cancelAnimationFrame(raf); ro.disconnect(); clearTubes();
+      if (atlasGroup) disposeGroup(atlasGroup);
       renderer.domElement.removeEventListener("pointermove", onMove);
       renderer.domElement.removeEventListener("pointerdown", onDown);
       renderer.domElement.removeEventListener("pointerup", onUp);

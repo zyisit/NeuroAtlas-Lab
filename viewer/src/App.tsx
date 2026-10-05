@@ -1,8 +1,30 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { loadBundle, otherEnd, type Index, type BrainRegion, type Claim, type Connection, type Dataset, type DatasetVersion, type Atlas, type Source, type ReferenceSpace } from "./data";
+import { loadBundle, otherEnd, type Index, type BrainRegion, type Claim, type Connection, type Dataset, type DatasetVersion, type Atlas, type Source, type ReferenceSpace, type SpatialTransformation } from "./data";
 import { createScene, type Edge, type SceneHandle } from "./scene";
 
 const DEFAULT_LINES = 20; // how many of a region's strongest connections are drawn until the threshold is moved
+
+/** Short label for the atlas switch; the full name stays in the masthead and detail panel. */
+function shortAtlasName(a: Atlas): string {
+  if (/julich/i.test(a.name)) return `Julich-Brain ${a.name.match(/\(v([\d.]+)\)/)?.[1] ?? a.parcellationVersion ?? ""}`.trim();
+  if (/allen/i.test(a.name)) return "Allen HRA 3D 2020";
+  return a.name;
+}
+
+// ---------- atlas switch --------------------------------------------------
+
+function AtlasSwitch({ idx, atlasId, onChange }: { idx: Index; atlasId: string; onChange: (id: string) => void }) {
+  if (idx.atlases.length < 2) return null;
+  return (
+    <div className="atlas-switch" role="group" aria-label="Atlas">
+      {idx.atlases.map((a) => (
+        <button key={a.id} className={a.id === atlasId ? "is-on" : ""} onClick={() => onChange(a.id)} title={a.name}>
+          {shortAtlasName(a)}<small>{idx.regionCountByAtlas.get(a.id) ?? 0} regions</small>
+        </button>
+      ))}
+    </div>
+  );
+}
 
 // ---------- region tree ---------------------------------------------------
 
@@ -30,22 +52,25 @@ function RegionNode({ id, idx, selected, onSelect, open, setOpen, filter }: {
   );
 }
 
-function RegionTree({ idx, selected, onSelect }: { idx: Index; selected: string | null; onSelect: (id: string) => void }) {
+function RegionTree({ idx, atlasId, selected, onSelect }: { idx: Index; atlasId: string; selected: string | null; onSelect: (id: string) => void }) {
   const [q, setQ] = useState("");
-  const [open, setOpen] = useState<Set<string>>(() => new Set(idx.roots));
+  const atlasRoots = idx.rootsByAtlas.get(atlasId) ?? [];
+  const [open, setOpen] = useState<Set<string>>(() => new Set(atlasRoots));
+  useEffect(() => { setOpen(new Set(idx.rootsByAtlas.get(atlasId) ?? [])); setQ(""); }, [atlasId, idx]);
   const filter = useMemo(() => {
     const t = q.trim().toLowerCase();
     if (!t) return null;
     const keep = new Set<string>();
     for (const r of idx.regions.values()) {
+      if (idx.atlasOfRegion.get(r.id) !== atlasId) continue;
       if (r.name.toLowerCase().includes(t) || r.aliases?.some((a) => a.toLowerCase().includes(t))) {
         keep.add(r.id);
         for (const a of idx.ancestors(r.id)) keep.add(a.id);
       }
     }
     return keep;
-  }, [q, idx]);
-  const roots = idx.roots.filter((r) => !filter || filter.has(r));
+  }, [q, idx, atlasId]);
+  const roots = atlasRoots.filter((r) => !filter || filter.has(r));
   return (
     <nav className="tree" aria-label="Brain regions">
       <input className="search" type="search" placeholder="Find a region, e.g. hippocampus or V1" value={q} onChange={(e) => setQ(e.target.value)} />
@@ -116,6 +141,16 @@ function Connections({ idx, id, onSelect, minStrength, setMinStrength }: {
     const leaves = [id, ...idx.descendants(id)].filter((d) => (idx.connectionsByRegion.get(d)?.length ?? 0) > 0);
     const hasData = (idx.bundle.records.connection?.length ?? 0) > 0;
     if (!hasData) return null;
+    const atlasId = idx.atlasOfRegion.get(id);
+    if (atlasId && !idx.atlasesWithConnections.has(atlasId)) {
+      const withData = idx.atlases.filter((a) => idx.atlasesWithConnections.has(a.id)).map((a) => a.name).join(", ");
+      return (
+        <div className="block">
+          <h3>Connections</h3>
+          <p className="muted small">Connectivity has been imported for {withData} only, not for this atlas. The overlaps above lead to the corresponding regions there.</p>
+        </div>
+      );
+    }
     return (
       <div className="block">
         <h3>Connections</h3>
@@ -169,6 +204,51 @@ function Connections({ idx, id, onSelect, minStrength, setMinStrength }: {
   );
 }
 
+// ---------- cross-atlas overlaps -----------------------------------------
+
+function Overlaps({ idx, id, onSelect }: { idx: Index; id: string; onSelect: (id: string) => void }) {
+  const own = idx.overlapsByRegion.get(id) ?? [];
+  const hasData = (idx.bundle.records.relationship ?? []).some((r) => r.predicate === "overlaps");
+  if (!hasData || idx.atlases.length < 2) return null;
+  const thisAtlas = idx.atlasOfRegion.get(id);
+  const otherAtlases = idx.atlases.filter((a) => a.id !== thisAtlas);
+  const otherName = otherAtlases.map((a) => a.name).join(", ");
+  if (own.length === 0) {
+    const leaves = [id, ...idx.descendants(id)].filter((d) => (idx.overlapsByRegion.get(d)?.length ?? 0) > 0);
+    return (
+      <div className="block">
+        <h3>In {otherName}</h3>
+        {leaves.length > 0 ? (
+          <p className="muted small">Overlaps are computed for the mapped leaf regions, not for grouping nodes. See {leaves.slice(0, 12).map((l, i) => <span key={l}>{i > 0 && ", "}<button className="link" onClick={() => onSelect(l)}>{idx.regions.get(l)?.name}</button></span>)}{leaves.length > 12 && ` and ${leaves.length - 12} more`}.</p>
+        ) : (
+          <p className="muted small">No region of {otherName} covers 10% or more of this one, or vice versa. That usually means the other atlas does not map this territory.</p>
+        )}
+      </div>
+    );
+  }
+  const tx = own[0].rel.context?.transformationId ? (idx.byId.get(own[0].rel.context.transformationId) as SpatialTransformation | undefined) : undefined;
+  const pct = (v?: number) => v === undefined ? "" : `${Math.round(v * 100)}%`;
+  return (
+    <div className="block">
+      <h3>In {otherName} <span className="tag">{own[0].rel.assertionType}</span></h3>
+      <p className="muted small">
+        Share of this region's volume that falls inside each region of the other atlas, from voxel overlap of the two labelled maps.
+        {tx ? ` The atlases sit on different MNI templates; the mapping between them is "${tx.method}", so expect about a millimetre of error at boundaries.` : ""}
+      </p>
+      <ol className="conn overlap">
+        {own.map((o) => (
+          <li key={o.rel.id}>
+            <span className="swatch" style={{ background: idx.colorOf(o.other) ?? "transparent" }} />
+            <button className="link" onClick={() => onSelect(o.other)}>{idx.regions.get(o.other)?.name ?? o.other}</button>
+            <span className="conn-strength">{pct(o.fractionOfThis)}</span>
+            <small>{pct(o.fractionOfOther)} of that region · {o.rel.context?.overlapVolumeMm3?.toLocaleString()} mm³ shared</small>
+          </li>
+        ))}
+      </ol>
+    </div>
+  );
+}
+
 function Detail({ idx, id, onSelect, minStrength, setMinStrength }: { idx: Index; id: string | null; onSelect: (id: string) => void; minStrength: number; setMinStrength: (v: number) => void }) {
   if (!id) return (
     <section className="detail">
@@ -215,6 +295,7 @@ function Detail({ idx, id, onSelect, minStrength, setMinStrength }: { idx: Index
               <Row k="Mapping">{m.mappingType}</Row>
               {v && <Row k="Release">{v.version}, retrieved {v.retrievedAt}</Row>}
             </dl>
+            {m.notes && <p className="muted small">{m.notes}</p>}
           </div>
         );
       })}
@@ -223,7 +304,7 @@ function Detail({ idx, id, onSelect, minStrength, setMinStrength }: { idx: Index
         <div className="block">
           <h3>Measurements</h3>
           <dl>
-            {centroid && <Row k="Centroid">{centroid.map((c) => c.toFixed(1)).join(", ")} mm (MNI152)</Row>}
+            {centroid && <Row k="Centroid">{centroid.map((c) => c.toFixed(1)).join(", ")} mm ({(idx.byId.get((idx.byId.get(idx.atlasOfRegion.get(id) ?? "") as Atlas | undefined)?.referenceSpaceId ?? "") as ReferenceSpace | undefined)?.name ?? "MNI152"})</Row>}
             {obs.map((o) => (
               <Row key={o.id} k={o.unit === "mm3" ? "Volume" : o.observationType}>
                 {typeof o.value === "number" ? o.value.toLocaleString() : String(o.value)} {o.unit}
@@ -235,6 +316,8 @@ function Detail({ idx, id, onSelect, minStrength, setMinStrength }: { idx: Index
           </dl>
         </div>
       )}
+
+      <Overlaps idx={idx} id={id} onSelect={onSelect} />
 
       <Connections idx={idx} id={id} onSelect={onSelect} minStrength={minStrength} setMinStrength={setMinStrength} />
 
@@ -273,13 +356,14 @@ export default function App() {
   const [idx, setIdx] = useState<Index | null>(null);
   const [err, setErr] = useState<string | null>(null);
   const [selected, setSelected] = useState<string | null>(null);
+  const [atlasId, setAtlasId] = useState<string>("");
   const [hover, setHover] = useState<{ id: string; x: number; y: number } | null>(null);
   const [meshCount, setMeshCount] = useState<number | null>(null);
   const [minStrength, setMinStrength] = useState(0);
   const canvasRef = useRef<HTMLDivElement>(null);
   const sceneRef = useRef<SceneHandle | null>(null);
 
-  useEffect(() => { loadBundle().then(setIdx).catch((e) => setErr(String(e))); }, []);
+  useEffect(() => { loadBundle().then((i) => { setIdx(i); setAtlasId(i.atlases[0]?.id ?? ""); }).catch((e) => setErr(String(e))); }, []);
 
   useEffect(() => {
     if (!idx || !canvasRef.current) return;
@@ -292,7 +376,22 @@ export default function App() {
     return () => { h.dispose(); sceneRef.current = null; };
   }, [idx]);
 
-  const select = (id: string | null) => { setSelected(id); if (id && idx) setMinStrength(defaultThreshold(idx, id)); };
+  // Load the chosen atlas's surfaces whenever it changes (the scene keeps the camera).
+  useEffect(() => {
+    if (!idx || !sceneRef.current || !atlasId) return;
+    setMeshCount(null);
+    sceneRef.current.setAtlas(idx.assetsByAtlas.get(atlasId) ?? {});
+  }, [atlasId, idx]);
+
+  const select = (id: string | null) => {
+    if (id && idx) {
+      const a = idx.atlasOfRegion.get(id);
+      if (a && a !== atlasId) setAtlasId(a); // picking a region of the other atlas (e.g. from the overlaps list) switches to it
+      setMinStrength(defaultThreshold(idx, id));
+    }
+    setSelected(id);
+  };
+  const switchAtlas = (a: string) => { setAtlasId(a); setSelected(null); };
 
   useEffect(() => {
     if (!idx || !sceneRef.current) return;
@@ -311,15 +410,16 @@ export default function App() {
   }, [selected, minStrength, idx]);
 
   const datasets = idx?.bundle.records.dataset ?? [];
-  const atlases = idx?.bundle.records.atlas ?? [];
-  const space = idx?.bundle.records["reference-space"]?.[0] as ReferenceSpace | undefined;
+  const atlas = idx?.atlases.find((a) => a.id === atlasId);
+  const space = atlas ? (idx?.byId.get(atlas.referenceSpaceId) as ReferenceSpace | undefined) : undefined;
+  const nConn = atlas && idx?.atlasesWithConnections.has(atlas.id) ? (idx.bundle.records.connection?.length ?? 0) : 0;
 
   return (
     <div className="app">
       <header className="masthead">
         <div>
           <h1>NeuroAtlas Lab</h1>
-          <p className="muted">{atlases[0]?.name ?? "Loading atlas"}{space && ` in ${space.name}`}{idx && ` · ${idx.regions.size} regions`}{meshCount !== null && ` · ${meshCount} surfaces`}{idx?.bundle.records.connection?.length ? ` · ${idx.bundle.records.connection.length.toLocaleString()} connections` : ""}</p>
+          <p className="muted">{atlas?.name ?? "Loading atlas"}{space && ` in ${space.name}`}{idx && atlas && ` · ${idx.regionCountByAtlas.get(atlas.id) ?? 0} regions`}{meshCount !== null && ` · ${meshCount} surfaces`}{nConn ? ` · ${nConn.toLocaleString()} connections` : ""}</p>
         </div>
         <a className="link" href="https://github.com/zyisit/NeuroAtlas-Lab" target="_blank" rel="noreferrer">Source and data</a>
       </header>
@@ -327,7 +427,7 @@ export default function App() {
       {err && <p className="error">Could not load the atlas: {err}</p>}
 
       <div className="workspace">
-        <aside className="left">{idx ? <RegionTree idx={idx} selected={selected} onSelect={select} /> : <p className="muted">Loading regions…</p>}</aside>
+        <aside className="left">{idx ? <><AtlasSwitch idx={idx} atlasId={atlasId} onChange={switchAtlas} /><RegionTree idx={idx} atlasId={atlasId} selected={selected} onSelect={select} /></> : <p className="muted">Loading regions…</p>}</aside>
         <main className="stage" ref={canvasRef} aria-label="3D brain model">
           {idx && meshCount === null && <p className="stage-note">Loading surfaces…</p>}
           {hover && idx && <div className="tip" style={{ left: hover.x + 12, top: hover.y + 12 }}>{idx.regions.get(hover.id)?.name}</div>}
@@ -344,7 +444,7 @@ export default function App() {
             {d.license.commercialUseAllowed === false && " (non-commercial)"}.
           </p>
         ))}
-        <p>Surfaces are smoothed, decimated illustrations of the atlas, not measurement-grade geometry. Connection tubes are drawn between region centres and do not follow real fibre paths. This is an educational tool, not a clinical one.</p>
+        <p>Surfaces are smoothed, decimated illustrations of the atlas, not measurement-grade geometry. Connection tubes are drawn between region centres and do not follow real fibre paths. Where two atlases are compared, their MNI templates are treated as the same space without registration. This is an educational tool, not a clinical one.</p>
       </footer>
     </div>
   );
