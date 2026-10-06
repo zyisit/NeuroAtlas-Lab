@@ -35,16 +35,19 @@
   (`docs/data-sources/allen-human-reference-atlas-3d-2020.md` records the reasoning)
 - Viewer: atlas switch and cross-atlas overlap panel
 
-### Sprint 6 — Connectivity follow-ups
-- Streamline lengths from the same HCP dataset (same import script, flag): decide between an observation per edge and a
-  second connection set with `method` distinguishing them — the schema allows one `strength` per edge
-- Resting-state functional connectivity (5 paradigms in siibra, CC BY 4.0) as `functional_connectivity` edges: signed
-  correlations, so the viewer needs sign-aware tubes and a threshold on |r|
-- Consider Julich's fibre-bundle atlases for anatomically named tracts (CC BY-NC-SA; directed `anatomical_projection`
+### Sprint 6 — Connectivity follow-ups (v0.12.0, done)
+- Streamline lengths: one `observation` per structural edge (10,990), not a second edge set
+- Resting-state functional connectivity: 6,768 undirected edges, concatenated paradigm, Fisher-z group mean, |r| ≥ 0.3;
+  no negative pairs survive the cut; REST1 vs REST2 agree at r = 0.998
+- Viewer: structural / functional switch, |r| slider, sign-coloured tubes, path lengths; light stage (pink / white)
+- Bundle packing keeps the viewer download smaller than before
+
+### Next candidates
+- Julich's fibre-bundle atlases for anatomically named tracts (CC BY-NC-SA / CC BY-NC; directed `anatomical_projection`
   edges need tracer data, not tractography)
-- Viewer: connection tubes along real fibre paths are out of scope; keep centre-to-centre arcs and say so
-- Later: Allen microarray gene expression (different resource, general Allen ToU, siibra endpoint currently down);
-  Julich receptor fingerprints (42 regions in siibra) for Phase 4
+- Viewer: connection tubes along real fibre paths stay out of scope; keep centre-to-centre arcs and say so
+- Allen microarray gene expression (different resource, general Allen ToU, siibra endpoint currently down — siibra
+  issue #636); Julich receptor fingerprints (42 regions in siibra) for Phase 4
 
 ## Phases
 

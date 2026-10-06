@@ -2,7 +2,7 @@
   {
     "id": "dataset:hcp-julich-brain-connectomes",
     "name": "Parcellation-based structural and resting-state functional brain connectomes of a healthy cohort",
-    "description": "Individual structural (dwMRI tractography) and functional (resting-state fMRI) connectomes for 200 Human Connectome Project subjects, computed for 20 parcellations including Julich-Brain. NeuroAtlas uses the Julich-Brain 3.1 streamline-count matrices only.",
+    "description": "Individual structural (dwMRI tractography) and functional (resting-state fMRI) connectomes for 200 Human Connectome Project subjects, computed for 20 parcellations including Julich-Brain. NeuroAtlas uses the Julich-Brain 3.1 streamline-count, streamline-length and one resting-state functional-connectivity set.",
     "publisher": "Forschungszentrum Jülich (INM-7) / EBRAINS",
     "homepage": "https://doi.org/10.25493/3PMM-FPW",
     "license": {
@@ -33,7 +33,7 @@
     "id": "dataset-version:hcp-julich-brain-connectomes-1.2",
     "datasetId": "dataset:hcp-julich-brain-connectomes",
     "version": "1.2",
-    "retrievedAt": "2026-09-15",
+    "retrievedAt": "2026-10-05",
     "accessUrl": "https://doi.org/10.25493/3PMM-FPW",
     "transformations": [
       "Diffusion MRI whole-brain probabilistic tractography (MRtrix3, multi-shell multi-tissue constrained spherical deconvolution) on HCP data; streamline count between Julich-Brain 3.1 parcels, averaged across subjects.",
@@ -41,9 +41,11 @@
       "Group mean of streamline counts computed per region pair; matrix diagonal (self-connections) dropped.",
       "Pairs retained only if mean count >= 20.0 and present (>= 1 streamline) in >= 90% of subjects.",
       "Each symmetric pair written once as an undirected connection; strength = group-mean streamline count.",
-      "Streamline lengths and functional-connectivity matrices in the same dataset are not imported."
+      "Streamline lengths: per-subject mean streamline length matrices read for the same subjects; for each retained structural pair, the mean over subjects with >= 1 streamline (a length of 0 marks a missing measurement), in mm; one observation per structural connection.",
+      "Functional connectivity: per-subject resting-state Pearson correlation matrices, paradigm 'Resting state (EmpCorrFC concatenated)', read for the same subjects; averaged in Fisher-z space (arctanh, mean over subjects with a value, tanh); diagonal dropped.",
+      "Functional pairs retained only if |r| >= 0.3 and a value exists in >= 90% of subjects; strength = signed group-mean r; context.subjectSignFraction = share of subjects whose r has the group-mean sign."
     ],
-    "notes": "Imported with siibra-python 1.0.1-alpha.21. EBRAINS dataset version id 2a52e7c3-9aad-49db-bb71-4ed0208ae7cb.",
+    "notes": "Imported with siibra-python 1.0.1-alpha.23. EBRAINS dataset version id 2a52e7c3-9aad-49db-bb71-4ed0208ae7cb.",
     "provenance": {
       "createdAt": "2026-09-15T00:00:00Z",
       "createdBy": "scripts/import/import_connectivity.py",

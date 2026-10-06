@@ -13,7 +13,7 @@ hypotheses are never silently mixed.
 
 ## Status
 
-**v0.11.0 · Sprint 5 (second atlas)**
+**v0.12.0 · Sprint 6 (connectivity follow-ups)**
 
 What exists today:
 
@@ -36,9 +36,11 @@ What exists today:
 - **First curated claims** (`data/function/`): twelve cited statements about the
   hippocampus, V1, M1 and amygdala, each with species, preparation, evidence status,
   and evidence for *and against* — see `docs/curation.md`
-- **Structural connectivity** (`data/connectivity/`): 10,990 undirected streamline-count
-  edges between Julich regions from 200 HCP subjects (Domhof et al., CC BY 4.0), with
-  per-edge subject consistency, drawn in the viewer from any selected region
+- **Connectivity** (`data/connectivity/`), from 200 HCP subjects (Domhof et al., CC BY 4.0):
+  10,990 undirected structural edges (tractography streamline counts, each with its mean
+  streamline length) and 6,768 resting-state functional edges (group-mean correlation,
+  |r| ≥ 0.3) between Julich regions, with per-edge subject consistency. The viewer switches
+  between the two and says plainly that a correlation is not a pathway
 
 Run it: see `viewer/README.md`. Roadmap: `docs/roadmap.md`.
 
@@ -64,7 +66,7 @@ python scripts/import/import_julich_brain.py --spatial  # adds centroids + volum
 To (re)build the connectivity records (needs the Julich records above):
 
 ```bash
-python scripts/import/import_connectivity.py            # 200 HCP subjects, ~2 min first run
+python scripts/import/import_connectivity.py            # 200 HCP subjects: counts, lengths, resting-state FC, ~4 min
 ```
 
 To (re)build the Allen atlas, its meshes and the cross-atlas overlaps:

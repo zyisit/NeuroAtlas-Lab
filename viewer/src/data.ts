@@ -31,7 +31,8 @@ export interface EvidenceRecord { id: string; claimId: string; sourceId: string;
 export interface Source { id: string; sourceType: string; title: string; authors?: string[]; year?: number; citation?: string; url?: string }
 export interface Connection {
   id: string; sourceId: string; targetId: string; direction: string; connectionType: string; species: string;
-  context?: { preparation?: string; subjectFraction?: number; notes?: string }; assertionType: string; method?: string;
+  context?: { preparation?: string; subjectFraction?: number; subjectSignFraction?: number; paradigm?: string; condition?: string; notes?: string };
+  assertionType: string; method?: string;
   strength?: number; strengthUnit?: string; datasetVersionId?: string; status?: string;
 }
 export interface Relationship {
@@ -46,6 +47,7 @@ export interface ReferenceSpace { id: string; name: string; coordinateSystem: st
 
 export interface Bundle {
   schemaVersion: string;
+  packed?: boolean;
   records: {
     "brain-region"?: BrainRegion[]; "atlas-mapping"?: AtlasMapping[]; "spatial-representation"?: SpatialRepresentation[];
     observation?: Observation[]; claim?: Claim[]; "evidence-record"?: EvidenceRecord[]; source?: Source[];
@@ -70,7 +72,11 @@ export interface Index {
   observationsByRegion: Map<string, Observation[]>;
   claimsByRegion: Map<string, Claim[]>;
   evidenceByClaim: Map<string, EvidenceRecord[]>;
-  connectionsByRegion: Map<string, Connection[]>; // both endpoints; sorted by strength, strongest first
+  connectionsByRegion: Map<string, Connection[]>; // key `${connectionType}|${regionId}`, both endpoints; sorted by |strength|, strongest first — use connectionsOf()
+  connectionTypes: string[];                       // connectionType values present, structural first
+  connectionCountByType: Map<string, number>;
+  lengthOf: Map<string, Observation>;              // structural connection id -> mean streamline length observation
+  connectionsOf: (regionId: string, type: string) => Connection[];
   atlases: Atlas[];                                // in the order they joined the project (dataset-version retrievedAt)
   atlasOfRegion: Map<string, string>;             // region id -> atlas id (from its first atlas-mapping)
   rootsByAtlas: Map<string, string[]>;
@@ -87,10 +93,38 @@ export interface Index {
 
 function push<K, V>(m: Map<K, V[]>, k: K, v: V) { const a = m.get(k); if (a) a.push(v); else m.set(k, [v]); }
 
+/** A run of records from one data file with the fields they all share written once (scripts/build/build_viewer_bundle.py). */
+interface Pack { _shared: Record<string, unknown> & { context?: Record<string, unknown> }; _items: Record<string, unknown>[] }
+
+/** Expand packed bundle entries back into complete records. Python twin: unpack() in build_viewer_bundle.py. */
+export function unpackRecords<T>(entries: unknown[]): T[] {
+  const out: T[] = [];
+  for (const e of entries) {
+    const p = e as Pack;
+    if (!p || !Array.isArray(p._items)) { out.push(e as T); continue; }
+    const sh = p._shared;
+    for (const it of p._items) {
+      const r: Record<string, unknown> = { ...sh, ...it };
+      if (sh.context) r.context = { ...sh.context, ...((it.context as Record<string, unknown> | undefined) ?? {}) };
+      out.push(r as T);
+    }
+  }
+  return out;
+}
+
+const TYPE_ORDER = ["structural_connectivity", "functional_connectivity", "anatomical_projection", "effective_connectivity", "synaptic_connection", "network_relationship"];
+
 export async function loadBundle(): Promise<Index> {
   const res = await fetch(`${import.meta.env.BASE_URL}data/bundle.json`);
   if (!res.ok) throw new Error(`bundle.json: ${res.status}. Run scripts/build/build_viewer_bundle.py first.`);
   const bundle = (await res.json()) as Bundle;
+  const R = bundle.records as Record<string, unknown[] | undefined>;
+  for (const k of Object.keys(R)) R[k] = unpackRecords(R[k] ?? []);
+  return buildIndex(bundle);
+}
+
+/** Build the lookup tables from an (unpacked) bundle. */
+export function buildIndex(bundle: Bundle): Index {
   const R = bundle.records;
 
   const regions = new Map<string, BrainRegion>();
@@ -111,15 +145,27 @@ export async function loadBundle(): Promise<Index> {
   const spatialByRegion = new Map<string, SpatialRepresentation[]>();
   for (const s of R["spatial-representation"] ?? []) if (s.subjectId) push(spatialByRegion, s.subjectId, s);
   const observationsByRegion = new Map<string, Observation[]>();
-  for (const o of R.observation ?? []) if (o.subjectId) push(observationsByRegion, o.subjectId, o);
+  const lengthOf = new Map<string, Observation>();
+  for (const o of R.observation ?? []) {
+    if (!o.subjectId) continue;
+    if (o.subjectId.startsWith("connection:")) lengthOf.set(o.subjectId, o); // the only connection observations are streamline lengths
+    else push(observationsByRegion, o.subjectId, o);
+  }
   const claimsByRegion = new Map<string, Claim[]>();
   for (const c of R.claim ?? []) for (const s of c.subjectIds ?? []) push(claimsByRegion, s, c);
   const evidenceByClaim = new Map<string, EvidenceRecord[]>();
   for (const e of R["evidence-record"] ?? []) push(evidenceByClaim, e.claimId, e);
 
   const connectionsByRegion = new Map<string, Connection[]>();
-  for (const c of R.connection ?? []) { push(connectionsByRegion, c.sourceId, c); push(connectionsByRegion, c.targetId, c); }
-  for (const arr of connectionsByRegion.values()) arr.sort((a, b) => (b.strength ?? 0) - (a.strength ?? 0));
+  const connectionCountByType = new Map<string, number>();
+  for (const c of R.connection ?? []) {
+    push(connectionsByRegion, `${c.connectionType}|${c.sourceId}`, c); push(connectionsByRegion, `${c.connectionType}|${c.targetId}`, c);
+    connectionCountByType.set(c.connectionType, (connectionCountByType.get(c.connectionType) ?? 0) + 1);
+  }
+  for (const arr of connectionsByRegion.values()) arr.sort((a, b) => Math.abs(b.strength ?? 0) - Math.abs(a.strength ?? 0));
+  const rank = (t: string) => { const i = TYPE_ORDER.indexOf(t); return i < 0 ? TYPE_ORDER.length : i; };
+  const connectionTypes = [...connectionCountByType.keys()].sort((a, b) => rank(a) - rank(b) || a.localeCompare(b));
+  const connectionsOf = (regionId: string, type: string) => connectionsByRegion.get(`${type}|${regionId}`) ?? [];
 
   const byId = new Map<string, unknown>();
   for (const list of Object.values(R)) for (const rec of list ?? []) byId.set((rec as { id: string }).id, rec);
@@ -177,6 +223,7 @@ export async function loadBundle(): Promise<Index> {
   };
 
   return { bundle, regions, children, roots, mappingsByRegion, spatialByRegion, observationsByRegion, claimsByRegion, evidenceByClaim, connectionsByRegion,
+    connectionTypes, connectionCountByType, lengthOf, connectionsOf,
     atlases, atlasOfRegion, rootsByAtlas, regionCountByAtlas, assetsByAtlas, atlasesWithConnections, overlapsByRegion, byId, colorOf, centroidOf, descendants, ancestors };
 }
 

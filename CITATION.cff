@@ -2,8 +2,8 @@ cff-version: 1.2.0
 title: "NeuroAtlas Lab"
 message: "If you use this software or its curated records, please cite NeuroAtlas Lab and the underlying source datasets listed in docs/data-sources/README.md."
 type: software
-version: 0.11.0
-date-released: 2026-09-15
+version: 0.12.0
+date-released: 2026-10-05
 license: Apache-2.0
 repository-code: "https://github.com/zyisit/NeuroAtlas-Lab"
 url: "https://zyisit.github.io/NeuroAtlas-Lab/"

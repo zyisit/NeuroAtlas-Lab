@@ -19,7 +19,7 @@ them via `spatial-representation.geometry.uri`.
 | 1 | Allen Human Reference Atlas – 3D, 2020 (direct download) | **CC BY 4.0** (verified 2026-09-16) | Ingested (`allen-human-reference-atlas-3d-2020.md`). Second parcellation; commercial use allowed |
 | 3 | Allen Human Brain Atlas (microarray gene expression) | Allen Terms of Use | Non-commercial; siibra's endpoint for it is currently down. Not ingested |
 | 1 | UBERON | CC BY 3.0 | Anatomical identifiers |
-| 2 | HCP connectomes for Julich-Brain (Domhof et al., EBRAINS v1.2, via siibra) | **CC BY 4.0** (verified 2026-09-15) | Ingested (`hcp-connectivity.md`). Derived matrices only; raw HCP images stay under HCP terms |
+| 2 | HCP connectomes for Julich-Brain (Domhof et al., EBRAINS v1.2, via siibra) | **CC BY 4.0** (verified 2026-09-15) | Ingested (`hcp-connectivity.md`): streamline counts, lengths, resting-state FC. Derived matrices only; raw HCP images stay under HCP terms |
 | 2 | Human Connectome Project (raw) | HCP Open Access terms | Registration required; not redistributed |
 | 2 | OpenNeuro | CC0 | |
 | 3 | NeuroMorpho.Org | CC BY | Morphologies |

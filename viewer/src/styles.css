@@ -1,12 +1,15 @@
-/* NeuroAtlas Lab viewer — instrument panel around a dark stage. */
+/* NeuroAtlas Lab viewer — instrument panel around a light stage (soft pink by default, white on request). */
 :root {
-  --stage: #1a222c;
+  --stage: #f9e3ea;      /* soft pastel pink */
+  --stage-white: #ffffff;
   --paper: #f2f4f6;
   --paper-2: #e7ebef;
   --ink: #1c2630;
   --ink-2: #4c5a67;
   --rule: #cfd6dd;
   --accent: #2b7a8c;
+  --positive: #e2793a; /* signed edges, matches scene.ts */
+  --negative: #3b7fd6;
   --font: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --left-w: 300px;
   --right-w: 380px;
@@ -33,11 +36,12 @@ h1, h2, h3 { margin: 0; font-weight: 600; line-height: 1.2; }
 .left { border-right: 1px solid var(--rule); }
 .right { border-left: 1px solid var(--rule); }
 
-.stage { position: relative; background: var(--stage); min-height: 320px; }
+.stage { position: relative; background: var(--stage); min-height: 320px; transition: background-color .2s; }
+.stage[data-bg="white"] { background: var(--stage-white); }
 .stage canvas { display: block; }
-.stage-note { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); color: #b9c4ce; margin: 0; }
+.stage-note { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); color: var(--ink-2); margin: 0; }
 .tip { position: fixed; pointer-events: none; background: var(--ink); color: #fff; padding: 4px 8px; border-radius: 3px; font-size: 12.5px; max-width: 320px; z-index: 5; }
-.clear { position: absolute; right: 12px; top: 12px; background: rgba(242,244,246,.92); color: var(--ink); border: 0; border-radius: 3px; padding: 6px 10px; font: inherit; font-size: 13px; cursor: pointer; }
+.clear { position: absolute; right: 12px; top: 12px; background: rgba(255,255,255,.92); color: var(--ink); border: 1px solid var(--rule); border-radius: 3px; padding: 6px 10px; font: inherit; font-size: 13px; cursor: pointer; }
 
 /* tree */
 .search { width: 100%; padding: 8px 10px; border: 1px solid var(--rule); border-radius: 4px; font: inherit; background: #fff; margin-bottom: 10px; }
@@ -105,5 +109,18 @@ dl { margin: 0; }
 .atlas-switch button.is-on { border-color: var(--accent); background: #e6f1f3; }
 .atlas-switch button.is-on small { color: var(--accent); }
 
+/* connection-type switch (same look as the atlas switch) */
+.type-switch { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 4px; margin: 4px 0 8px; }
+.type-switch button { border: 1px solid var(--rule); background: #fff; color: var(--ink); border-radius: 4px; padding: 5px 8px; font: inherit; font-size: 12.5px; cursor: pointer; text-align: left; line-height: 1.25; }
+.type-switch button small { display: block; color: var(--ink-2); font-size: 11px; }
+.type-switch button.is-on { border-color: var(--accent); background: #e6f1f3; }
+.type-switch button.is-on small { color: var(--accent); }
+
 /* overlaps reuse the connection list layout */
 .overlap li .conn-strength { min-width: 3.5em; text-align: right; }
+
+/* stage background switch */
+.bg-switch { position: absolute; left: 12px; bottom: 12px; display: flex; gap: 4px; align-items: center; font-size: 12px; color: var(--ink-2); background: rgba(255,255,255,.85); border: 1px solid var(--rule); border-radius: 4px; padding: 3px 4px 3px 8px; }
+.bg-switch button { border: 1px solid transparent; background: none; color: var(--ink); border-radius: 3px; padding: 2px 8px; font: inherit; font-size: 12px; cursor: pointer; display: inline-flex; align-items: center; gap: 5px; }
+.bg-switch button.is-on { border-color: var(--accent); background: #e6f1f3; }
+.bg-switch .dot { width: 10px; height: 10px; border-radius: 50%; border: 1px solid var(--rule); }

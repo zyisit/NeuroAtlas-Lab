@@ -23,13 +23,15 @@ python scripts/build/build_meshes.py          # both atlases, ~6 min; or --atlas
 
 ## How it works
 
-- `src/data.ts` loads the bundle and builds lookup indexes (hierarchy, mappings, spatial, claims, connections, atlases, cross-atlas overlaps).
+- `src/data.ts` loads the bundle, re-expands packed records (`unpackRecords`, see `scripts/build/build_viewer_bundle.py`), and builds lookup indexes (hierarchy, mappings, spatial, claims, connections by type, streamline lengths, atlases, cross-atlas overlaps).
 - `src/scene.ts` is the three.js scene: whole-brain hull at low opacity, one mesh per mapped leaf
   region coloured with the atlas's own colours, raycast picking, selection dims everything else,
-  and one bowed tube per drawn connection from the selected region (width and opacity follow strength).
+  and one bowed tube per drawn connection from the selected region (width and opacity follow |strength|;
+  functional correlations are coloured by sign instead of by region). The stage is soft pink by default;
+  a switch in its corner makes it white, remembered per browser.
 - `src/App.tsx` is the UI: atlas switch, searchable region tree scoped to the chosen atlas, detail panel that renders only what the records
   contain (atlas mapping, measurements with their method and dataset version, claims with evidence
-  polarity, overlaps with the other atlas, connections with a strength threshold, external identifiers), and the dataset attribution footer.
+  polarity, overlaps with the other atlas, structural and functional connections with a type switch and threshold, external identifiers), and the dataset attribution footer.
 
 The viewer never owns facts. If something should appear in the panel, it goes into a record
 in `data/`, gets validated, and the bundle is rebuilt.

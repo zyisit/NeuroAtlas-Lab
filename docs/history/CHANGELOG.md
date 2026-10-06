@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.12.0 — 2026-10-05
+- Sprint 6, connectivity follow-ups from the same HCP dataset (Domhof et al., EBRAINS v1.2, CC BY 4.0), all written by `scripts/import/import_connectivity.py` (one run imports everything; `--skip-lengths`, `--skip-fc`, `--fc-*` flags):
+  - Streamline lengths: 10,990 `observation` records, one per structural connection (`subjectId` = the connection), group-mean path length in mm over subjects with ≥ 1 streamline, in `streamline-lengths.json`
+  - Resting-state functional connectivity: 6,768 undirected `functional_connectivity` edges (paradigm "EmpCorrFC concatenated", Fisher-z group mean of 200 subjects, |r| ≥ 0.3, value present in ≥ 90% of subjects, signed r as strength, per-edge `subjectSignFraction`) in `functional-connections.json`. No pair has a negative group-mean r at that cut (strongest negative anywhere: −0.175). REST1-vs-REST2 group means agree at r = 0.998 (`--fc-reliability`)
+  - Re-running the importer keeps each existing record's `createdAt`; the 10,990 structural edges are reproduced byte-for-byte
+- Schema unchanged (v0.7): lengths use the existing `observation` type, functional edges the existing `connectionType`
+- Viewer: Structural / Functional switch in the Connections section (count per type), |r| slider for functional edges, functional tubes coloured by sign, mean streamline length on every structural edge, explicit "correlation is not a pathway" note, and a reasoned empty state for the 183 regions without functional edges (small deep nuclei and low-signal cortex). Masthead shows both connection counts
+- Viewer: the stage background is now soft pastel pink instead of dark slate, with a Pink / White switch in its corner (remembered per browser); the whole-brain shell is a faint grey so it still reads on a light background
+- `scripts/build/build_viewer_bundle.py` packs fields that repeat across a data file once (`_shared` / `_items`); `viewer/src/data.ts` re-expands them. Lossless; the bundle is smaller than in 0.11.0 despite ~17,800 more records
+- `tests/test_connectivity.py`: five tests (lengths ↔ structural edges, functional edge invariants against the recorded threshold, region scope, packing round-trips) — 19 tests total
+- `docs/data-sources/hcp-connectivity.md`: decision records for lengths and functional connectivity, threshold sweep, reliability, regions without edges
+- Total 34,547 validated records (34,527 in `data/`)
+
 ## 0.11.0 — 2026-09-17
 - Sprint 5: second atlas — the Allen Human Reference Atlas – 3D, 2020 (Ding et al., RRID:SCR_017764, CC BY 4.0) imported by `scripts/import/import_allen_hra_3d.py` directly from the Allen release directory (siibra has no Allen human parcellation): 473 brain-region records (205 ontology nodes, 268 hemisphere leaves split at x = 0, 7 midline leaves), 473 atlas-mappings with Allen colours, 275 centroids and volumes, plus dataset / dataset-version / source / reference-space / atlas records in `data/anatomy/allen-hra-3d-2020/`. First anatomy dataset with `commercialUseAllowed: true`
 - The Allen template (ICBM 2009b symmetric) gets its own reference-space and an explicit approximate-identity `spatial-transformation` to the Julich space (2009c asymmetric); the importer verifies that the release volume is a left→right mirror and records it

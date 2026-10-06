@@ -3,7 +3,9 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import type { AtlasAssets, Index } from "./data";
 
-export interface Edge { from: string; to: string; weight: number } // weight in [0, 1], 1 = strongest edge of the selected region
+/** weight in [0, 1], 1 = strongest edge of the selected region. sign is set for signed measures (functional
+ *  correlations): tubes are then coloured by sign instead of by the target region's colour. */
+export interface Edge { from: string; to: string; weight: number; sign?: number }
 
 export interface SceneHandle {
   /** Unload the current atlas's surfaces and load another's. The camera stays where it is. */
@@ -25,6 +27,7 @@ const DIM_OPACITY = 0.18;
 const CONNECTED_OPACITY = 0.6;
 const FULL_OPACITY = 0.95;
 const TUBE_MIN_R = 0.45, TUBE_MAX_R = 1.8; // mm; MNI brain is ~150 mm across
+const POSITIVE = "#e2793a", NEGATIVE = "#3b7fd6"; // signed edges (correlations): warm = positive, blue = negative
 
 /** Mounts a three.js scene into `container`. Geometry is in MNI RAS mm; the
  *  world group is rotated so superior (+z MNI) becomes +y in three.js. */
@@ -85,7 +88,7 @@ export function createScene(container: HTMLElement, index: Index, cb: SceneCallb
       g.scene.traverse((o) => {
         if ((o as THREE.Mesh).isMesh) {
           const m = o as THREE.Mesh;
-          m.material = new THREE.MeshStandardMaterial({ color: 0xc9d3dc, transparent: true, opacity: 0.07, depthWrite: false, roughness: 0.9, side: THREE.DoubleSide });
+          m.material = new THREE.MeshStandardMaterial({ color: 0x8c96a0, transparent: true, opacity: 0.09, depthWrite: false, roughness: 0.9, side: THREE.DoubleSide }); // a faint grey shell that reads on the light stage
           m.renderOrder = -1;
         }
       });
@@ -179,7 +182,7 @@ export function createScene(container: HTMLElement, index: Index, cb: SceneCallb
       const curve = new THREE.QuadraticBezierCurve3(a, mid.add(bow), b);
       const r = TUBE_MIN_R + (TUBE_MAX_R - TUBE_MIN_R) * Math.sqrt(e.weight);
       const geom = new THREE.TubeGeometry(curve, 16, r, 6, false);
-      const color = new THREE.Color(index.colorOf(e.to) ?? "#e8c26a");
+      const color = new THREE.Color(e.sign === undefined ? (index.colorOf(e.to) ?? "#e8c26a") : e.sign < 0 ? NEGATIVE : POSITIVE);
       // depthTest off: the tubes are an overlay and must stay visible where they pass inside a surface.
       const mat = new THREE.MeshStandardMaterial({ color, emissive: color, emissiveIntensity: 0.7, roughness: 0.6, transparent: true, opacity: 0.55 + 0.45 * e.weight, depthWrite: false, depthTest: false });
       const t = new THREE.Mesh(geom, mat);
